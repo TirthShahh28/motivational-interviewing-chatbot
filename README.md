@@ -1,6 +1,27 @@
 # Emotion-Aware Conversational Chatbot for Alcohol Dialogues
 
-An MVP conversational agent that uses real-time state inference to detect user emotion and defensiveness, providing empathetic, autonomy-respecting responses grounded in Motivational Interviewing (MI) principles.
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+An intelligent conversational agent that uses real-time state inference to detect user emotion and defensiveness, providing empathetic, autonomy-respecting responses grounded in Motivational Interviewing (MI) principles.
+
+---
+
+## 🌿 Branch Strategy
+
+| Branch         | Purpose                                       | Status            |
+| -------------- | --------------------------------------------- | ----------------- |
+| `main`         | Capstone presentation version (Streamlit MVP) | ✅ Stable         |
+| `capstone-mvp` | Backup of simple MVP                          | ✅ Frozen         |
+| `production`   | Full-stack production-grade version           | 🚧 In Development |
+
+### Which branch should you use?
+
+- **For capstone demo**: Use `main` branch
+- **For portfolio showcase**: Use `production` branch (FastAPI + PostgreSQL + Redis + Airflow)
+
+---
 
 ## Architecture Overview
 
