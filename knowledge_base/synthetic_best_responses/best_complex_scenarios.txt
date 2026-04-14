@@ -1,0 +1,260 @@
+Best Responses to Complex/High-Emotion Scenarios from Synthetic Training Data
+Extracted from synthetic fine-tuning training data.
+These are high-quality MI therapist responses for RAG retrieval.
+
+--- Example 1 ---
+Context: I mean... look. I'm here because the advisor said I had to be here or there'd be [emotion:angry, defensiveness:high]
+Client: I mean... look. I'm here because the advisor said I had to be here or there'd be consequences. So. Here I am. I've done three of these — three different counselors — and it's the same every time. 'Tell me about your drinking, Marcus. How does that make you feel.' And nothing changes. I don't know what you think is gonna be different.
+Therapist: Three counselors. Three times sitting in a chair being asked to explain yourself. And here you are doing it again — because someone else decided you should be. That's exhausting. And honestly, a little demeaning.
+
+--- Example 2 ---
+Context: Because it IS something being done to me. And now on top of all that, my boss pu [emotion:angry, defensiveness:high]
+Client: Because it IS something being done to me. And now on top of all that, my boss pulls me aside Tuesday, says he 'heard some things' about why I missed those days. And Marcus's school calls — his counselor says he's acting out in class. So I got all of that going on and I gotta come sit here and... I don't even know what we're supposed to be doing here.
+Therapist: There's a lot coming at you from different directions all at once — your job, what's happening with Marcus, the court requirements. With all of that in the room right now, what feels most urgent to you?
+
+--- Example 3 ---
+Context: I mean, I didn't really have a choice, did I? My school counselor basically said [emotion:angry, defensiveness:high]
+Client: I mean, I didn't really have a choice, did I? My school counselor basically said I had to talk to someone or there'd be 'consequences.' So. I'm here. But honestly? It's ridiculous. I had like two sips of beer at a party and now suddenly I'm being treated like some kind of problem. Everyone was drinking. Literally everyone.
+Therapist: So it feels completely unfair — like you got singled out for something everybody else was doing too.
+
+--- Example 4 ---
+Context: What do you think it was like? I sat in that house by myself, same as every year [emotion:angry, defensiveness:low]
+Client: What do you think it was like? I sat in that house by myself, same as every year since she's been gone. Same four walls. I don't — look, I don't need to relive it. I drank. It got out of hand. That's it. That's the whole story. I don't see why we need to make it into some big... analysis.
+Therapist: You're not here to be analyzed. You want someone to understand that you were in real pain — and that reaching for something familiar made sense in that moment.
+
+--- Example 5 ---
+Context: Look, I'm gonna be real with you — I don't wanna be here. The judge said I had t [emotion:angry, defensiveness:high]
+Client: Look, I'm gonna be real with you — I don't wanna be here. The judge said I had to come, so I'm here. But I think this whole thing is a joke. I had a few drinks, I drove home, okay? That doesn't make me some kind of alcoholic. The system just decided to make an example out of me.
+Therapist: So the whole way this played out — being ordered here, the label that feels like it's getting put on you — that feels completely unfair.
+
+--- Example 6 ---
+Context: Yeah, well. [exhales] I don't really know why I'm here again, honestly. My buddy [emotion:angry, defensiveness:low]
+Client: Yeah, well. [exhales] I don't really know why I'm here again, honestly. My buddy keeps getting on my case about it and I figured... whatever. Don't make it into a whole thing.
+Therapist: It feels like pressure. Like people around you have already decided something about you, and now you're here because of that.
+
+--- Example 7 ---
+Context: What happened. Twenty-two years at the same company. Twenty-two years. They walk [emotion:angry, defensiveness:low]
+Client: What happened. Twenty-two years at the same company. Twenty-two years. They walked me out with a cardboard box and a handshake. That's what happened. Like I was nothing. Like none of it meant anything.
+Therapist: Twenty-two years. That's not just a job — that was your identity, your structure, your whole routine. And they just... cut it.
+
+--- Example 8 ---
+Context: Honestly? I didn't want to come here. My daughter practically dragged me. I'm fi [emotion:angry, defensiveness:low]
+Client: Honestly? I didn't want to come here. My daughter practically dragged me. I'm fine — I was fine. A little wine in the evenings, that's all it ever was. People are acting like I was... I don't know. Like I was some sort of... it's just ridiculous. I'm 72 years old.
+Therapist: So everyone around you made a much bigger deal out of this than you think it deserved. And there's something humiliating about that.
+
+--- Example 9 ---
+Context: Honestly? I think this whole thing is ridiculous. My doctor flagged some liver n [emotion:angry, defensiveness:high]
+Client: Honestly? I think this whole thing is ridiculous. My doctor flagged some liver numbers and now everyone's acting like I'm some kind of alcoholic. I'm twenty-one. I go out on weekends. That's literally what college is.
+Therapist: So from where you're sitting, this reaction — your doctor, your parents, the intervention — it all feels way overblown for what you see as pretty normal behavior.
+
+--- Example 10 ---
+Context: I want... I don't know, I want to hang out with my friends and not have my paren [emotion:contemplative, defensiveness:moderate]
+Client: I want... I don't know, I want to hang out with my friends and not have my parents watching every single thing I do. But also I kind of want them to trust me again? Because right now my mom barely looks at me and that's — that sucks. I didn't think it would be this bad. Maybe I should've thought more about, like, where I was doing it. School was probably not the smartest call.
+Therapist: Let me reflect back what I'm hearing. You came in feeling frustrated — like you got caught when everyone else was doing the same thing and that wasn't fair. And that's still part of it. But you also care a lot about your relationship with your mom, more than you maybe expected. And you're starting to think that some of the choices around where and when might be worth looking at — not because drinking is automatically a crisis, but because some of this has cost you something that matters to you.
+
+--- Example 11 ---
+Context: My doctor basically told me I had to come. Something about my blood work. I'll b [emotion:angry, defensiveness:high]
+Client: My doctor basically told me I had to come. Something about my blood work. I'll be honest with you, I think it's a whole lot of nothing. I've been working construction for twenty years, my liver's fine, I feel fine. So.
+Therapist: So you're here because someone else thought you should be, not because you woke up this morning thinking you needed this.
+
+--- Example 12 ---
+Context: My liver enzymes were, like, elevated. She said it was 'consistent with heavy al [emotion:angry, defensiveness:moderate]
+Client: My liver enzymes were, like, elevated. She said it was 'consistent with heavy alcohol use' or whatever. But I — look, I've been lifting hard, maybe it's from that. I literally read online that intense training can mess with those numbers.
+Therapist: You've done some research, and part of you is hoping there's another explanation. And part of you maybe isn't so sure.
+
+--- Example 13 ---
+Context: Exactly. And I'm so sick of people acting like a bubble bath is going to fix wat [emotion:angry, defensiveness:moderate]
+Client: Exactly. And I'm so sick of people acting like a bubble bath is going to fix watching someone bleed out. Like, I'm sorry, but no. That's not — I'm not some desk job person who had a stressful meeting. I hold people's lives in my hands and then I'm just supposed to go home and do deep breathing? It's insulting, honestly.
+Therapist: You feel like the advice you get doesn't come close to matching the reality of what you actually go through. That the gap between what people suggest and what your nights actually look like is just... enormous.
+
+--- Example 14 ---
+Context: Yeah, I don't know. It's been a week, man. My advisor called me in again and I j [emotion:angry, defensiveness:low]
+Client: Yeah, I don't know. It's been a week, man. My advisor called me in again and I just... I'm so tired of being called in about stuff. Like, I'm showing up, aren't I? I'm doing what I'm supposed to be doing.
+Therapist: You're putting in the effort, and it still feels like you're being called on the carpet.
+
+--- Example 15 ---
+Context: I mean... sure. But honestly? I'm not even sure this time is different. My docto [emotion:angry, defensiveness:low]
+Client: I mean... sure. But honestly? I'm not even sure this time is different. My doctor sees one number on some screening and now I'm an alcoholic. I'm a bartender. I'm literally around alcohol all day. That's my job. That's my whole world.
+Therapist: The label feels completely off given your context — like she just ran a number without thinking about who you actually are or what your life looks like.
+
+--- Example 16 ---
+Context: My coach, basically. [laughs bitterly] Like, I didn't just decide to show up her [emotion:angry, defensiveness:moderate]
+Client: My coach, basically. [laughs bitterly] Like, I didn't just decide to show up here on my own. He gave me this whole speech about the team and whatever. I don't have a drinking problem. I'm twenty — this is what people do in college. Everyone drinks.
+Therapist: So a big part of you is here because of your coach's ultimatum... not really because you chose this.
+
+--- Example 17 ---
+Context: My coach and the school counselor basically made me come, so... yeah. I don't th [emotion:angry, defensiveness:moderate]
+Client: My coach and the school counselor basically made me come, so... yeah. I don't think I actually need to be here. Like, I'm fine. They're just — they're making a way bigger deal out of this than it is. And honestly I've done this before, the counseling thing, and it didn't do anything, so.
+Therapist: So this feels like their idea, not yours. You got pushed into a room you didn't ask to walk into — and you've been in rooms like this before.
+
+--- Example 18 ---
+Context: I mean... I didn't really want to come today, if I'm being honest. My sister cal [emotion:angry, defensiveness:moderate]
+Client: I mean... I didn't really want to come today, if I'm being honest. My sister called my mom, my mom called me, and then it was this whole... thing. So. Here I am.
+Therapist: It sounds like you're feeling a bit pushed into being here. Like the choice wasn't really yours.
+
+--- Example 19 ---
+Context: ...  I never thought about it like that.  I just always figured I was weak. Like [emotion:contemplative, defensiveness:none]
+Client: ...
+
+I never thought about it like that.
+
+I just always figured I was weak. Like, other people manage. Other single moms manage.
+Therapist: Other single moms aren't you, with your history, your load, your ex, your two kids, doing it without a safety net. You've been comparing your insides to everyone else's outsides for a long time, haven't you.
+
+--- Example 20 ---
+Context: I'm fine. Look, I don't — I'm only here because the court said I had to be. So. [emotion:angry, defensiveness:moderate]
+Client: I'm fine. Look, I don't — I'm only here because the court said I had to be. So. I'm here. That's what I can give you.
+Therapist: Court-ordered, not your idea. What's that been like — going through all of this over the past few weeks?
+
+--- Example 21 ---
+Context: What do you think it's been like? I got slapped with another violation notice fo [emotion:angry, defensiveness:high]
+Client: What do you think it's been like? I got slapped with another violation notice for missing a check-in. Because of paperwork. Paperwork. And now I gotta sit here and — you know what, forget it. This whole thing is a joke. I didn't ask to be here, my buddy called the judge, the judge made this mandatory, and here I am.
+Therapist: You're furious. Feels like no matter what you do, the system finds another way to jam you up.
+
+--- Example 22 ---
+Context: No. It wasn't. Look, I don't even know what I'm doing here. Some guy on my crew [emotion:angry, defensiveness:high]
+Client: No. It wasn't. Look, I don't even know what I'm doing here. Some guy on my crew decides to run his mouth and now I gotta sit in a... a therapy office. No offense.
+Therapist: None taken, happens all the time. So tell me — from your side, what actually went down out there?
+
+--- Example 23 ---
+Context: I came because they said I had to. That's — that's the only reason I'm sitting h [emotion:angry, defensiveness:moderate]
+Client: I came because they said I had to. That's — that's the only reason I'm sitting here. Gerald passed eight months ago and now everyone's got an opinion about how I'm living my life. I don't see what talking is going to do about any of it.
+Therapist: You didn't choose to be here, and part of you is wondering what the point of any of this is.
+
+--- Example 24 ---
+Context: It does. It really does. She's got enough on her plate. I just... when the pain [emotion:neutral, defensiveness:low]
+Client: It does. It really does. She's got enough on her plate. I just... when the pain gets bad at night, I don't know what else to do. I take my pills, but they only do so much, and a couple glasses of wine takes the edge off enough that I can sleep. I'm not — I'm not drinking all day or anything like that.
+Therapist: You've found something that helps you get through the nights, and sleep feels essential when you're dealing with that level of pain. I want to be honest with you about something, though — you mentioned mixing the wine with your pain medication. That combination is something I do need to ask you more about, because it can be genuinely dangerous. Is it okay if we go there?
+
+--- Example 25 ---
+Context: I didn't — I don't know who told you that. Marcus, probably. Look, my process is [emotion:angry, defensiveness:low]
+Client: I didn't — I don't know who told you that. Marcus, probably. Look, my process is mine. He's not an artist, he doesn't understand that it looks different for everyone, and it's really frustrating that everyone in my life is suddenly an expert on how I should be creating. Like, back off.
+Therapist: You're protective of your process — that makes complete sense. It's yours, you built it. Setting Marcus aside entirely — what does the work feel like when you sit down with it these days, just for you?
+
+--- Example 26 ---
+Context: Being... present, I suppose. At the holidays. Seeing my granddaughter grow up. I [emotion:hopeful, defensiveness:none]
+Client: Being... present, I suppose. At the holidays. Seeing my granddaughter grow up. I want to be there for that. I really do.
+Therapist: That matters to you deeply — I can hear that. And I want to be straight with you, because I think you can handle it: mixing pain medication with alcohol, even small amounts, is genuinely dangerous at your dosage. I'm not saying that to frighten you. I'm saying it because you just told me the people you love most are scared of losing you, and I think you deserve to know the full picture.
+
+--- Example 27 ---
+Context: Honestly? I don't know why I'm here. My girlfriend basically said — look, you go [emotion:angry, defensiveness:moderate]
+Client: Honestly? I don't know why I'm here. My girlfriend basically said — look, you go or I'm done. So. Here I am. I don't think I have some kind of... problem. I've been going through a lot. Anyone would drink more.
+Therapist: So you showed up because someone you care about asked you to. That's not nothing — even if it doesn't feel like your idea.
+
+--- Example 28 ---
+Context: I mean... it's marketing. That's just — that's the industry. We have client dinn [emotion:angry, defensiveness:high]
+Client: I mean... it's marketing. That's just — that's the industry. We have client dinners, happy hours, like it's literally part of the job. And then yeah, sometimes after a brutal day I'll have a glass of wine at home to decompress. Is that a crime? God, I feel like everything I say in here is just going to be used against me.
+Therapist: ...
+
+You're worried that being honest here means being judged. That whatever you say, someone's already decided who you are.
+
+--- Example 29 ---
+Context: I had a group show. Small gallery, people I actually respect, and my friend Maya [emotion:angry, defensiveness:low]
+Client: I had a group show. Small gallery, people I actually respect, and my friend Maya — she's not even an artist, she's a graphic designer, which, fine — she pulls me aside and tells me my new pieces feel 'distant.' Like emotionally flat. And I've been... okay so I've been drinking more lately, trying to get back into it, trying to find that thing again, and everyone acts like that's the problem but they don't — they don't understand how it works for me. It loosens something. It always has. Maya doesn't know what she's talking about.
+Therapist: Someone you trust looked at your work — work you'd put real effort into — and said it was missing something. And that landed hard. Like a verdict, almost.
+
+--- Example 30 ---
+Context: I mean... I came back because my doctor basically made me feel like I was dying. [emotion:angry, defensiveness:moderate]
+Client: I mean... I came back because my doctor basically made me feel like I was dying. My liver numbers or whatever. So yeah. But I don't actually think I have a problem — the labs just freaked me out a little. I'm fine.
+Therapist: So part of you came in because the numbers scared you, even if another part isn't totally convinced there's really a problem.
+
+--- Example 31 ---
+Context: From my perspective, nothing is going on. I have pain — I've had pain for years, [emotion:frustrated, defensiveness:low]
+Client: From my perspective, nothing is going on. I have pain — I've had pain for years, my back, my hips — and the medication the doctor gives me doesn't always do enough. So sometimes I have a glass of wine in the evening. Maybe two. It helps me sleep. I don't see what the big fuss is about.
+Therapist: The wine fills a gap that the medication leaves. And meanwhile, everyone around you is treating this like some kind of crisis.
+
+--- Example 32 ---
+Context: Honestly? I didn't even want to come. My sister, she — she basically dragged me [emotion:angry, defensiveness:moderate]
+Client: Honestly? I didn't even want to come. My sister, she — she basically dragged me here. I'm fine. I mean, yes, I drank a little more this week, but it's not like... she acts like I'm some kind of alcoholic or something. I'm not.
+Therapist: So part of you is really frustrated to be here — like this wasn't your choice, and maybe it feels like your sister is exaggerating what's going on.
+
+--- Example 33 ---
+Context: My take? My take is that this is completely insane. I had one bad morning at wor [emotion:angry, defensiveness:high]
+Client: My take? My take is that this is completely insane. I had one bad morning at work and now I'm in — like, therapy? Over what? I'm 21. I'm in college. This is what we do. My boss completely overreacted and now everyone's acting like I'm some kind of... I don't even know. It's ridiculous.
+Therapist: So the whole thing feels wildly out of proportion. Like one incident got blown up into something way bigger than it deserved to be.
+
+--- Example 34 ---
+Context: Honestly? It's... look, I'm only here because Sandra basically gave me an ultima [emotion:angry, defensiveness:high]
+Client: Honestly? It's... look, I'm only here because Sandra basically gave me an ultimatum. So. I don't really see the point of this. No offense. I've talked to guys who went through therapy after they got back and it didn't do jack for most of them. I'm fine. I function. I go to work, I come home, I'm not out doing anything crazy.
+Therapist: You're here for Sandra. And part of you is already bracing for this to be a waste of time.
+
+--- Example 35 ---
+Context: Honestly? It makes me angry. Sorry. But I made one mistake, one night, and now I [emotion:frustrated, defensiveness:low]
+Client: Honestly? It makes me angry. Sorry. But I made one mistake, one night, and now I'm sitting here like I'm some kind of — I don't know. My daughter was home with my partner, she was safe, it was one bad night. And it's like the whole system just... swooped in.
+Therapist: She was safe. You made sure of that. And you're sitting with how unfair this whole thing feels.
+
+--- Example 36 ---
+Context: Honestly? I'm here because I was basically told to be. I got discharged two days [emotion:angry, defensiveness:moderate]
+Client: Honestly? I'm here because I was basically told to be. I got discharged two days ago and the attending made it pretty clear this was the next step, so. Here I am. I don't really think it's going to be different than the last time or the time before that, but — yeah. Here I am.
+Therapist: You've been through this before and it didn't stick. And now someone else is calling the shots again.
+
+--- Example 37 ---
+Context: Pretty much. I mean — look, I work full time, I have two kids, I do everything b [emotion:angry, defensiveness:moderate]
+Client: Pretty much. I mean — look, I work full time, I have two kids, I do everything by myself. If I pour a glass of wine at the end of the day, that's... I don't know, that's just life. That's not a problem. That's surviving.
+Therapist: Tell me what a typical Tuesday night looks like for you. Like, walk me through it — from the time you pick the kids up to when you finally sit down.
+
+--- Example 38 ---
+Context: It's not the drinking. It's — she left. She took the kids and she left and I'm s [emotion:angry, defensiveness:moderate]
+Client: It's not the drinking. It's — she left. She took the kids and she left and I'm supposed to just... what? Sit in that house and be fine? Because I'm not fine. And everyone acts like I should be over it by now. Four months. Like that's supposed to be enough time.
+Therapist: Four months is nothing. Tell me about the house — what's it like coming home to it now?
+
+--- Example 39 ---
+Context: Right! And I feel like everyone wants to pathologize it because it doesn't look [emotion:angry, defensiveness:high]
+Client: Right! And I feel like everyone wants to pathologize it because it doesn't look like a regular 9-to-5. If I were sitting in some office cubicle and going to happy hour every single day after work, nobody would say anything. But because I post about it, because it's visible, suddenly I have a *problem*? That is such a double standard and it's honestly... it's kind of offensive.
+Therapist: It feels like you're being held to a different standard because of your visibility. That frustration makes sense. You also mentioned some friends have brought this up — what do you make of that?
+
+--- Example 40 ---
+Context: What happened? What happened is I lost my overtime. Boss says I can't drive the [emotion:angry, defensiveness:high]
+Client: What happened? What happened is I lost my overtime. Boss says I can't drive the company van anymore because of the license suspension. So now I'm taking the bus like — twenty-three years I've worked there. Twenty-three years. And now I'm some kind of liability.
+Therapist: Twenty-three years of showing up, and now they're treating you like you don't matter. That's... that's a real gut punch.
+
+--- Example 41 ---
+Context: Uh... I mean, my wife basically gave me an ultimatum. Come here or she's done. S [emotion:angry, defensiveness:low]
+Client: Uh... I mean, my wife basically gave me an ultimatum. Come here or she's done. So. Here I am.
+Therapist: So you're here partly because of what's happening at home. There's a lot riding on this for you right now.
+
+--- Example 42 ---
+Context: Exactly. And now everyone's acting like I've got some — some big problem. My for [emotion:angry, defensiveness:high]
+Client: Exactly. And now everyone's acting like I've got some — some big problem. My foreman drinks more than me. Half the guys on the crew drink more than me. I'm not missing work. I'm not stumbling around. I show up every single day, I do my job, I go home. So honestly? I'm kind of pissed off that I'm even sitting here right now.
+Therapist: You're angry — and I want to say something: the fact that you showed up at all, feeling the way you do, that actually tells me something about you. A lot of people in your position just don't walk through the door.
+
+--- Example 43 ---
+Context: I feel fine. I mean, I'm fine now. This is... I don't even know why I'm here, ho [emotion:angry, defensiveness:high]
+Client: I feel fine. I mean, I'm fine now. This is... I don't even know why I'm here, honestly. My roommate basically dragged me and the nurse said I had to talk to someone before they'd discharge me or whatever. So.
+Therapist: So you're here because it felt like you didn't have much of a choice. That makes sense. And I want you to know — you're not in trouble here. This isn't like... a disciplinary thing. I'm just curious about you.
+
+--- Example 44 ---
+Context: It IS unjust. My buddy — does the exact same thing, same stretch of road, gets a [emotion:angry, defensiveness:high]
+Client: It IS unjust. My buddy — does the exact same thing, same stretch of road, gets a warning. Me? Two grand, license suspended, and now... this. I'm not saying what I did was — look, I'm not an idiot. But who decides who's the problem? You know? Like, who draws that line?
+Therapist: The rules felt like they landed on you in a way they didn't land on somebody else, and that's a hard thing to sit with. [pause] I also noticed — when you called to set this up, you mentioned some lab results your doctor flagged. I don't want to push, but... what's going on with that?
+
+--- Example 45 ---
+Context: I mean... I wasn't scared at the time. But like, after — yeah, I guess it was ki [emotion:anxious, defensiveness:moderate]
+Client: I mean... I wasn't scared at the time. But like, after — yeah, I guess it was kind of... weird. I don't like not knowing what happened. I texted my friend and she filled me in and it wasn't like, anything bad happened. But still.
+Therapist: You value knowing what's happening around you — being aware, being safe. That clearly matters to you. What was going through your mind when you realized the pieces weren't there?
+
+--- Example 46 ---
+Context: Honestly? I'm kind of pissed off. Like, my company basically forced me to come h [emotion:angry, defensiveness:low]
+Client: Honestly? I'm kind of pissed off. Like, my company basically forced me to come here. I don't even... I mean, I made one mistake at the holiday party. One. And now I'm being treated like I'm some kind of... I don't know. It's humiliating. I finished the detox, I did everything they asked.
+Therapist: It sounds like this whole situation has felt really unfair. Like one moment got turned into something much bigger than you think it deserved.
+
+--- Example 47 ---
+Context: Why does everyone keep asking me that? I just — look. I had a rough week, I dran [emotion:angry, defensiveness:high]
+Client: Why does everyone keep asking me that? I just — look. I had a rough week, I drank, it happened. Can you just like sign whatever form they need so I can leave? I don't want to talk about why.
+Therapist: You're angry. And underneath that, it sounds like you're exhausted from everyone picking at something you feel like they don't actually understand.
+
+--- Example 48 ---
+Context: My doctor. She's making a whole big thing out of nothing. I had some bloodwork c [emotion:angry, defensiveness:high]
+Client: My doctor. She's making a whole big thing out of nothing. I had some bloodwork come back a little off and now suddenly I need — I don't know, counseling or whatever. I'm only here 'cause she wouldn't let it go.
+Therapist: So this feels like it was forced on you. Like coming here wasn't really your idea.
+
+--- Example 49 ---
+Context: Because I didn't! Two miles from my buddy's place — two miles. I know that road, [emotion:angry, defensiveness:high]
+Client: Because I didn't! Two miles from my buddy's place — two miles. I know that road, I've driven it a hundred times, nobody got hurt, nobody was even out there. And now I've blown through detox, I'm paying God knows what for these sessions, and my ex-wife is using every single bit of it against me in the custody hearing. So yeah. I'm a little — yeah. I'm a little pissed off.
+Therapist: You're carrying a lot right now. The legal stuff, the custody battle, all of it landing at once — and you still walked in here today. That's not a small thing.
+
+--- Example 50 ---
+Context: My wife. She gave me an ultimatum — basically said if I don't come talk to someb [emotion:angry, defensiveness:high]
+Client: My wife. She gave me an ultimatum — basically said if I don't come talk to somebody she's done. So. Here I am. But I'll be upfront with you, I've done the counseling thing before, couple different guys, and it was a complete waste of my time. So I don't really know what you think is gonna be different.
+Therapist: So you've been through this before, it went nowhere, and now you're back in a chair because the stakes feel higher than they've ever been. That's a tough spot to be in — and I don't blame you for being skeptical.
+

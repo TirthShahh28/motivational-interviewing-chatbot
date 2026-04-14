@@ -1,0 +1,254 @@
+Best Open Questions from Synthetic Training Data
+Extracted from synthetic fine-tuning training data.
+These are high-quality MI therapist responses for RAG retrieval.
+
+--- Example 1 ---
+Context: Pretty much. I mean, I don't — I don't think I have like a problem or whatever. [emotion:sad, defensiveness:moderate]
+Client: Pretty much. I mean, I don't — I don't think I have like a problem or whatever. My whole team drinks, everyone does. It's just... last semester things got a little out of hand and now suddenly it's this whole thing. My coach is treating me like I'm some kind of, I don't know. It's just a lot of drama for what it is.
+Therapist: Before any of this — the ultimatum, coming here — what was this season supposed to look like for you?
+
+--- Example 2 ---
+Context: I mean... sure. Look, I made a mistake. I drove when I probably shouldn't have. [emotion:frustrated, defensiveness:moderate]
+Client: I mean... sure. Look, I made a mistake. I drove when I probably shouldn't have. But I wasn't — I wasn't stumbling around or anything. I just... it was a bad night.
+Therapist: A bad night. Tell me a little more about that — what was going on for you that night?
+
+--- Example 3 ---
+Context: ... I mean. Yeah. I didn't really have a choice, but — I guess. Yeah. [emotion:neutral, defensiveness:moderate]
+Client: ... I mean. Yeah. I didn't really have a choice, but — I guess. Yeah.
+Therapist: You mentioned Marcus. What did he actually say to you? Like, the conversation that made you think — okay, I'll go.
+
+--- Example 4 ---
+Context: Yeah. I mean... I don't know if I'd call it a problem exactly. Like I can stop w [emotion:sad, defensiveness:low]
+Client: Yeah. I mean... I don't know if I'd call it a problem exactly. Like I can stop when I want to. But I've seen counselors before and it never really went anywhere, so I'm kind of... I guess I'm skeptical this is going to be different. No offense.
+Therapist: No offense taken — that's a fair thing to bring in. Something kept you trying though. You're here. What felt different about this week?
+
+--- Example 5 ---
+Context: She said she's... she said she's done. That she'll take the kids to her mom's if [emotion:frustrated, defensiveness:moderate]
+Client: She said she's... she said she's done. That she'll take the kids to her mom's if I don't — I don't know — 'get help' or whatever. Which is — I mean I'm not gonna just stop being who I am because she's — ugh. It's not that simple. It's not like I can just flip a switch. I don't even know if I... I mean, it's complicated. It's just real complicated.
+Therapist: You're not willing to just... disappear yourself because someone's telling you to. I hear that. That's not weakness, that's someone who knows who he is. ... But your kids. When you think about them not being there when you get home — what comes up?
+
+--- Example 6 ---
+Context: Of course it matters. He's my kid. I'm not gonna... look, I'm not gonna pretend [emotion:frustrated, defensiveness:moderate]
+Client: Of course it matters. He's my kid. I'm not gonna... look, I'm not gonna pretend I've been perfect. I know I haven't. But I do care about him. It's just everything kind of — I don't know, this past week especially just felt like too much all at once.
+Therapist: You mentioned the last couple weeks had actually been going okay, and then this week felt like too much. What happened that threw things off?
+
+--- Example 7 ---
+Context: Yeah. I mean, I read what they sent. They flagged my liver enzymes. The doctor m [emotion:neutral, defensiveness:moderate]
+Client: Yeah. I mean, I read what they sent. They flagged my liver enzymes. The doctor mentioned alcohol could be a factor but — a lot of things can cause that. Diet, medication, whatever. I don't take it as like... a diagnosis or anything.
+Therapist: Sure, there are several things that can affect those levels. I'm curious — what does drinking actually look like for you these days? Just to get a picture.
+
+--- Example 8 ---
+Context: Exactly. Yeah. I mean, my dad did the same thing his whole life and he was fine. [emotion:anxious, defensiveness:moderate]
+Client: Exactly. Yeah. I mean, my dad did the same thing his whole life and he was fine. It's just... it's what you do after a shift like that. But then the doc pulls up these numbers and she's got this look on her face, and I don't know. I didn't sleep great after that appointment.
+Therapist: Tell me about that — when she showed you the numbers. What went through your head in that moment?
+
+--- Example 9 ---
+Context: Yeah. I just — I don't think there's some big problem or whatever. There was an [emotion:neutral, defensiveness:moderate]
+Client: Yeah. I just — I don't think there's some big problem or whatever. There was an incident at work, yes, but it was one time. I was having a really rough week and I had a couple drinks at lunch and someone noticed. That's it. I'm not like... I don't have a drinking problem.
+Therapist: Okay. That sounds like it was a genuinely hard week. Can you tell me a bit about what that week looked like for you — what was going on?
+
+--- Example 10 ---
+Context: Yeah, well—I don't know when exactly. It just... crept up. Stopped being a glass [emotion:frustrated, defensiveness:low]
+Client: Yeah, well—I don't know when exactly. It just... crept up. Stopped being a glass of wine after a bad shift and became like, I need this or I can't sleep, I can't eat, I can't think straight. And then I started showing up to work feeling like absolute garbage and—god, I was so foggy. I caught myself almost making a med error in November and I just... that scared me. Really scared me.
+Therapist: A near-miss with a patient. That's not a small thing to carry. What was going through your head in that moment?
+
+--- Example 11 ---
+Context: ... Yes. It does. I never thought — I'm seventy-two years old. I thought I was p [emotion:sad, defensiveness:none]
+Client: ... Yes. It does. I never thought — I'm seventy-two years old. I thought I was past the age of this kind of thing happening to me. Stupid, maybe.
+Therapist: Not stupid. Pain has a way of narrowing our options down to whatever works, even when part of us knows the cost. You mentioned you've talked to someone before — counselors. What was that like for you?
+
+--- Example 12 ---
+Context: Exactly. And now that I'm out of detox I'm just... honestly I'm terrified. Like, [emotion:anxious, defensiveness:low]
+Client: Exactly. And now that I'm out of detox I'm just... honestly I'm terrified. Like, what if I can't handle the nights? What if the anxiety just comes back and I don't have anything to reach for? She still doesn't sleep through the night and I'm so exhausted and I just...
+Therapist: What does that fear feel like — when you imagine one of those hard nights and there's nothing to reach for?
+
+--- Example 13 ---
+Context: I just... none of that went through my head in the moment. I just didn't want to [emotion:anxious, defensiveness:moderate]
+Client: I just... none of that went through my head in the moment. I just didn't want to feel left out. But now I'm like — what if this keeps happening? What if I keep doing things just because everyone else is and I keep hurting people who care about me and I don't even... I haven't really thought about it like that before, I guess.
+Therapist: When you're in one of those moments — the pressure's on, everyone's doing it — what gets in the way of you being able to make a different call?
+
+--- Example 14 ---
+Context: Exactly. And I just — yeah. ... I don't know. I mean, it's a bar. Everyone drink [emotion:frustrated, defensiveness:low]
+Client: Exactly. And I just — yeah. ... I don't know. I mean, it's a bar. Everyone drinks. That's the culture. You can't work in a bar and be weird about alcohol, that's just... that's how it is.
+Therapist: That makes a lot of sense given where you work. And... last time you said something that stayed with me. You said you couldn't remember the last day you didn't drink. I've been sitting with that. What does it feel like when you think about that now?
+
+--- Example 15 ---
+Context: It matters. It matters a lot. I just... I worry sometimes that one day she won't [emotion:sad, defensiveness:moderate]
+Client: It matters. It matters a lot. I just... I worry sometimes that one day she won't. That she'll — I don't know. That she'll figure out that I'm not who she thinks I am. Like she's got this picture of her dad and I'm scared she's gonna see through it eventually.
+Therapist: What would it mean to you to still be the guy she runs to — five, ten years from now?
+
+--- Example 16 ---
+Context: My buddy Dave — he kind of... he sat me down last week. Said I'd changed. That I [emotion:anxious, defensiveness:moderate]
+Client: My buddy Dave — he kind of... he sat me down last week. Said I'd changed. That I wasn't myself anymore. That was, uh... that hit different coming from him. We've known each other twenty-some years. I figured, okay, maybe I should at least talk to someone.
+Therapist: Something about hearing it from Dave got through in a way other things haven't. Tell me a little more about what he said — what did he actually notice?
+
+--- Example 17 ---
+Context: Yeah. Yeah, that's it. And honestly the reason I answered Dr. Patel's questions [emotion:contemplative, defensiveness:none]
+Client: Yeah. Yeah, that's it. And honestly the reason I answered Dr. Patel's questions honestly instead of just... fudging them... was because I'm kind of tired? Like I'm tired of my whole social life being this logistical puzzle — how much can I drink, who's driving, is there going to be alcohol there, how do I pace myself. It takes up so much mental space. It's exhausting.
+Therapist: That's a significant thing to say — that you're tired of organizing your life around it. I'm curious: when you imagine things being different, what does that actually look like for you?
+
+--- Example 18 ---
+Context: ...yeah. That's pretty much it. [long pause] I'm 39. I thought I'd have more fig [emotion:contemplative, defensiveness:low]
+Client: ...yeah. That's pretty much it. [long pause] I'm 39. I thought I'd have more figured out by now. I've got a decent job, I'm in this program, and I still come home and it's like... what's the point. And I hate that I think that. I hate it.
+Therapist: When you imagine having more figured out - not perfectly, just better - what does that actually look like for you?
+
+--- Example 19 ---
+Context: Exactly. You come back stateside and suddenly everyone's acting like a beer afte [emotion:frustrated, defensiveness:high]
+Client: Exactly. You come back stateside and suddenly everyone's acting like a beer after work is some kind of red flag. It's not. My guys back in the unit — nobody thought twice about it. You work hard, you drink, you move the hell on. I'm not sitting in a ditch somewhere, I'm in college trying to get a degree. That's not what a guy with a problem looks like.
+Therapist: And I'm not here to argue with you about what it looks like. I'm genuinely curious — you've got school, you've got all this history behind you. What does a regular week actually look like for you right now? At home, I mean, not just on campus.
+
+--- Example 20 ---
+Context: It is. I've told myself for months it's fine, it's manageable, I'm just decompre [emotion:hopeful, defensiveness:low]
+Client: It is. I've told myself for months it's fine, it's manageable, I'm just decompressing like anyone would. But... yeah. Hearing it like that. It's not fine. I don't want to be fine with it anymore.
+Therapist: So what would 'not being fine with it anymore' actually look like — what would changing something feel like for you?
+
+--- Example 21 ---
+Context: Okay, fine. Brianna's birthday was Tuesday. She didn't invite me. We've been fri [emotion:sad, defensiveness:high]
+Client: Okay, fine. Brianna's birthday was Tuesday. She didn't invite me. We've been friends for six years and I found out through Instagram — through a tagged photo, like I'm some random person. Which is, like, beyond mortifying. But whatever, she's been doing this whole wellness era thing lately so.
+Therapist: Six years. Finding out through a photo. What was going through your head when you saw that?
+
+--- Example 22 ---
+Context: I don't know what she sees in me at this point, honestly. Three years. Three yea [emotion:anxious, defensiveness:none]
+Client: I don't know what she sees in me at this point, honestly. Three years. Three years sober and then... I just threw it all away. Over what? Because I lost a job? My dad lost jobs. He didn't... he didn't fall apart like this.
+Therapist: You're being really hard on yourself right now. Comparing yourself to your father, measuring your worth against those three years like they don't count anymore. What was it like when you got that call — when you found out you'd lost the job?
+
+--- Example 23 ---
+Context: Um. Yeah. I mean, I'm here because I kind of... have to be. Court thing. I got a [emotion:anxious, defensiveness:moderate]
+Client: Um. Yeah. I mean, I'm here because I kind of... have to be. Court thing. I got a DUI a few months back and this is part of the — the thing they want me to do. The program. So.
+Therapist: Okay, so the court's got a foot in the door. That makes sense. I'm not gonna pretend that's a super fun reason to be sitting here. But I'm curious — now that you're actually in the room, what's going through your head about all this?
+
+--- Example 24 ---
+Context: Yeah. Exactly. Like, I teach middle school. Thirty-two twelve-year-olds, every s [emotion:neutral, defensiveness:moderate]
+Client: Yeah. Exactly. Like, I teach middle school. Thirty-two twelve-year-olds, every single day. Do you know what that's like? I come home completely hollowed out. So yeah, I have a scotch, maybe two, I watch something, I fall asleep on the couch sometimes. That's... I don't know, that's just how I decompress. It's not some big thing.
+Therapist: Teaching middle school is genuinely exhausting. I'm curious — what does a morning look like for you, the day after?
+
+--- Example 25 ---
+Context: Yeah. Like, they're technically fine — maybe even technically better in some way [emotion:anxious, defensiveness:low]
+Client: Yeah. Like, they're technically fine — maybe even technically better in some ways — but they're... hollow. There's nothing in them. And I can't tell if that's the drinking or if I'm just losing it as an artist, which is honestly the scarier possibility.
+Therapist: Losing your identity as an artist — that's a real and painful fear. I'm curious, when did you first start to believe that drinking and your creativity were connected?
+
+--- Example 26 ---
+Context: Well... yeah. I mean, I know I've been drinking more than I should. I'm not stup [emotion:frustrated, defensiveness:low]
+Client: Well... yeah. I mean, I know I've been drinking more than I should. I'm not stupid. But I had a bad week, okay? Margaret's birthday was Thursday — that's my wife, she passed four years ago — and I just... I don't know. I don't need people treating me like I'm some kind of... I handled myself fine for sixty-five years.
+Therapist: Margaret's birthday. That's a heavy day to carry alone. What was that like for you this year?
+
+--- Example 27 ---
+Context: I mean... everything? My dad played. My whole family, it's like — it's the one t [emotion:hopeless, defensiveness:moderate]
+Client: I mean... everything? My dad played. My whole family, it's like — it's the one thing I've always been good at. It's not just something I do. It's like... who I am. Or was. I don't even know anymore.
+Therapist: So it's tied up in your identity — not just your performance, but who you are, what you carry from your family. And at the same time, when you go out with the guys... what does that give you?
+
+--- Example 28 ---
+Context: I mean... yeah. And I'm not saying — look, I'm not saying I handled it perfectly [emotion:frustrated, defensiveness:moderate]
+Client: I mean... yeah. And I'm not saying — look, I'm not saying I handled it perfectly, alright? That night, I'd had a rough week. I'm not saying it was a smart call. But I am not some drunk. I'm not that guy who, like, can't function without it. That's not me.
+Therapist: You're drawing a line there — between the decision you made that night and who you actually are. What does 'that guy' look like in your head?
+
+--- Example 29 ---
+Context: Yeah. [quieter] Yeah, it did. Like I've always got an answer for everything, rig [emotion:contemplative, defensiveness:none]
+Client: Yeah. [quieter] Yeah, it did. Like I've always got an answer for everything, right? Oh it's the job, oh it's just how we all blow off steam. But I sat there and I genuinely could not find... a single day. In I don't even know how long. And I just sat with that for a while and it was like... [pause] ...huh. What does that mean?
+Therapist: You've always had the answer ready. And for the first time, you didn't. [pause] I'm curious — what do you think it means? Not what anyone else would say. What does it mean to you?
+
+--- Example 30 ---
+Context: Yeah. And I just... I sat there. I didn't yell, I didn't argue. I just sat there [emotion:sad, defensiveness:moderate]
+Client: Yeah. And I just... I sat there. I didn't yell, I didn't argue. I just sat there and finished the rest of the bottle. Which — I know how that looks. I know. I'm not... I'm not an idiot.
+Therapist: You knew in that moment something wasn't right, and you're still sitting with that now. What does it mean to you — actually losing her?
+
+--- Example 31 ---
+Context: Three years. I had three years sober. Three years. And then everything just... I [emotion:frustrated, defensiveness:low]
+Client: Three years. I had three years sober. Three years. And then everything just... I don't even know how to explain it. It went sideways fast.
+Therapist: Three years is real. That didn't disappear. What happened when things started to unravel?
+
+--- Example 32 ---
+Context: ...Yeah. That's — yeah. [quiet] I didn't think I was dependent. I truly didn't. [emotion:neutral, defensiveness:none]
+Client: ...Yeah. That's — yeah. [quiet] I didn't think I was dependent. I truly didn't. I thought I was just coping. And I suppose I was, just... not in a very good way. Not a safe way. I can see that now.
+Therapist: That kind of honesty — especially right after something as hard as detox — that's not nothing. I want you to know that. So let me ask you this: what would actually taking care of yourself look like? Not for your daughter, not for your doctor. For you. What would that even mean?
+
+--- Example 33 ---
+Context: Yeah. Yeah, that's... that's exactly it. I didn't expect to feel like someone ac [emotion:hopeful, defensiveness:none]
+Client: Yeah. Yeah, that's... that's exactly it. I didn't expect to feel like someone actually gets it. [exhales] I think I do want to change. I just have no idea where to even start.
+Therapist: That's exactly where we start — with not knowing. What would feel like one small, manageable step before we talk again? Just one.
+
+--- Example 34 ---
+Context: ... I never thought of it quite that way. I just thought I was being sensible. N [emotion:contemplative, defensiveness:none]
+Client: ... I never thought of it quite that way. I just thought I was being sensible. Not making a fuss. But... yes. I suppose that is what it is.
+Therapist: What do you think it would mean to your daughter — if she really knew how much pain you were in?
+
+--- Example 35 ---
+Context: Yeah. And I don't want you to think I'm, like, some kind of... I don't have a dr [emotion:anxious, defensiveness:low]
+Client: Yeah. And I don't want you to think I'm, like, some kind of... I don't have a drinking problem in the way people picture it. I don't drink at home alone or whatever. It's just — I have really severe social anxiety, like clinically diagnosed, and alcohol just... turns it off. I can actually function at a party, talk to his coworkers, go to work events. Without it I just freeze up. So it's not nothing, it's actually useful.
+Therapist: It genuinely works. It gives you access to a version of yourself that can show up and get through those situations. What's it like, though — needing it in order to feel okay in those moments?
+
+--- Example 36 ---
+Context: Yeah. I mean... yeah. I've always been the teacher that kids trust, you know? I [emotion:contemplative, defensiveness:moderate]
+Client: Yeah. I mean... yeah. I've always been the teacher that kids trust, you know? I had a teacher like that when I was their age and it made a difference. I don't want to be the guy who's just going through the motions.
+Therapist: What would it mean for you — your life, your teaching — if the drinking wasn't something you had to manage around?
+
+--- Example 37 ---
+Context: Yeah. Yeah, that's... that's pretty much it. I used to have somewhere to be ever [emotion:sad, defensiveness:none]
+Client: Yeah. Yeah, that's... that's pretty much it. I used to have somewhere to be every morning. People who needed things from me. Now I wake up and there's just... coffee and the news. Sometimes I don't talk to another person for two, three days at a stretch. My kids are busy, they've got their own lives. I don't want to be a burden. So I just... I keep to myself mostly.
+Therapist: You're carrying a lot of that alone, trying not to be a burden to the people you love. I want to ask you something gently — when you pour that drink in the evening, what does it do for you?
+
+--- Example 38 ---
+Context: Okay. Good. Because that's what everyone else seems to be trying to do. [emotion:frustrated, defensiveness:high]
+Client: Okay. Good. Because that's what everyone else seems to be trying to do.
+Therapist: What would it look like for you to walk out of here today feeling like this wasn't a complete waste of your time?
+
+--- Example 39 ---
+Context: Um... I usually start in the late afternoon when the light is good. I'll pour a [emotion:neutral, defensiveness:none]
+Client: Um... I usually start in the late afternoon when the light is good. I'll pour a glass of wine, put on some music, and just... let go. The wine helps me stop overthinking. Without it I'm just staring at the canvas second-guessing every brushstroke. With it, I actually — I flow. It's been my process for like, ten years.
+Therapist: The wine quiets the inner critic. That makes sense — a lot of artists talk about needing to get out of their own heads. And you've built a whole ritual around it. I want to ask you something directly though, and I'm curious what you honestly think: how has the work been lately? The actual art.
+
+--- Example 40 ---
+Context: Yeah, I... I almost didn't. I sat in my car for like twenty minutes before I cam [emotion:sad, defensiveness:moderate]
+Client: Yeah, I... I almost didn't. I sat in my car for like twenty minutes before I came in. [pause] Not great, honestly. Not great.
+Therapist: Twenty minutes in the car. Something made you walk through that door though. What was going through your mind?
+
+--- Example 41 ---
+Context: Yes. Exactly. And now I'm the one sitting in a therapist's office like I'm some [emotion:anxious, defensiveness:high]
+Client: Yes. Exactly. And now I'm the one sitting in a therapist's office like I'm some kind of... I don't know, like I have a problem. My parents are freaking out, my counselor keeps emailing them, and I just... I don't see what the big deal is. It was one night.
+Therapist: Tell me a little more about what drinking is usually like for you — like in your friend group, what does that look like?
+
+--- Example 42 ---
+Context: Yeah, uh... I've got like twenty minutes, maybe less. I don't even really know w [emotion:anxious, defensiveness:high]
+Client: Yeah, uh... I've got like twenty minutes, maybe less. I don't even really know why I'm here. My manager basically said I had to come or it would go on my record or whatever.
+Therapist: So someone told you that you had to be here. That's a tough spot. What's your sense of... what they think this is about?
+
+--- Example 43 ---
+Context: I don't know if it's remarkable. My sister basically dragged me here. But... I d [emotion:hopeful, defensiveness:none]
+Client: I don't know if it's remarkable. My sister basically dragged me here. But... I don't know. This feels different. You're actually listening. Like you're not just waiting for me to stop talking so you can give me a handout. ... Sorry, that probably sounds rude.
+Therapist: Don't apologize. Please. I want you to say exactly what's true for you in here. Always. ... What you just said — that this feels different — I want to stay with that for a second. What would it mean for you if you found that connection you've been missing? Not just here, but... in your life here.
+
+--- Example 44 ---
+Context: ...Yeah, okay, that sucked. But that's not — like, she's making it about her. I' [emotion:anxious, defensiveness:moderate]
+Client: ...Yeah, okay, that sucked. But that's not — like, she's making it about her. I'm the one who's... whatever. Forget it. It's complicated.
+Therapist: It's complicated. I hear that. Can you help me understand what drinking actually does for you — like when you reach for it, what's going on?
+
+--- Example 45 ---
+Context: Yeah, exactly. I'm not, like, blacking out every weekend. It's more that... okay [emotion:neutral, defensiveness:low]
+Client: Yeah, exactly. I'm not, like, blacking out every weekend. It's more that... okay, I'll be honest, I pretty much can't go to a party or even a work happy hour without having a few drinks first. Or during. Like before I even get there I'm already having a glass of wine at home just to, I don't know, get myself out the door. Which — I know how that sounds.
+Therapist: You already know something about that pattern feels off. That takes honesty. What does it feel like — those moments before you go out, when you're having that drink at home?
+
+--- Example 46 ---
+Context: Eight years. Maya and I have been friends for eight years. And I kept replaying [emotion:hopeless, defensiveness:high]
+Client: Eight years. Maya and I have been friends for eight years. And I kept replaying it all week, like, every night. And then Thursday I went out anyway because... I mean, what am I supposed to do, just sit at home and spiral? That's not who I am. Except I had more than I meant to, and I posted some stuff, and then my manager called Friday morning and just... *long pause* ...everything kind of collapsed at once. But it's fine. I'm fine.
+Therapist: What was it like to wake up Friday, before your manager called — that moment right when you first opened your eyes?
+
+--- Example 47 ---
+Context: Yeah. [long pause] I'm 65. If I wreck my liver now... I mean... [trails off] Wha [emotion:hopeless, defensiveness:none]
+Client: Yeah. [long pause] I'm 65. If I wreck my liver now... I mean... [trails off] What's the point anyway. [catches himself] That's a terrible thing to say, isn't it.
+Therapist: It doesn't sound terrible to me. It sounds honest. [pause] What did you mean — what's the point?
+
+--- Example 48 ---
+Context: ... Yeah. I guess it is. Because when he showed me those numbers I thought, I'm [emotion:frustrated, defensiveness:none]
+Client: ... Yeah. I guess it is. Because when he showed me those numbers I thought, I'm not some drunk stumbling around, I'm a guy having a few drinks in his own house. But then I thought — I mean, my liver doesn't care about my excuses, does it.
+Therapist: Your liver doesn't care about your excuses. What does that land on for you when you say it out loud like that?
+
+--- Example 49 ---
+Context: Yeah. I mean... I don't really know why I'm here, honestly. I saw something onli [emotion:frustrated, defensiveness:moderate]
+Client: Yeah. I mean... I don't really know why I'm here, honestly. I saw something online and I had like twenty minutes between classes so I figured whatever. It's probably nothing.
+Therapist: Something drew you in, even with everything you had going on today. What was it about what you saw that made you think, even just for a second, it might be worth stopping by?
+
+--- Example 50 ---
+Context: ...Okay. I mean. I hear you. But lots of things can cause that, right? Like, str [emotion:frustrated, defensiveness:moderate]
+Client: ...Okay. I mean. I hear you. But lots of things can cause that, right? Like, stress, or... I don't know, diet? I eat like crap on the jobsite. Could be that.
+Therapist: Sure, other things can contribute. What's your honest read on it, though? When you factor in a six-pack every night — what do you think is most likely driving those numbers?
+

@@ -1,0 +1,404 @@
+# Reinforcing Change Talk (Client Showing Motivation)
+# Source: AnnoMI Dataset (High-Quality Sessions)
+# These examples show how expert MI therapists respond when clients
+# express desire, ability, reasons, or need to change.
+
+--- Example 1 ---
+Client (motivated): Well, I don't think that I'm ready to cut down to seven drinks a week. That seems like a lot but I would consider cutting back to two drinks a night. I think that would be my goal.
+Therapist: If I gave you a scale from 0 to 10, 0 being not ready at all to cut back on drinking and 10 being very ready, what number would you be at?
+Technique: question
+
+--- Example 2 ---
+Client (motivated): I'd say an eight.
+Therapist: Okay. Why do you think it's not something less like a six?
+Technique: question
+
+--- Example 3 ---
+Client (motivated): Well, I'm more ready than a six because I'm ready to cut back on my drinking and I don't wanna make my depression any worse.
+Therapist: What would help you cut back to two drinks?
+Technique: question
+
+--- Example 4 ---
+Client (motivated): Maybe having less wine in the house.
+Therapist: Having less wine in the house will help?
+Technique: reflection
+
+--- Example 5 ---
+Client (motivated): Well, that was fine until I came here, uh, but now that I know about the health risk, uh, I have something I gotta think about.
+Therapist: So, on one hand, you like how beer tastes, uh, it's part of your social life to some extent, um, but on the other hand, you don't like the idea of it posing risks to your health over the long term?
+Technique: reflection
+
+--- Example 6 ---
+Client (motivated): I started watching what I ate and I ate less. I've been eating more fruits and vegetables. I've also been walking a lot. I'm walking up to 20 minutes a day now. I saw the weight come slowly off, um, and I felt better. But then when I watched it come back on again, you know, I gave up.
+Therapist: But you did have some success. Tell me how you felt when you lost the weight.
+Technique: reflection
+
+--- Example 7 ---
+Client (motivated): I felt great and I felt really proud of myself. I thought that this was something that I could do.
+Therapist: Okay. Well, it sounds like you realized that when you lost the weight you feel better and that it's gonna affect your overall health. So, tell me what you think changed that caused you to gain the weight back.
+Technique: reflection
+
+--- Example 8 ---
+Client (motivated): Well, this changes quite a bit. I mean, here I'm thinking that my fruit intake is making me healthier and actually it's making me fatter.
+Therapist: Indeed. Let me ask you something, knowing what you know now, how important is it to you to lose the weight by decreasing the amount of juice that you're currently taking in?
+Technique: question
+
+--- Example 9 ---
+Client (motivated): Obviously, I need to cut back on the fruit juice. But boy, do I love that OJ.
+Therapist: Oh, I understand. Let me ask you this, on a scale from 0 to 10, 0 meaning that there's no way you can do it, and 10 meaning that you're 100% confident that you can do it, how confident are you that you'll be able to reduce the amount of juice you're currently taking in.
+Technique: therapist_input
+
+--- Example 10 ---
+Client (motivated): Um, six or seven.
+Therapist: All right. So, you're not a zero. So, that tells me that you've got some confidence that this is doable, this is something you certainly can do it. Why are you not a zero?
+Technique: question
+
+--- Example 11 ---
+Client (motivated): I guess it's because I know that I need to do it to lose the weight.
+Therapist: So, you realize, again, that if you decrease the amount of juice you're taking in, you're gonna decrease your weight, you're gonna feel better, and you're gonna impact your po- health positively?
+Technique: reflection
+
+--- Example 12 ---
+Client (motivated): Getting the fruit juice of the house because I know if it's there I'll drink it. My wife does the shopping for us, so maybe if I ask her not to get the juice, that would solve it.
+Therapist: Okay. Now, if the juice was still there, can you think of anything else you could do?
+Technique: question
+
+--- Example 13 ---
+Client (motivated): I suppose I could replace it with, um, a low-calorie drink or drink more water.
+Therapist: Excellent. John, I get the impression that you want to stay in course with weight reduction. And the best way to do this will be to decrease the amount of juice that you're currently taking in. So if I saw you in two weeks and I asked you how much juice you're t- drinking and how you did it, what would you tell me?
+Technique: reflection
+
+--- Example 14 ---
+Client (motivated): I'd say I didn't have any and I substituted it with, um, sugar-free drinks.
+Therapist: Excellent. Well, it sounds like you have a plan. Same scale, 0 to 10, how confident are you that you can, uh, make this happen?
+Technique: question
+
+--- Example 15 ---
+Client (motivated): Great. It sounds good to me.
+Therapist: Excellent. I'll see you in two weeks.
+Technique: therapist_input
+
+--- Example 16 ---
+Client (motivated): Um, which I'm not doing but, um, yeah, I guess, I don't really wanna wreck my teeth 'cause-- Yeah, I didn't really notice any of the chipping.
+Therapist: There's nothing yet.
+Technique: reflection
+
+--- Example 17 ---
+Client (motivated): Just take them in.
+Therapist: So, you actually have to deliver them to the polytech, do you?
+Technique: question
+
+--- Example 18 ---
+Client (motivated): Yeah. Uh, I think you can post them, but I'll just drop them in.
+Therapist: Mm-hmm. So, when do you think you're gonna do that?
+Technique: question
+
+--- Example 19 ---
+Client (motivated): Uh, probably by the end of this week.
+Therapist: Mm-hmm. So, by the end of this week, so by next time, when you come here, as in, those forms will be at the polytech?
+Technique: question
+
+--- Example 20 ---
+Client (motivated): Not really fitting in. It kind of just gets in the way.
+Therapist: So, offending gets in the way of the life that you're starting to lead?
+Technique: reflection
+
+--- Example 21 ---
+Client (motivated): Yeah. 'Cause if there's just like if a mate said they're gonna go out and pick a car or something, she just bumps them out and then-then I don't know. She say that's stupid and stuff. And I don't know. It gives me something to do.
+Therapist: Mm. What do you think?
+Technique: question
+
+--- Example 22 ---
+Client (motivated): Just kind of stupid. Well, it's pointless, but still a bit of a laugh.
+Therapist: Mm. Yeah. 'Cause I was thinking about that dream that you've got about the job and a life with Donna and-
+Technique: other
+
+--- Example 23 ---
+Client (motivated): They don't lead me into trouble. But-
+Therapist: Okay. So tell me- tell me what it is that they do so I get a better understanding of it.
+Technique: question
+
+--- Example 24 ---
+Client (motivated): So just hang out instead of go and do stuff, like stupid stuff.
+Therapist: Okay. So-so Donna's helped calm you down and you'd like, um, them to calm down too?
+Technique: question
+
+--- Example 25 ---
+Client (motivated): Just they know that I'm serious.
+Therapist: Okay. So, how would they know you're serious?
+Technique: question
+
+--- Example 26 ---
+Client (motivated): But, like I feel guilty if they wanna go and have fun, and I'm not with them.
+Therapist: Okay. That's the second time you've used that word 'guilty'.
+Technique: other
+
+--- Example 27 ---
+Client (motivated): -so, it'd be cool if we could spend time together, like, with Donna and my mates.
+Therapist: Okay. So, it's almost as if you feel a bit torn because you wanna be with Donna, but you also wanna be with your-
+Technique: reflection
+
+--- Example 28 ---
+Client (motivated): And, um, my-my asthma is out of control too. So maybe those two.
+Therapist: Okay, and those are ones that are pretty related to each other-
+Technique: reflection
+
+--- Example 29 ---
+Client (motivated): Um, it's really stupid. Uh, I was at a pub crawl last night and you know how pub crawls are. You have a few drinks and then I thought it was a really good idea to catch up with my friends who are, yeah, they're in front of me. So I just like jumped off the stairs of the bus and I was wearing these like stilettos 'cause it was a 90s-themed pub crawl. Anyway, and then I just like fell on my ankle. It was really embarrassing.
+Therapist: Sounds like a wild night.
+Technique: reflection
+
+--- Example 30 ---
+Client (motivated): Um, per night, uh, like if we go out oh, it's a lot. It's like I can drink probably like seven or eight drinks like if I'm going hard. Um, and then, you know, like maybe when I get home from school, a long day at the library, have a beer or two, so.
+Therapist: All right. Do you have any concerns at all about your alcohol use?
+Technique: question
+
+--- Example 31 ---
+Client (motivated): Um, so that's a little- a little bit, uh, concerning I guess to me.
+Therapist: Do you feel like you have any reasons to kind of bring your alcohol use down within the limits?
+Technique: question
+
+--- Example 32 ---
+Client (motivated): Uh, any reason to? Uh, I guess health-health reasons.
+Therapist: Tell me more about that.
+Technique: question
+
+--- Example 33 ---
+Client (motivated): Um, well, I mean, clearly I don't feel good right now. Um, and it's-- I definitely feel more productive when I don't have a hangover. Uh, so I see a benefit.
+Therapist: So you can see some advantages to reducing the amount of drinking-
+Technique: reflection
+
+--- Example 34 ---
+Client (motivated): Well, she's concerned about my health and she cuts out all these articles from the paper about second-hand smoke and—
+Therapist: Wow, that she's been showing you and making you read.
+Technique: reflection
+
+--- Example 35 ---
+Client (motivated): Well, the big one of course is how it's affecting my wife and the family. Like my dad's 85, he still smokes. I mean, yeah, you know, sometimes I thought of quitting, but I mean, I don't know. I don't know if I can-- I don't know if I can quit.
+Therapist: So, let me make sure I understand kind of the whole scenario 'cause there's a lot of pieces to it. Your wife is on your case and your kids are ganging up too. So, you're sort of isolated, you're put in a corner and you're being told this is something you have to do, you have no choice in the matter.
+Technique: reflection
+
+--- Example 36 ---
+Client (motivated): Yeah. Yeah. I-I'm just, I don't want to lose her or my family over smoking.
+Therapist: I get the feeling that your relationship is really important to you. That you would do anything.
+Technique: reflection
+
+--- Example 37 ---
+Client (motivated): Well, yeah, I mean, we've been married over 25 years, and uh, we've never had any major problems. Like this is-- this is the first problem. I don't even really see it as a problem cause we used to both smoke and I was trying to accommodate them by smoking outside, but it's feeling like we're going like this and I'm just concerned, like if this keeps going, like.
+Therapist: So, it strikes me that the way that we're talking about it, it's like it's all or nothing. Either you keep smoking the way you are, things continue to go downhill and get worse, your wife gets more and more on your case, or you put your cigarettes down starting the moment you walk in the door tonight and never pick them up again. It's almost like one or the other. It strikes me that as well there might be some middle ground here that it took you a long time to learn how to be a smoker and maybe it's going to take some time to learn how to stop smoking.
+Technique: reflection
+
+--- Example 38 ---
+Client (motivated): Well, I mean, you brought up some kinda scary stuff like, you know, cancer risk or other things like that. And you know, being a mother, I-I don't want something to happen to me obviously.
+Therapist: Right. Well, that's a lot of information to think about. So given, the fact that these healthcare concerns are a possibility, and that you're worried about your family and you certainly have goals you want to succeed at, where are you in your consideration to making a change? In other words, what steps would you consider taking for this number to move closer to a 10?
+Technique: question
+
+--- Example 39 ---
+Client (motivated): Well, I mean, I could maybe try to cut back in the evenings a little bit.
+Therapist: Okay, great. Let's quantify that a little bit. So how many cigarettes would that be?
+Technique: therapist_input
+
+--- Example 40 ---
+Client (motivated): Well, right now, if I'm having like five or six, I could try to smoke three in the evening plus, you know, still the couple during the day.
+Therapist: Okay. So you-- that's cutting back quite a bit. That's a big step. So since we're kind of running out of time here today, I'm wondering if we could-- would be willing to come back in about four weeks to review this plan?
+Technique: question
+
+--- Example 41 ---
+Client (motivated): Uh, I guess it's okay. I mean, I just I want her to be healthy and safe.
+Therapist: It's really important for you to make sure that she's protected and that you make good decisions and do your research before you make any medical decisions for her.
+Technique: reflection
+
+--- Example 42 ---
+Client (motivated): Yeah, I guess so.
+Therapist: -on that. All right. So, I'd like to ask you, uh, kind of a scaling question about this 'cause I'm hearing that this feels really important to you that you'd be way up there on the high- on the high end of importance.
+Technique: reflection
+
+--- Example 43 ---
+Client (motivated): And like be able to look nice, you know.
+Therapist: Okay, all right.
+Technique: other
+
+--- Example 44 ---
+Client (motivated): I wanna be able to look nice.
+Therapist: Okay. So, what would help increase that confidence? What-- Because that sounds like where we really need to focus on. What's gonna help you feel more confident about this?
+Technique: question
+
+--- Example 45 ---
+Client (motivated): And some nights you do, so.
+Therapist: Yeah. So how often do you end up with no money in your pocket? Can be the times when you end up with money in your pocket
+Technique: question
+
+--- Example 46 ---
+Client (motivated): I don't know. I-I don't think it would have been too much of a problem. I mean I'm not a bad person, I wouldn't have, you know, wouldn't have continued to steal. It was just at the time that I was going through a rough patch. I wasn't intending to make it a long-term thing.
+Therapist: Yeah. Yeah, so you're not a bad person. Certainly, I don't make judgments about people being bad people. So that seems sort of actually thinking about this, you sensed that you could've stopped.
+Technique: question
+
+--- Example 47 ---
+Client (motivated): I know it's not good for him. I mean, I've read those things about ear infections and asthma and stuff and-and, uh, but other kids have ear infections and their parents don't smoke.
+Therapist: So on the one hand, you're worried about how your smoking might be affecting him and on the other hand, you're not so sure if it's really the smoking that's causing these problems?
+Technique: reflection
+
+--- Example 48 ---
+Client (motivated): No, I mean, we're two separate people. And like I said, I don't, I try really hard not to smoke around him. I'm pretty good about that. I-I don't let other people smoke around him. Um, so I, you know.
+Therapist: You're doing the best you can do.
+Technique: reflection
+
+--- Example 49 ---
+Client (motivated): Yeah. I-I know that I need to, and I, you know, keep every new year I say, "Okay, this year I'm gonna quit smoking" but then something happens and it-it just doesn't. And quitting doesn't happen.
+Therapist: It's on your to-do list. It's just not making it to the top?
+Technique: reflection
+
+--- Example 50 ---
+Client (motivated): I know- I know all the ways it's bad for me. And I don't want him to grow up thinking that it's okay to smoke. I don't want him to-to use any kind of-- I don't want him to chew or anything like that. Um, so I know I need to, especially before he gets old enough to understand what mommy's doing, but I just don't know if I can do it.
+Therapist: Okay. So it sounds like you have a lot of reasons why you'd like to quit. You have been successful quitting in the past, and right now you're just feeling a little bit hesitant about your ability to do it?
+Technique: reflection
+
+--- Example 51 ---
+Client (motivated): I don't know. I-I'd like some help. I just don't know what kind of help I need.
+Therapist: Sure. Well, if you'd be interested, that's something I can definitely talk to you about. There are a lot of new options that can actually help people be way more successful in their attempt at quitting. There's different medications you can try.
+Technique: therapist_input
+
+--- Example 52 ---
+Client (motivated): -and I want them to, um, be accepting and love me.
+Therapist: Okay. Do you have brothers or sisters?
+Technique: question
+
+--- Example 53 ---
+Client (motivated): So maybe people won't bug me about drinking or something.
+Therapist: Okay, you're kinda getting pressure from other people who are drinking, and it feels easier for you to-
+Technique: reflection
+
+--- Example 54 ---
+Client (motivated): Um, definitely, yeah. I mean, when I'm at parties and stuff and it's getting a little later, some people, um, that drink-- Like, drank too much, they start throwing up, or they get hurt, or they're really loud and obnoxious, and that's not fun for anybody.
+Therapist: Mm-hmm. So, you've seen a lot of other kids who-
+Technique: reflection
+
+--- Example 55 ---
+Client (motivated): -in my life, considering I have big plans for my future. So.
+Therapist: Okay. Can you expand on that a little bit more? What do you mean?
+Technique: question
+
+--- Example 56 ---
+Client (motivated): I mean, I don't think I would be, you know, drinking as much or going to parties as much if I'm studying for school, or in college, or trying to get in law school and things like that.
+Therapist: Okay, so, the-the alcohol is something that might make it harder to reach your goals?
+Technique: reflection
+
+--- Example 57 ---
+Client (motivated): Yeah, definitely.
+Therapist: Um, so, when you're sort of looking ahead, how often do you think you might be drinking, say, when you get to college?
+Technique: question
+
+--- Example 58 ---
+Client (motivated): -maybe, like, one drink every once in a blue moon.
+Therapist: Okay. So, you sort of have a plan to cut back on-
+Technique: reflection
+
+--- Example 59 ---
+Client (motivated): Yeah, definitely.
+Therapist: -your drinking eventually?
+Technique: reflection
+
+--- Example 60 ---
+Client (motivated): Well, I mean, I guess right now I would try to stop in high school, and once I get older, maybe just like, socially once in a while, but not anything big or anything.
+Therapist: Yeah, so, you don't feel the need to make any major changes, but you feel like you could make some adjustments that would make it easier or—
+Technique: reflection
+
+--- Example 61 ---
+Client (motivated): Definitely, yeah. That's a good word.
+Therapist: Okay. How important is it to you to make some adjustments to your drinking, on a scale of 1 to 10? Where 1 is not at all important, not something you're thinking about, and 10 is most important thing.
+Technique: question
+
+--- Example 62 ---
+Client (motivated): Because, um, it's not something I do not care about at all, but it's not something that's just constantly on my mind that I want to change about myself.
+Therapist: Okay. So, it is something you have thought about or something.
+Technique: reflection
+
+--- Example 63 ---
+Client (motivated): Yeah, yeah. Definitely.
+Therapist: Okay. And, how confident are you that you could make a change if you decide you wanted to on that same scale?
+Technique: question
+
+--- Example 64 ---
+Client (motivated): I'm not really into that whole scene, so, it's-it's not gonna bedifficult for me.
+Therapist: So, what number do you think you'd say?
+Technique: question
+
+--- Example 65 ---
+Client (motivated): Maybe like an 8 or 9.
+Therapist: Okay, and why'd you say 8 or 9 rather than even like 5 or 6?
+Technique: question
+
+--- Example 66 ---
+Client (motivated): Because, like I said, it's not a big part of my life. So, it's not really that difficult
+Therapist: Okay. All right. Well, kind of keeping that in mind, it sounds like, um, you do have sort of a-a vague plan to make some adjustments in your drinking at some point-
+Technique: reflection
+
+--- Example 67 ---
+Client (motivated): Um, probably to stop, maybe next party I go to, not have a drink at all.
+Therapist: Okay. Um, do you feel pretty confident that you could just stop completely?
+Technique: question
+
+--- Example 68 ---
+Client (motivated): So, I could just tell them, "Hey, I don't feel like having a drink today."
+Therapist: What-what might be some benefits of following through with that goal?
+Technique: question
+
+--- Example 69 ---
+Client (motivated): Um, definitely, I'll have like all my senses there and I'll be aware of everything that's going on.
+Therapist: Uh-huh. Anything else?
+Technique: question
+
+--- Example 70 ---
+Client (motivated): So, that would be one.
+Therapist: Okay. So, it's-- It sounds like you're actually pretty comfortable with setting a goal of not drinking anymore a-at least at the next part? and seeing how it goes.
+Technique: reflection
+
+--- Example 71 ---
+Client (motivated): Um, how would you, um, advise me to like get maybe my friends to stop drinking?
+Therapist: Oh, that's a great question. So, a lot of times, kids who are trying to cut back, it's harder if their friends are still drinking, and one of the easiest things is trying to have more activities that don't involve alcohol, but-
+Technique: therapist_input
+
+--- Example 72 ---
+Client (motivated): Yeah, that's a good idea.
+Therapist: -and it-it kinda, um, prevents them from trying to stuff something else in there. Do you think any of those things might work for you?
+Technique: question
+
+--- Example 73 ---
+Client (motivated): Yeah, for sure.
+Therapist: Okay. What about in terms of talking to your friends about it, have you thought about how you might approach with them or is that something else you'd like some tips about, about telling them about your plan to-
+Technique: question
+
+--- Example 74 ---
+Client (motivated): Yeah. I mean, at least my closest friends, for sure.
+Therapist: Okay, great. Any other concerns or questions? Anything else I can help with?
+Technique: question
+
+--- Example 75 ---
+Client (motivated): Sure. I can quit.
+Therapist: Okay. What makes you so confident?
+Technique: question
+
+--- Example 76 ---
+Client (motivated): Well, I mean, anything's possible. I mean, I-I guess I could maybe be convinced. Yeah. Is there some-- I mean, are there things I can try that would make me like want to quit smoking?
+Therapist: Well, there are a lot of products available now that can actually help you curb that urge to smoke. We have products that can help to replace nicotine, which can help to decrease withdrawal symptoms that you might experience when quitting or cutting down and also some medications that your doctor could prescribe for you that might take away even some of the desire to smoke.
+Technique: therapist_input
+
+--- Example 77 ---
+Client (motivated): That's a good point. I hadn't really thought about that. That-that's a good idea. Yeah.
+Therapist: Okay. Well, it sounds like you're really here just for information today. I'm happy to help you pick out some of these products if and when you decide that the time is right for you.
+Technique: therapist_input
+
+--- Example 78 ---
+Client (motivated): Um, I really want to start working out again. Definitely wanna get back in it, have a routine, and just be healthy.
+Therapist: Okay, and-and why would you want to make this change?
+Technique: question
+
+--- Example 79 ---
+Client (motivated): Just, I don't feel comfortable.
+Therapist: Yeah. So, you're not feeling comfortable with the way that, you said, your clothes fit.
+Technique: reflection
+
+--- Example 80 ---
+Client (motivated): -exercising. So, I want-- I really just want to go get back in a routine.
+Therapist: So, to heal-- feel healthy for yourself as well be a good role model for your kids?
+Technique: reflection

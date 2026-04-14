@@ -1,0 +1,404 @@
+# Handling Sustain Talk (Client Resisting Change)
+# Source: AnnoMI Dataset (High-Quality Sessions)
+# These examples show how expert MI therapists respond when clients
+# express resistance, ambivalence, or reasons NOT to change.
+
+--- Example 1 ---
+Client (resisting): Yeah, but only on the weekend.
+Therapist: Okay. And then when you do drink alcohol, you typically have five or six drinks.
+Technique: reflection
+
+--- Example 2 ---
+Client (resisting): So, uh, are you saying I drink too much?
+Therapist: How would you define drinking too much?
+Technique: question
+
+--- Example 3 ---
+Client (resisting): Well, I-- If-if I was getting fallen down drunk or if I drink every night. Um, it's not like I get sloppy drunk or anything.
+Therapist: Mm-hmm. Well, in this country, the guidelines are men can drink up to 14 drinks a week or up to four on one occasion and still be low risk.
+Technique: therapist_input
+
+--- Example 4 ---
+Client (resisting): So I'm already at the week limit. And then I have four beers a night. Are you sure?
+Therapist: So a limit of four a night doesn't feel right to you?
+Technique: reflection
+
+--- Example 5 ---
+Client (resisting): I have five or six beers when I go out with friends to a bar. It's not a problem for me.
+Therapist: You're not alone in feeling that way. Uh, binge drinking can feel normal to some people.
+Technique: reflection
+
+--- Example 6 ---
+Client (resisting): I don't chug a lot of beers in a row. I have about five or six beers throughout the entire evening.
+Therapist: Mm-hmm. Well, technically, we define binge drinking as having more than four drinks on one occasion.
+Technique: therapist_input
+
+--- Example 7 ---
+Client (resisting): But I'm healthy. What health problems are you talking about?
+Therapist: Well, uh, we know if someone binge drinks over time, there's kind of two categories of risk. There's the short-term risk where someone who binge drinks is more likely to fall down, hurt themselves through an accident, uh, they're more likely to drive while under the influence. Uh, but over the long term, binge drinking can also, uh, cause things like heart disease, uh, different kinds of cancer, liver problems obviously, and then even mental health issues like depression and anxiety are more likely to happen.
+Technique: therapist_input
+
+--- Example 8 ---
+Client (resisting): Well, I-I like beer. I like the way it tastes, I like the way it makes me feel. Uh, like when I'm around friends and it's not a problem for me.
+Therapist: And so what about your drinking do you not like or is there anything that worries you about your drinking?
+Technique: question
+
+--- Example 9 ---
+Client (resisting): Well, I think it's because I've been eating more fruits and vegetables, that- that's it.
+Therapist: And how many servings of fruits and vegetables on average per day would you have?
+Technique: question
+
+--- Example 10 ---
+Client (resisting): -and it looks pretty cool.
+Therapist: I guess that it does.
+Technique: other
+
+--- Example 11 ---
+Client (resisting): Like like getting on the piss, but with Donna, there kind of keeps me busy.
+Therapist: Mm. So the drinking is something that we talked about can make it easier for you to offend.
+Technique: reflection
+
+--- Example 12 ---
+Client (resisting): Yeah. I just wanna have a bit of a laugh and like go smash some windows or go and nick a car or something, but yeah. It's kind of harder to think straight.
+Therapist: It's harder to think straight when you've been drinking?
+Technique: question
+
+--- Example 13 ---
+Client (resisting): I'd probably just go be stupid with my mates.
+Therapist: Okay. So Donna at the moment who kind of being there is like a strength?
+Technique: reflection
+
+--- Example 14 ---
+Client (resisting): Yeah. You don't really think about that. Well, just in the moment.
+Therapist: Okay. So what-wh-- in the moment, what are you thinking?
+Technique: question
+
+--- Example 15 ---
+Client (resisting): Just have a bit of fun. Not really thinking.
+Therapist: Not really thinking or simply not thinking beyond the next-
+Technique: question
+
+--- Example 16 ---
+Client (resisting): No. Just, like, it's not normally my idea, like someone else would just suggest it and you kind of just, yeah.
+Therapist: So it's not your idea. And you also go along with it?
+Technique: question
+
+--- Example 17 ---
+Client (resisting): Yeah. You can't really be like, "Oh no," just give me shit.
+Therapist: Mm-hmm. What would happen if you say no?
+Technique: question
+
+--- Example 18 ---
+Client (resisting): I don't think, like, I am not sure they like it.
+Therapist: Then so when you're-- so you're spending less time with them and more time with Donna?
+Technique: question
+
+--- Example 19 ---
+Client (resisting): I don't know, something about changing my life even more. You know, the smoking's been changed, and now it's, you know, cut down the drinking, get rid of those extra smokes, get rid of my dog. I don't know what else have to do.
+Therapist: So your asthma has been acting up and there's a lot of stuff, not just the asthma going on?
+Technique: reflection
+
+--- Example 20 ---
+Client (resisting): Yeah, there's a lot of stress too. My wife's still on maternity leave, she's not getting paid, she's with the baby right now. And I'm the only person that's working right now, and plus I got to change all these things that are going on in my life.
+Therapist: Mm-hmm. Almost—
+Technique: reflection
+
+--- Example 21 ---
+Client (resisting): Um, the fact that they want me to get rid of Oscar, that's-that's my dog.
+Therapist: So your dog, and-and the doctor's saying the dog's—
+Technique: reflection
+
+--- Example 22 ---
+Client (resisting): Which I don't- I don't- I don't- I don't buy it and I can't just get rid of him like that, but it's something that's there.
+Therapist: That's pretty shocking to be told that you have to get rid of your dog.
+Technique: reflection
+
+--- Example 23 ---
+Client (resisting): Yeah. The dog has been there before my wife. I know I've had him longer.
+Therapist: Hmm. So that's a huge stress right now?
+Technique: reflection
+
+--- Example 24 ---
+Client (resisting): No. It's just overwhelming when you see them everything they're, you know?
+Therapist: Right. Well, so where would you-- I mean, if you-you had to pick somewhere, one or two kind of high priorities or-or things to talk about in our time this morning, where would you wanna start?
+Technique: question
+
+--- Example 25 ---
+Client (resisting): It was a lot of fun but I didn't do any dancing after that.
+Therapist: No, I guess that that would be the end of your, uh, shaking and moving. I know-- I wonder if you'd be open to exploring your alcohol use and what that looks like during the week.
+Technique: question
+
+--- Example 26 ---
+Client (resisting): No. I-I don't know. It's normal for university students I feel.
+Therapist: Okay, so at this point, you're not too concerned and you think that, you know, this is what the other students are doing?
+Technique: reflection
+
+--- Example 27 ---
+Client (resisting): Yeah. Yeah, well, the only reason I'm here is 'cause my wife thinks I've got a problem with smoking. I've been smoking all my life and, uh, six months ago, uh, she thought, she got into this health kick, right? And now everyone who smokes is evil. And, uh, so that's why I'm here just to please her, get her off my back and—
+Therapist: So, you're not too happy to be here. This is the last thing that you want to be doing this afternoon.
+Technique: reflection
+
+--- Example 28 ---
+Client (resisting): Yeah, yeah. I'm only here because my wife forced me to come, you know. Like this has come to a head six months of just nagging me, relentless every day, because she was able to quit smoking and now I have to quit.
+Therapist: So, let me ask you this, Bob, what are some of your wife's concerns about your smoking?
+Technique: question
+
+--- Example 29 ---
+Client (resisting): It's not like I was gonna sell it or anything. It's like—
+Therapist: Just enough for your own use?
+Technique: question
+
+--- Example 30 ---
+Client (resisting): Yeah, whatever, you know. It's California, no one cares.
+Therapist: Yeah. Yeah. Yeah.
+Technique: other
+
+--- Example 31 ---
+Client (resisting): Well, I-I'm just kinda surprised because, I mean, I don't smoke or drink that much. And I mean, compared to people I work with, you know, I-I smoke a lot less, and I feel like I've actually been trying to keep it pretty low.
+Therapist: So you're consciously trying to cut back.
+Technique: reflection
+
+--- Example 32 ---
+Client (resisting): Oh, I-I don't know if I'm comfortable with that. I've been reading a bunch of stuff lately about them.
+Therapist: Hmm. Can you tell me more about your concerns about vaccines?
+Technique: question
+
+--- Example 33 ---
+Client (resisting): Uh, yeah, well, I was just- I was reading that it's better to let them build up their immunity, like, naturally and stuff in their immune systems.
+Therapist: Okay, so you were thinking that maybe exposing Lily naturally to these diseases would be a better choice than using vaccines to help her get stronger?
+Technique: reflection
+
+--- Example 34 ---
+Client (resisting): Well, yeah. I mean, I had chickenpox as a kid, and now I'm immune. Right? So.
+Therapist: That's right. Having chickenpox as a child means that you are less likely to have chickenpox as an adult because you've developed a-a natural immunity. Uh, but is it okay if I offer you a little bit more information about the other vaccines that we're- we were going to give her Lily today?
+Technique: question
+
+--- Example 35 ---
+Client (resisting): But I know when I go home and I see the food, it's probably gonna drop back down to a four.
+Therapist: Okay. All right. So, let's talk about that, um, so we should just assume we're gonna be at a four.
+Technique: reflection
+
+--- Example 36 ---
+Client (resisting): It's not an issue.
+Therapist: Yeah. See one of the things I'll be really interested in-in talking with you about is, um, yeah, what's-what's the, um, what's the worst thing that has happened in terms of pokies, in terms of you know behavior around the pokies, what's the worst thing that's happened?
+Technique: question
+
+--- Example 37 ---
+Client (resisting): I don't know. It's if you're at the pub, you're, you know, that-that you're out there.
+Therapist: That-that you're up for the money and-and then-then they slot you.
+Technique: reflection
+
+--- Example 38 ---
+Client (resisting): It's the unlucky ones.
+Therapist: Yeah, you might be lucky then. So-so what do you reckon like in terms of like you're saying you're not sort of sure if that's an issue, and that's probably something that we can be working with, uh, figure it is an issue.
+Technique: question
+
+--- Example 39 ---
+Client (resisting): A bit of a rush, I suppose.
+Therapist: A bit of a rush. Yeah. 'Cause other people I have worked with say that, yeah, sometimes they get a bit of a rush, that somehow the rush takes over and they don't know when to stop. Not sure if that's what- if that's what it's like for you, but other people have told me that, so.
+Technique: therapist_input
+
+--- Example 40 ---
+Client (resisting): I don't know, I suppose it's lead me to be here, maybe. I don't know.
+Therapist: Yeah, yeah. Thinking about your friends, you know, how would you soft of think about your friends 'cause, you know, I guess you go out with your girlfriends and stuff.
+Technique: question
+
+--- Example 41 ---
+Client (resisting): Well, um, It's just me and him and I do smoke. Um, I try really hard not to smoke around him, but I-I've been smoking for 10 years except when I was pregnant with him. But it-- everything is so stressful being a single mom and-and my having a full-time job. And so it's just-- that's why I started smoking again.
+Therapist: You have a lot of things going on and smoking's kind of a way to relax and destress.
+Technique: reflection
+
+--- Example 42 ---
+Client (resisting): Yeah. Some people have a glass of wine. I have a cigarette.
+Therapist: Sure. And it sounds like you're trying not to smoke around him. Why did you make that decision?
+Technique: reflection
+
+--- Example 43 ---
+Client (resisting): Right. Yeah. I mean, he doesn't have asthma. Yeah. He-- I don't-- he hasn't had a lot of other problems that his other friends have, so. And I've thought about quitting before in the past, but I just don't- I just don't see how it's possible right now.
+Therapist: What made you decide to quit smoking when you were pregnant?
+Technique: question
+
+--- Example 44 ---
+Client (resisting): Probably like a 5 . Kind of in the unsure area. Like I know I've done it before, so I know I can do it, but at the same time, it just seems really hard. And it's not the same situation.
+Therapist: Well, what made you say five rather than two or three?
+Technique: question
+
+--- Example 45 ---
+Client (resisting): Um, not much, maybe like one or two drinks at the most.
+Therapist: Okay. Can you tell me a little bit about how alcohol fits into your overall social scene?
+Technique: question
+
+--- Example 46 ---
+Client (resisting): Not really much.
+Therapist: So, one or two weekends a month you're in a situation where there is alcohol?
+Technique: reflection
+
+--- Example 47 ---
+Client (resisting): Not more than two drinks.
+Therapist: Okay. So, the-the absolute most-
+Technique: reflection
+
+--- Example 48 ---
+Client (resisting): Yeah, yeah, relaxed.
+Therapist: Okay. Uh, anything else?
+Technique: question
+
+--- Example 49 ---
+Client (resisting): Um, I know it's definitely risky, but, I mean, I guess, we still do it. [chuckles]
+Therapist: Uh-huh. So, it's kind of something that you're—
+Technique: other
+
+--- Example 50 ---
+Client (resisting): It's just there.
+Therapist: It's just there? Okay. And, I'm curious, you mentioned, you know, your friends are important to you, and your family's important to you, and, sort of fitting in is important to you. How does alcohol play a role with that?
+Technique: question
+
+--- Example 51 ---
+Client (resisting): -alcohol use, but, friendships, I mean, when I'm hanging out with my friends, or we're at a party or something, there's usually alcohol involved.
+Therapist: Okay. So, from your family perspective, the drinking is not something that fits very well?
+Technique: reflection
+
+--- Example 52 ---
+Client (resisting): -it ties in with the whole belonging thing.
+Therapist: Okay. Well, when you think about your drinking and, sort of, looking forward in 5 years or 10 years, how do you think that drinking might fit in with your life?
+Technique: question
+
+--- Example 53 ---
+Client (resisting): Yeah, I hope so. Um, my workplace has just gone smoke-free. I-I'm not-not very happy about it. I'm gonna keep smoking, but I was wondering if there's anything that-that can help me like get through the day. It's like, you know, go get my beer and smoke cigarettes after work.
+Therapist: So your workplaces went smoke-free and you're not too pleased, huh?
+Technique: reflection
+
+--- Example 54 ---
+Client (resisting): No. I'm not gonna quit smoking. I mean, I like it. It helps me relax. So, I mean, I don't see what the big deal is.
+Therapist: Okay. Tell me a little bit about how smoking fits in your day. It'll help with the—
+Technique: question
+
+--- Example 55 ---
+Client (resisting): I mean, I smoke a little less than a pack a day. It's not too bad. Um, I've probably smoked for the last five years, but I-I-I mean, could quit if I wanted to, but I don't really want to right now.
+Therapist: Okay. So you feel like, right now, smoking's a pretty important part of your life. It's not something you're ready to change, but if the time came when you did decide to quit, you feel pretty confident that you could go ahead and do that.
+Technique: reflection
+
+--- Example 56 ---
+Client (resisting): Well, I mean, I don't see why I couldn't, I-- although I have not ever tried to quit, it's just something that I do for fun, you know, on breaks at work, in the morning, and after work.
+Therapist: Mm-hmm. And so in terms of, uh, uh, readiness to actually go ahead and make a quit attempt, where do you think you fall on the scale of 1 to 10, where one is, I'm not considering it at all, and 10 is, I'm definitely ready, I wanna quit.
+Technique: question
+
+--- Example 57 ---
+Client (resisting): I am probably a two. I-I haven't even thought about quitting and until this great announcement at work today, I- I'm totally not gonna quit smoking.
+Therapist: Okay. What made you say two instead of one?
+Technique: question
+
+--- Example 58 ---
+Client (resisting): Okay. Well, that’s good information. I mean, I'm not gonna do anything today. I just need to know my options, but that's encouraging. If I decided to quit smoking, I-I do have at least tools to help me.
+Therapist: Sure. And back to that scale, you mentioned, you said you were a two. What do you think it would take to move you up to a four or five?
+Technique: question
+
+--- Example 59 ---
+Client (resisting): I don't know. I guess if my friends, like if one of my friends decided to like quit with me, that would probably help too, but I-- all my friends love to smoke, so I don't see that happening in the near future.
+Therapist: Sure. I wonder if now that your workplace is going smoke-free, if there will be some people at work who planning to quit.
+Technique: question
+
+--- Example 60 ---
+Client (resisting): -unsuccessfully, uh,--
+Therapist: Tell me a little bit about what happened with the-the Chantix.
+Technique: question
+
+--- Example 61 ---
+Client (resisting): Well, um, I don't know if it's my lack of willpower but, um, also had ve-very bad side effects from it so.
+Therapist: Mm-hmm. Mm-hmm. Wh-What sort of if-if you are willing to talk about what kind of side effect—
+Technique: question
+
+--- Example 62 ---
+Client (resisting): -um, stomach problems, and agitation. Yeah.
+Therapist: Oh really. You know, and I've heard that too, Carrie, that people especially you know those are, um, some people seem to have a lot of success but when people do have the adverse side effects they are really pronounced like the ones you just described.
+Technique: therapist_input
+
+--- Example 63 ---
+Client (resisting): Right and it didn't stop me from smoking as well, so that's, uh, [laughs]—
+Therapist: Want the good [crosstalk] no good right? And how long ago was that that you—
+Technique: question
+
+--- Example 64 ---
+Client (resisting): -because, um, you know, um, being at my age I'm going through the menopause stage which is part, you know, you'll have that anyways and then having 15-year-old that causes a little bit more stress so you don't need any extra stress, I don't think, as far as I'm concerned.
+Therapist: So, it's already piled I'm thinking up for you, you don't need anything else so you're looking for some relief and not something to make you feel worse.
+Technique: reflection
+
+--- Example 65 ---
+Client (resisting): Right, exactly.
+Therapist: Um, have there been some times in the past where you were able to quit smoking completely?
+Technique: question
+
+--- Example 66 ---
+Client (resisting): And even then I-I snuck out and had a cigarette, you know.
+Therapist: Okay. So, what's the longest you've ever gone without a cigarette including being in the hospital?
+Technique: question
+
+--- Example 67 ---
+Client (resisting): But it was not really by choice, it was by, um, the situation I was in, I wasn't able to smoke so, yeah.
+Therapist: You were forced to-
+Technique: reflection
+
+--- Example 68 ---
+Client (resisting): -I was craving my cigarette.
+Therapist: You were [unintelligible 00:06:04]
+Technique: other
+
+--- Example 69 ---
+Client (resisting): I don't know, and I still don't wanna charge it.
+Therapist: So, it's something you just aren't willing to do?
+Technique: question
+
+--- Example 70 ---
+Client (resisting): No. I got a lot of stuff to do, I don't need to charge it.
+Therapist: So, it's not really a priority for you right now, to be charging it?
+Technique: reflection
+
+--- Example 71 ---
+Client (resisting): I guess so. I don't know. I-I-I honestly don't care what the consequences are.
+Therapist: Okay. Um, would it be okay if I do share you what will happen if you don't charge your battery.
+Technique: question
+
+--- Example 72 ---
+Client (resisting): It really [unintelligible 00:00:58]-- I don't care.
+Therapist: Um, so I know that you, you know, you know the consequences of it, and yet you're sharing with me it's just not a priority for you at this time.
+Technique: question
+
+--- Example 73 ---
+Client (resisting): Yeah, whatever. I Know you got to do your job, but I don't care.
+Therapist: Okay. Um, any questions about that? Any questions about kind of the next steps from here?
+Technique: question
+
+--- Example 74 ---
+Client (resisting): I mean, whatever happens happens. I'll deal with it when it happens.
+Therapist: So, your confidence that you'll be able to deal with possibly going back to detention?
+Technique: question
+
+--- Example 75 ---
+Client (resisting): Yeah, that'd be okay, yeah, you know, I'm not so certain I'm even gonna take the medicine cause, you know, he mentioned muscle weakness, uh, you know, I-I know I got high cholesterol, uh, and that I'm running the risk of stroke and heart attack down line but yeah, he mentioned muscle weakness and I've been thinking about that and, uh, you know I'm a truck driver and I got a haul the heavy boxes out of the truck on a dolly, and I can't afford that right now. Just that-that muscle weakness, uh, that-that bothers me.
+Therapist: So-so on the one hand, the doctor talked to you about high cholesterol, down the line possibly causing a stroke or heart attack-
+Technique: reflection
+
+--- Example 76 ---
+Client (resisting): Yeah, that's the problem, that's what I face now with my job.
+Therapist: Especially with your job and-
+Technique: reflection
+
+--- Example 77 ---
+Client (resisting): Yeah, I've thought about it. I'm just-- It's not my cup-- I-I-I hear it from everybody, and, uh, I've tried- I've tried before, didn't work. I get it all the time.
+Therapist: Okay. And it's like here I am one more person, the next- the next doctor who's saying, "You need to quit smoking, David."
+Technique: therapist_input
+
+--- Example 78 ---
+Client (resisting): Yeah, I-I-I know I'm not an idiot and people know that smokers are, you know, "How can you smoke today?" [coughs] It's just not that easy to, uh, quit.
+Therapist: Mm-hmm, and if it was as easy as the doctor is saying or your partner-
+Technique: reflection
+
+--- Example 79 ---
+Client (resisting): No matter what kinda talk I get or what they come up with.
+Therapist: It sounds like almost you've tried a lot of things that are out there and it's not something that you're—
+Technique: reflection
+
+--- Example 80 ---
+Client (resisting): Yeah, a while, quite a while. Yeah.
+Therapist: Yeah. Okay. Well, I really appreciate you being willing to even talk about it. And I get that right now, this is not something that you wanna pursue. Would it be okay if I brought it up in our next visit? 'Cause I-I know that you've said you don't want a lecture, but on the other hand, I am- I am concerned.
+Technique: therapist_input

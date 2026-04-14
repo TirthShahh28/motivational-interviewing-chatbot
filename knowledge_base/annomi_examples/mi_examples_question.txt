@@ -1,0 +1,323 @@
+# MI Technique Examples: Open Question (Exploring)
+# Source: AnnoMI Dataset (High-Quality Sessions)
+# These are real exchanges from expert Motivational Interviewing sessions.
+
+--- Example 1 ---
+Client: It's just because I know that once I make the decision, I know I can do it. It's making the decision in the first place.
+Therapist (Open Question (Exploring)): Okay. And so you mentioned the- you know, quite a few reasons why you would like to cut down. Um, have you thought at all about how you might go about doing that?
+
+--- Example 2 ---
+Client: Well. Yeah. Well, yeah, I-I'd like to. I don't know, is it-- Can you- can you drink with them, some of these other ones?
+Therapist (Open Question (Exploring)): Well, you know, uh, Scott, well, tell me a little bit since you brought that up. Yeah, obviously, drink and tell me a little bit about your [unintelligible 00:07:35]
+
+--- Example 3 ---
+Client: Yeah, like this girl Ruth that I know she's-she's, uh, got a serious job and she kind of does that on the side. [laughs]
+Therapist (Open Question (Exploring)): So, um, what are the uh, uh, what would be the benefits to you right now to having him out of the house?
+
+--- Example 4 ---
+Client: Um, I don't really remember. I know, uh, I dunno, I probably had five or six drinks, I would think, something like that.
+Therapist (Open Question (Exploring)): Mm-hmm. Five, six drinks, like?
+
+--- Example 5 ---
+Client: Yes, it's the most important because it's a little lacking, so I know that that's something that is very important to me.
+Therapist (Open Question (Exploring)): Okay. Would you like to talk more about that?
+
+--- Example 6 ---
+Client: Um, I mean, I guess- I guess I need some strategies for figuring out how to ease stress without, I guess, getting high.
+Therapist (Open Question (Exploring)): Okay. And that's a very good reason for being here. Um, can you talk to me about maybe some of your-- the goals that you have?
+
+--- Example 7 ---
+Client: I mean, I know if-if I lose my job, she leaving me. She's been getting after me about smoking weed for a long time, so—
+Therapist (Open Question (Exploring)): Okay. So that's where you wanna get to. Um, what do you think that you need to do in the next, like, month or so to maybe help going in that direction?
+
+--- Example 8 ---
+Client: Um, well, I wanna count my drinks so I don't have more than two and I want to stop drinking once I start feeling drunk.
+Therapist (Open Question (Exploring)): Great. Who could help you reach this goal?
+
+--- Example 9 ---
+Client: I guess- I guess more problems with police and school and I really don't have like the time or the money for any of that.
+Therapist (Open Question (Exploring)): How important is it that you avoid future problems with the police or school, Dylan?
+
+--- Example 10 ---
+Client: Right. Yeah. Especially during times when I'm more active is when I noticed the biggest cha-change in energy and mood.
+Therapist (Open Question (Exploring)): Yeah. Tell me more about that, those previous times that you've been active.
+
+--- Example 11 ---
+Client: I-it was. A-and it was huge for me cause I'd never really been a runner, you know, but it-it was very motivating, and-and—
+Therapist (Open Question (Exploring)): What'd you like about it?
+
+--- Example 12 ---
+Client: Yeah. I just sort of did a bit of search on the internet and stuff and just read about this place, so I just thought I'll—
+Therapist (Open Question (Exploring)): Right. So it sounds like you thought there was something that, uh, that you needed to look at, something that was concerning you?
+
+--- Example 13 ---
+Client: It doesn't fit, you know. It's the opposite side of the coin. You know, I love to do it, but I don't think it's right.
+Therapist (Open Question (Exploring)): So what would it take for quitting or changing your smoking to be something that was more important, that raised it up in the list of priorities for you?
+
+--- Example 14 ---
+Client: But, um, definitely some of the ideas people can have when they're stup- when they're drunk and can be really stupid.
+Therapist (Open Question (Exploring)): Mm-hmm. So you're trying to, like you said, not engage in really dangerous activities?
+
+--- Example 15 ---
+Client: I didn't understand, like, what you're supposed to write down. Like, yeah. I'm not good at this, maybe too confusing.
+Therapist (Open Question (Exploring)): Yeah. So, when you've had to write things or fill out forms before, how-how's that been for you?
+
+--- Example 16 ---
+Client: So, maybe I would just, uh-- I think I'll just have people come over to my house instead of going somewhere else, you know.
+Therapist (Open Question (Exploring)): That would work for you?
+
+--- Example 17 ---
+Client: She just wants me. I mean, she just wants someone to be there. Me. She-she remembers me and she wants- she wants him.
+Therapist (Open Question (Exploring)): She wants him. So which him does she want, Daryl?
+
+--- Example 18 ---
+Client: I mean, not like they have been because we've only just started on the new road, but I mean, yeah, tense is the right word.
+Therapist (Open Question (Exploring)): Second, I'd like to talk, Daryl, about this all- whole idea, that's this crossroads idea, yep? So on the one hand here, you've got this 12 year history of being in the other system and done some time and being away from Fiona, but you're now back, sitting back together, and you've got some choice about where to go. So, in that 'where to go', what ideas have you been thinking about in terms of where this-this Daryl, non-dealing [crosstalk] guy—
+
+--- Example 19 ---
+Client: Well, I'm more ready than a six because I'm ready to cut back on my drinking and I don't wanna make my depression any worse.
+Therapist (Open Question (Exploring)): What would help you cut back to two drinks?
+
+--- Example 20 ---
+Client: Well, yeah, I've been to the doctor about maybe last year for a physical, but-- I mean, everything showed up to be fine, so—
+Therapist (Open Question (Exploring)): Okay. But you feel that you feel good?
+
+--- Example 21 ---
+Client: Um, well, I can talk to my housemate tomorrow night. I'm pretty sure that he doesn't work tomorrow night so he'll be around.
+Therapist (Open Question (Exploring)): That's great. And how do you want to get the information on injecting?
+
+--- Example 22 ---
+Client: Mm-hmm. Um, yeah, my asthma has just been out of control lately and my doctor says that might be connected to Oscar.
+Therapist (Open Question (Exploring)): Hmm. So, what- can you let me know or-or what do you know about your asthma and the things that affected or might make it worse?
+
+--- Example 23 ---
+Client: No. I'm not gonna quit smoking. I mean, I like it. It helps me relax. So, I mean, I don't see what the big deal is.
+Therapist (Open Question (Exploring)): Okay. Tell me a little bit about how smoking fits in your day. It'll help with the—
+
+--- Example 24 ---
+Client: Um, I really want to start working out again. Definitely wanna get back in it, have a routine, and just be healthy.
+Therapist (Open Question (Exploring)): Okay, and-and why would you want to make this change?
+
+--- Example 25 ---
+Client: Yeah, I know that she said I have to get so many hours in, but I don't- I don't know. I kind of was half-listening.
+Therapist (Open Question (Exploring)): Okay. So why don't you tell me what you remember from having your conversation with your case manager? What do you know so far about community service?
+
+--- Example 26 ---
+Client: I think if I made the decision that I was going to, for sure, then I think definitely like a 10 I know it'd be going through.
+Therapist (Open Question (Exploring)): Oh, wow. Okay. Why do you say 10?
+
+--- Example 27 ---
+Client: And maybe just having that faith in myself that, you know, that I can do it instead of just thinking that I can't.
+Therapist (Open Question (Exploring)): So that positive self-talk could really go a long way for you?
+
+--- Example 28 ---
+Client: I guess, I'm-- It made me think about how much money I have been losing recently. So, yeah. I'm happier to be here. [chuckles]
+Therapist (Open Question (Exploring)): Okay, okay. So, there's a shift from last time?
+
+--- Example 29 ---
+Client: Uh, well I have one older brother he's about eight and a half old- years older than me. My parents, and I have a dog [laughs].
+Therapist (Open Question (Exploring)): Cute. What kind of dog?
+
+--- Example 30 ---
+Client: Yeah, I-I-I got to be careful with it. If I take more than a hit or two of it, it-it-it can be a bit of a problem.
+Therapist (Open Question (Exploring)): Yeah. Why, what happens if you take a little too much of it?
+
+--- Example 31 ---
+Client: Mm. Let's see. Well, you know, I'm really not sure, I kind of, you know. Um, I'm having a hard time with that. Um.
+Therapist (Open Question (Exploring)): Tell me a bit more about that.
+
+--- Example 32 ---
+Client: Yes. Sometimes a pain in-in the body. It's, uh, to [unintelligible 00:01:27] handle and-and the pain inside of me.
+Therapist (Open Question (Exploring)): So you were in a lot of pain?
+
+--- Example 33 ---
+Client: Well, I'd like to see my children settled and my grandchildren growing up and I should,suppose I should be an example to them.
+Therapist (Open Question (Exploring)): So can it be in there for your-your family's important to you?
+
+--- Example 34 ---
+Client: Not really. I mean, I just normally see if my mom can watch my son, so, you know, I haven't really looked around.
+Therapist (Open Question (Exploring)): Okay. Well, one thing you could consider is talking to one of our social workers, they sort of specialize in helping people who have a lot on their plate identifying resources that they may need, uh, things you haven't thought of or aren't aware of. So, I don't know, would you be interested in doing something like that?
+
+--- Example 35 ---
+Client: I have done, and my eyes have, you know, just become like mush after all the reading I've done on this situation.
+Therapist (Open Question (Exploring)): What did you find out?
+
+--- Example 36 ---
+Client: Oh, I would. I really would because, like I said, I'm a brand new smoker. I didn't know I was a smoker until I came to see you.
+Therapist (Open Question (Exploring)): Mm-hmm. Well, if you think about it on a scale of 1 to 10 where 1 is really don't think you could do it at all and 10 is really confident that you could quit if you tried, where do you think you fall?
+
+--- Example 37 ---
+Client: And that can't be a ten there's nothing as ten in life I feel. Like there's too many factors but I feel like I'm determined to.
+Therapist (Open Question (Exploring)): Why did you say eight or nine rather than six or seven?
+
+--- Example 38 ---
+Client: Seems like a bit of an unrealistic dream. Um, and I'd like to take the first step but, uh, that's gonna be easy.
+Therapist (Open Question (Exploring)): No, no. That'll be easy. So what is the first step for you?
+
+--- Example 39 ---
+Client: Yeah, I guess. I-I think I probably know a couple of friends that don't drink and I don't really, uh, probably--
+Therapist (Open Question (Exploring)): Then, who are- who-who-who are they?
+
+--- Example 40 ---
+Client: Um, yeah. I was drinking the last time I had sex. Um, the guy had been drinking too, and we didn't use a condom.
+Therapist (Open Question (Exploring)): Do you remember giving consent when you had sex?
+
+--- Example 41 ---
+Client: -but I don't-I don't sense it, I don't feel it and, um, I think that's just what I'm going by and I feel like probably 98% true.
+Therapist (Open Question (Exploring)): Mm-hmm. So now you have this information and it's on your mind, is there-- have you given any thought about what you might want to do about it?
+
+--- Example 42 ---
+Client: It is the little things, yeah, like waking up, and having a cup of tea and sitting on the porch is kind of cool.
+Therapist (Open Question (Exploring)): It's kind of cool?
+
+--- Example 43 ---
+Client: Wow. I knew my doctor didn't like me drinking the amount that I did but I didn't know that seven was the limit.
+Therapist (Open Question (Exploring)): Yeah, you're surprised to hear that?
+
+--- Example 44 ---
+Client: I think I'm gonna have to be successful. I don't really- I don't have any other choice. Like I have to- I have to take that path.
+Therapist (Open Question (Exploring)): Mm-hmm. Tell me more about that, what makes you say, "I have to take that path"? What makes you feel like you need that?
+
+--- Example 45 ---
+Client: -and do all the other things in a gym that you can do when you’re not running, so, it just nakes you to [unintelligible 00:02:23]
+Therapist (Open Question (Exploring)): Oh, and yet and at the same time you know your body well enough, and you-you’re willing to pay attention to your doctor’s advice about the running, right now, for you, not the best thing. Um, so, riding a stationary bike. Um, what else do you like to do that's cardiovascular?
+
+--- Example 46 ---
+Client: I'd say, um, on a not busy month, for instance, I'd say about like two weekends out of the month. Two or three.
+Therapist (Open Question (Exploring)): Mm-hmm. So about half the time you're drinking and half the time you're not. Can you tell me what's different about the days when you choose to drink versus not to drink?
+
+--- Example 47 ---
+Client: Well, uh, sleeping and then, I don't know, catch up my mates if they're not doing anything and just get up to mischief with them.
+Therapist (Open Question (Exploring)): Mm-hmm. So what sort of mischief are we talking about here, Billy?
+
+--- Example 48 ---
+Client: I mean. And it comes with a whole lot of different rules, and you know, she's never been quite like she is now.
+Therapist (Open Question (Exploring)): Okay. So something's changed in your relationship between you, yeah?
+
+--- Example 49 ---
+Client: No. Just, like, it's not normally my idea, like someone else would just suggest it and you kind of just, yeah.
+Therapist (Open Question (Exploring)): So it's not your idea. And you also go along with it?
+
+--- Example 50 ---
+Client: I mean, I would like to talk about, you know, my stress, but I'm still not sure with the whole drinking thing.
+Therapist (Open Question (Exploring)): Certainly, certainly. I'm glad you're willing to talk to him. So before you leave here today, we'll, uh, stop by the scheduler's desk and make an appointment for you to see me back in four weeks, as well as the appointment with Dr. Kirtley. And that way, before you leave, you're all set. So do you have any other questions for me, Sarah?
+
+--- Example 51 ---
+Client: Well, uh, I don't want to have an overdose and I don't want to get an infection. Seems like easy things to do.
+Therapist (Open Question (Exploring)): What kind of plan could you put in place to make sure you meet these goals?
+
+--- Example 52 ---
+Client: I guess I should probably just call a taxi cab or something, you know. That way, I wouldn't have this problem.
+Therapist (Open Question (Exploring)): Would that help?
+
+--- Example 53 ---
+Client: Uh. [clears throat] I'm not sure that the hospital is worse than the cotton ball, but I don't like it either.
+Therapist (Open Question (Exploring)): So, you'd really like to stay out of that hospital?
+
+--- Example 54 ---
+Client: Yeah, I mean, it sounds like it would be really good for my son and, you know, it would help me out in terms of childcare for sure.
+Therapist (Open Question (Exploring)): Okay. Well, good. Um, all right. It sounds like you've got a good plan there going forward. Um, now I did see from the nurse practitioner's notes, you're also working on reducing your smoking and your drinking. How's that going?
+
+--- Example 55 ---
+Client: Yeah. I tried to be safe. I mean, I tried to call her roommate, but I don't know, getting in trouble anyways.
+Therapist (Open Question (Exploring)): Dylan, you told me what brought you here today, what do you think the problem really is?
+
+--- Example 56 ---
+Client: Probably 'cause I didn't- I wasn't drinking with them, I guess. I don't really know. I mean, it seemed, uh--
+Therapist (Open Question (Exploring)): Did you ask them?
+
+--- Example 57 ---
+Client: I've been getting blamed ever since like fifth or sixth grade about with every single thing that's going on.
+Therapist (Open Question (Exploring)): For, like why do you think, wh-what kinds of-
+
+--- Example 58 ---
+Client: Uh, I've been thinking about them a lot lately, and I want to be there for them. So have to do what I need to, to improve my health.
+Therapist (Open Question (Exploring)): What's kind of the first thing you might think about doing?
+
+--- Example 59 ---
+Client: Well, to be honest, I drink sometimes when I'm feeling down and I find it more interesting and not so blur.
+Therapist (Open Question (Exploring)): Okay. And how do you feel after you drink?
+
+--- Example 60 ---
+Client: Yeah, yeah. Yeah, there's something going on. And, um, also my drinking, I got to cut down my drinking too.
+Therapist (Open Question (Exploring)): Okay, wow. So there's a lot happening right now, Sal. Anything else that that's concerning you?
+
+--- Example 61 ---
+Client: Syringes? Uh, sometimes I'll buy them at Walgreens. Most times I'll just get them from the needle exchange.
+Therapist (Open Question (Exploring)): Uh, what one do you remember?
+
+--- Example 62 ---
+Client: Yeah, absolutely. Yeah. As soon as my girlfriend left, I could go out with them again, you know. [laughter]
+Therapist (Open Question (Exploring)): Did they not get along with your girlfriend?
+
+--- Example 63 ---
+Client: Uh, well, like I'll do stuff around the house, you know, uh, cut the grass and stop, do yard work, other than that, um, I don't know.
+Therapist (Open Question (Exploring)): Yeah. And any other relationship, if you don't mind me asking-- [crosstalk]
+
+--- Example 64 ---
+Client: Hmm. That's, that's interesting. I-I never really thought of something like that, but, yeah, it might work.
+Therapist (Open Question (Exploring)): Okay. Okay, I'm glad you think so. Um, so, other than this neighbor, or is there anyone else that could help you?
+
+--- Example 65 ---
+Client: Well, um, I don't know if it's my lack of willpower but, um, also had ve-very bad side effects from it so.
+Therapist (Open Question (Exploring)): Mm-hmm. Mm-hmm. Wh-What sort of if-if you are willing to talk about what kind of side effect—
+
+--- Example 66 ---
+Client: I should-- Or next to nothing. I walk to the grocery store or whatever’s handy when I have time, but yeah.
+Therapist (Open Question (Exploring)): So what ideas do you have about initially just getting started, and what-what would you do [unintelligible 00:04:13] ?
+
+--- Example 67 ---
+Client: I-I've had friends that had that happen. So, um, I-I agree a little, with some hesitation, but I do agree.
+Therapist (Open Question (Exploring)): Uh-huh, and tell me how your physical therapy is going?
+
+--- Example 68 ---
+Client: It's all right, you know, I date a little bit but, uh, you know, I just don't wanna get serious right now.
+Therapist (Open Question (Exploring)): Oh what-- So, what does serious look like? Um--
+
+--- Example 69 ---
+Client: I really feel like I dodged the bullet. That was- that was probably the scariest like two days of my life.
+Therapist (Open Question (Exploring)): It feels like it was like two days was a year?
+
+--- Example 70 ---
+Client: Uh, well it's mostly just for, for parties or party settings is kind of to get things going and get everything loosened up as they say.
+Therapist (Open Question (Exploring)): Mm-hmm, mm-hmm. And so when you go to parties, most of the time there's alcohol there?
+
+--- Example 71 ---
+Client: I haven't felt well for a while. I'm getting coughing fits even when I'm on the telephone with customers.
+Therapist (Open Question (Exploring)): Is there anything else that's not good about smoking for you?
+
+--- Example 72 ---
+Client: Well, 'cause they're drinking and then- and if I'm drinking soda, they kind of mess with me a little bit.
+Therapist (Open Question (Exploring)): How-- So, messing with you would be like what?
+
+--- Example 73 ---
+Client: Oh, yes. I checked the box on your form when you asked if I use tobacco, I checked "No," because I never thought of myself as a smoker.
+Therapist (Open Question (Exploring)): Mm-hmm. What do you kind of make of that now that you realize that you're actually a tobacco user and that you might actually be causing some pretty se-serious health effects.
+
+--- Example 74 ---
+Client: Um, it kind of escalated a bit. Um, I've just recently moved out, um, from living with my parents. So just made it a bit worse, I think.
+Therapist (Open Question (Exploring)): Okay. Is this the first time that you've left home?
+
+--- Example 75 ---
+Client: You know, and it's not- it's not cool to not pay the rent, obviously. It's not something I'm happy with.
+Therapist (Open Question (Exploring)): That creates problems?
+
+--- Example 76 ---
+Client: No, I don't think it's a problem at all. It's something I do to help me relax. In fact, I think it's something that is good for me, but—
+Therapist (Open Question (Exploring)): Okay. Can you tell me a little bit more about how, like, it's-it's not an issue for you?
+
+--- Example 77 ---
+Client: Oh, I think I will probably be in seven or eight. I'm-I'm pretty confident that I could stop doing this.
+Therapist (Open Question (Exploring)): Okay, what made you choose seven or eight as opposed to a-a five?
+
+--- Example 78 ---
+Client: Of course, that's a double-edged sword a bit, because then I found I was drinking more coffee, you know.
+Therapist (Open Question (Exploring)): But they go together so well. And sugar in the coffee?
+
+--- Example 79 ---
+Client: Well, this changes quite a bit. I mean, here I'm thinking that my fruit intake is making me healthier and actually it's making me fatter.
+Therapist (Open Question (Exploring)): Indeed. Let me ask you something, knowing what you know now, how important is it to you to lose the weight by decreasing the amount of juice that you're currently taking in?
+
+--- Example 80 ---
+Client: And I'm not sure about the Tai Chi anymore. I-I think the physical therapy, I can understand that, but I'm not so sure about the Tai Chi.
+Therapist (Open Question (Exploring)): Yeah. So the physical therapy is can- you can kind of still see that it's helping you to build your strength, which-

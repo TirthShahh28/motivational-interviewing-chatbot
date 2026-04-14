@@ -1,0 +1,323 @@
+# MI Technique Examples: Therapist Input (Affirmation / Summary / Information)
+# Source: AnnoMI Dataset (High-Quality Sessions)
+# These are real exchanges from expert Motivational Interviewing sessions.
+
+--- Example 1 ---
+Client: Okay, so I would do that. And then do you know, can I get all the 24 hours in in like a weekend or how does that work?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, I mean, 24 hours in a weekend sounds to me like it might be a lot of time.
+
+--- Example 2 ---
+Client: Well, she also mentioned monitoring my blood sugar and all this. And that just seemed like a lot of mumbo jambo to me.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah. And that really is to give you feedback about how those other things are doing so that it keeps you on task.
+
+--- Example 3 ---
+Client: Well, I-- If-if I was getting fallen down drunk or if I drink every night. Um, it's not like I get sloppy drunk or anything.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm. Well, in this country, the guidelines are men can drink up to 14 drinks a week or up to four on one occasion and still be low risk.
+
+--- Example 4 ---
+Client: And then you know, the next time I see, see progress, or maybe write-- have like a diary or something, I don't know.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. Yeah, no, all those things are good. I mean, I think you know, the will- picking a quit date has been found to be really effective. And, um, uh, I know you had talked earlier and then we'll end in just a couple minutes, but about, you know, like, the willingness or the readiness and most-- a lot of people, a lot of my clients have shared with me that when they woke up that morning, they truly had no idea that was going to be their last cigarette.
+
+--- Example 5 ---
+Client: -that I am-- I don't have that many people I trust to support me. My mates, I love them but, um, yeah, I don't know.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. So as we're gonna do this work together and go through this, uh, this program, one of the things we-we don't want to do is fall into the same trough we did last time. So I-I just want to leave that with you to think about next time we come together. There may be two or three other people that you think of that can be really supportive, that we-we need to let know that you're [unintelligible 00:10:50] each gonna make these changes and this time, you're serious about it. So let your mother and, uh, and, um, your partner, how might that happen? How does that sound to you?
+
+--- Example 6 ---
+Client: -itself, no, I don't think I ever- yeah. No, I-I mean, I don't believe that I have a problem with the actual interview process.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah. I bet you're even better now.
+
+--- Example 7 ---
+Client: -I just want to be upfront about that part with me and maybe that changes or maybe it doesn't, but what do you think about that.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Absolutely, I appreciate you sharing that piece with me and you absolutely get to have that desire. And, um, we certainly are bombarded all day long with messages about how a body is supposed to look and so we all, um, certainly have moments of feeling dissatisfied with how our bodies look. And so you're absolutely, um, welcome to hold that and we can have space for that and you can certainly talk about that in these sessions. And I'll check in with you as we're going through the process of behavior change, um, to see how your body confidence is, um, as we talk more.
+
+--- Example 8 ---
+Client: -and maybe mark that down that, uh, I didn't go right away when something went wrong. Um, yes, I-I can try that.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. And I can give you a little card that can help you keep track of it. And if you can bring that back to the next appointment, it could be something we could discuss. Okay. Anything else?
+
+--- Example 9 ---
+Client: Black and white. It just stops right there. "I'm sorry. I can't really do much for you. I-- You have to go," you know, and it's—
+Therapist (Therapist Input (Affirmation / Summary / Information)): So do you- do you, um, put out there about the felony conviction before you even go for the interview?
+
+--- Example 10 ---
+Client: I knew you were gonna say that, but I don't have time in my schedule. I can't afford to take an hour to go to the gym every day.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, I understand that. I don't have an hour to go to the gym every day either, but one of the great things about physical activity is that any amount in any type of activity can be very helpful. For example, let's think about some activities that you enjoy doing.
+
+--- Example 11 ---
+Client: -you know, and, um, I don't know, it's a really, it's-it's like being caught between a rock and a hard place.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm. So, what have you looked into about, um, you know, advocacy in that area or expungement or anything like that?
+
+--- Example 12 ---
+Client: -to what they know, and, uh, and it's, uh, there is prejud- uh, prejudicial motivation, uh, and there is—
+Therapist (Therapist Input (Affirmation / Summary / Information)): You're not allowed to vote.
+
+--- Example 13 ---
+Client: Where would I start? Well, I-- What if about if I cut down on sugar in the coffee? If we could have long blacks, no milk, and no sugar.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah. Hmm, that might be a start.
+
+--- Example 14 ---
+Client: Yeah. No, it- it's just- it's just weird for me. I don't- I don't like thinking about that stuff, yeah.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Sure. I totally appreciate that, and it's your decision, Olivia. You know yourself best and what fits for you. If you ever feel like you like to open up the idea of conversation about family planning or birth control, I'd love to talk to you about that another time.
+
+--- Example 15 ---
+Client: No, I didn't know. Um, but doesn't the fruit- food pyramid classify, um, fruit juice as a- a serving?
+Therapist (Therapist Input (Affirmation / Summary / Information)): You're absolutely right, but keep in mind that the food pyramid is to be used as a guideline only. When it comes to nutrition, we have to have a more personalized approach. So I have a hunch, and that is the excess fruit that you were consuming probably caused your weight rebound. What's your impression?
+
+--- Example 16 ---
+Client: Well, if I need to get my license back, I think it would be pretty important for me to stop hanging around with them for a while, you know.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm. Okay. [unintelligible 00:24:52] something you'd be willing to try. Okay.
+
+--- Example 17 ---
+Client: Well, I, yeah, I guess I do have abo-about 2:00 AM, I tend to wake up on the nights I drink too much.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm. Well, I just wanted to just show you this little chart here. For your age as a male, you're drinking more than those at a low-risk level. Um, the low-risk level for men under 65 is no more than 14 drinks a week and no more than four a day. And, in this case, a drink is considered 12 ounces of beer, 5 ounces of wine, or an ounce and a half of distilled spirits. And you're right, you're not drinking as much as some people out there. The way you answered our questions here, you're actually falling in the high-risk category, the risky or hazardous category, category two.
+
+--- Example 18 ---
+Client: I don't chug a lot of beers in a row. I have about five or six beers throughout the entire evening.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm. Well, technically, we define binge drinking as having more than four drinks on one occasion.
+
+--- Example 19 ---
+Client: Yeah, yeah, I think when I'm feeling a little- a little better. Maybe when I haven't gone all out the-the night before and sprained my ankle.
+Therapist (Therapist Input (Affirmation / Summary / Information)): I'd love to, uh, set up an appointment for you if you can come in later this week or early next week to-
+
+--- Example 20 ---
+Client: -and then I don't know what really makes a-a legal limit. So, I think I can drink what? Like two or three drinks an hour, is that what it is?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Um, it's one drink per hour.
+
+--- Example 21 ---
+Client: Well, I suppose you're gonna give me a row and tell me it's all self-inflicted and I've got to change my ways and give up the things I enjoy.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Actually, I'm not going to do that because you're the boss. It's up to you what you want to do with you about your own health.
+
+--- Example 22 ---
+Client: Well, there's one, one thing uh, I've done already, I've stopped adding salt to my food. The doc said that would help with my blood pressure.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, that's good. That's probably benefited you already. And the other thing you might not be aware of is that salt intake is linked to loss of calcium from our bones, which makes the bones more fragile. So reducing your salt intake will really help with that too.
+
+--- Example 23 ---
+Client: Yeah, it just feels like everything's all over the place but I guess we got to start somewhere.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. Well, one of the things that-that we use are these-- it's kind of like a worksheet and it's an agenda-setting worksheet basically.
+
+--- Example 24 ---
+Client: Well, I wouldn't get caught with using a pen, so I wouldn't get kicked off the basketball team.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. Well, it sounds like you have a goal of not using marijuana once basketball starts. How long do you think you could not use?
+
+--- Example 25 ---
+Client: Well, just about every joint like especially my knees. They're really-- They have me doing some leg things that-that-that is it really necessary?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, you know, I-I understand that pain is hard to work through but a lot of time when you're having rehab after a stroke, that pain is telling you that your muscles and joints are starting to work again. So you can kind of think of it as a positive way to, you know, know that your-your body's getting back to normal.
+
+--- Example 26 ---
+Client: And you know what? I used to really love to dance, but I haven't done that in such a long time.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, dancing is a great exercise, especially because it's fun.
+
+--- Example 27 ---
+Client: Okay. Um, I'd be open to that and then I'm not sure-- I'm not familiar with the other thing that you had suggested. Um, I don't know what that is.
+Therapist (Therapist Input (Affirmation / Summary / Information)): It's the same thing. It's Wellbutrin, and when they found out by accident through what we call serendipity that you know what, Viagra. [laughs] That when- when people were on Wellbutrin that they tended to decrease and stop smoking, and, um, there were a couple of different reasons for that. Number one, people tend to get depressed when they quit smoking, because it puts you in such a state of deprivation and, um also-- well, so Wellbutrin really is a good antidepressant for them.
+
+--- Example 28 ---
+Client: Yeah. I can hang out with her and stuff and she gets all my mates and stuff. So it's all good.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Hmm, yeah. It's really special when you find someone who can be both a friend and girlfriend, eh.
+
+--- Example 29 ---
+Client: Yeah, and I-I didn't think it was much, but that makes it look like I'm drinking way too much.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm. From this, uh, drinker's pyramid over on this side of the card, you can see that the-the score on your screening sheet shows that you're up in the harmful category of drinkers. So that it's likely you're drinking, you know, in quantities probably more than about 90% of the folks who come in to see me here at the clinic.
+
+--- Example 30 ---
+Client: [chuckles] No, no, not at all. He, he really hasn't been in the picture since my son was born.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay, fine. You know what? We've got one really good lead with the neighbor. I think if you would follow up in pursuing that, you might find some relief and resolve some of your childcare issues. Um, how many days a week are you in school?
+
+--- Example 31 ---
+Client: Like I said, my friend talks about it and-and it's very pretty. I've seen pictures, you know.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah, yeah, yeah. Well, it's not that easy to get started. You do certainly have to have some motivation to want to do it. Um, and when you first start, oftentimes you do feel a little wobbly or a little insecure.
+
+--- Example 32 ---
+Client: Yeah. I stayed home two times already from school just 'cause of the bullying and everything.
+Therapist (Therapist Input (Affirmation / Summary / Information)): That's a- that's a lot of school to, yeah, and, you know--
+
+--- Example 33 ---
+Client: I think I'd just like to do what I did this first week. I liked the idea of marking it down.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay, so you can continue with that.
+
+--- Example 34 ---
+Client: Oh yeah, well, they must be. I can't imagine everyone is there, I guess just the ma-majority or at least p-- the majority of people that I know, yeah.
+Therapist (Therapist Input (Affirmation / Summary / Information)): So that might be something that we can look at but later if you're interested in is maybe what are some of those other parts of the gay scene, whose still party and party medley, but when meth is not a- is not a dominant-
+
+--- Example 35 ---
+Client: Well, I don't have the money for it so I can't pay for it and my parents wouldn't approve.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, the cost is free and the counseling services we provide, we are legally obligated to protect your privacy. We can't tell your parents. There are some exceptions to that privacy rule, including, uh, mostly if we're concerned about- that your safety.
+
+--- Example 36 ---
+Client: Okay, thank you doctor, but I'm just concerned about how I can possibly lose weight now since work is so busy and the kids take up so much of my time.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah, that's certainly understandable. We both know that there's a lot that plays into weight management, but there's no need to figure it all out today, especially since things are so busy for you right now. Maybe we could put our heads together and think about something small that fits reasonably into your life and then we can take further steps when you're ready.
+
+--- Example 37 ---
+Client: That's a good point. I hadn't really thought about that. That-that's a good idea. Yeah.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. Well, it sounds like you're really here just for information today. I'm happy to help you pick out some of these products if and when you decide that the time is right for you.
+
+--- Example 38 ---
+Client: I've always been an anxious person. Pot just helps me calm my nerves. I'm I in trouble?
+Therapist (Therapist Input (Affirmation / Summary / Information)): I promise you, you're not in trouble, I wanna help.
+
+--- Example 39 ---
+Client: Um yeah, like I'm so close anyways, that I know I need to now. Um, and I just also, like, have I completely screwed this up, like, is it already too late?
+Therapist (Therapist Input (Affirmation / Summary / Information)): You're concerned about the health of your baby. I just would love to share with you, Nina, that every day without alcohol is a good day for your baby, and you know, starting today to have zero alcohol is a great start, and I'm wondering if that's the sort of something you'd be open to as no more alcohol at this point.
+
+--- Example 40 ---
+Client: Um, I can't argue with a medical professional, Mark, because I know nothing, you know.
+Therapist (Therapist Input (Affirmation / Summary / Information)): The test, is the test, and experience, yeah.
+
+--- Example 41 ---
+Client: I think have you ever been to an ER when you cut yourself, you'd know why I don't go.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay, but part of the problem is those look deep and like you're going to have significant scars. So my suggestion is in the future, if you do it, is that you put some sort of bandaid on it to keep it closed. But let's talk about how, um, how this happened. First of all, tell me, you were telling me on that phone that you wanted to die. But, um, did you-- Was this a suicide attempt or do you think it was just-just a cutting? Were thinking of killing yourself or wanting to kill yourself or wanting to die when you did it?
+
+--- Example 42 ---
+Client: In fact, on the nights when I don't drink, I-I have a harder time going to sleep.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, you're not alone, a lot of people think that drinking helps them sleep better, and in reality, drinking might make you fall asleep faster, but it has what's called this rebound effect, and this rebound effect means that you wake up, may, might wake up in the middle of the night or early in the morning and have a hard time falling back asleep.
+
+--- Example 43 ---
+Client: -I don't feel like I'm like you know, it's gonna be-- I think gradually getting my- wrapping my brain around it will help, you know, before I just do, you know.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah. Is it appealing the thought of quitting with a group at the same time?
+
+--- Example 44 ---
+Client: And, um, 'cause I smoke a large pack and small pack, maybe just two small packs.
+Therapist (Therapist Input (Affirmation / Summary / Information)): You said five cigarettes this time.
+
+--- Example 45 ---
+Client: I don't know. I-I'd like some help. I just don't know what kind of help I need.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Sure. Well, if you'd be interested, that's something I can definitely talk to you about. There are a lot of new options that can actually help people be way more successful in their attempt at quitting. There's different medications you can try.
+
+--- Example 46 ---
+Client: Um, how would you, um, advise me to like get maybe my friends to stop drinking?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Oh, that's a great question. So, a lot of times, kids who are trying to cut back, it's harder if their friends are still drinking, and one of the easiest things is trying to have more activities that don't involve alcohol, but-
+
+--- Example 47 ---
+Client: Yeah, my doctor talked to me about my cholesterol, that-that's-that's his job.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay, certainly glad to hear that your doctor did spend some time with you, um, I-I see myself as somebody who works with your doctor, uh, to help you get the most benefit from your medicine, uh, because you are gonna spend money on it we wanna make sure that you get the most benefit from it. Uh, also sometimes it may be difficult to reach your doctor we're also here, uh, and so we try to work together, wo-would that be okay?
+
+--- Example 48 ---
+Client: Yeah, that would be good. Do you think I should try to go back to the Tai Chi?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yes. I was going to say the other thing that I would say- that I would consider because the senior center, and I know you were really active in the senior center before-
+
+--- Example 49 ---
+Client: Obviously, I need to cut back on the fruit juice. But boy, do I love that OJ.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Oh, I understand. Let me ask you this, on a scale from 0 to 10, 0 meaning that there's no way you can do it, and 10 meaning that you're 100% confident that you can do it, how confident are you that you'll be able to reduce the amount of juice you're currently taking in.
+
+--- Example 50 ---
+Client: Yeah, I've thought about it. I'm just-- It's not my cup-- I-I-I hear it from everybody, and, uh, I've tried- I've tried before, didn't work. I get it all the time.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. And it's like here I am one more person, the next- the next doctor who's saying, "You need to quit smoking, David."
+
+--- Example 51 ---
+Client: Um, yeah, I just, so I still have to find the community service hours myself?
+Therapist (Therapist Input (Affirmation / Summary / Information)): So that's something that you can work with your case manager on.
+
+--- Example 52 ---
+Client: Well, I'm pretty sure, um, I can stop using for a month. I want to play well.
+Therapist (Therapist Input (Affirmation / Summary / Information)): So, what steps could you take to help you stop using for a month?
+
+--- Example 53 ---
+Client: Well, I mean, I-I like cooking. I'm-I'm actually in school for culinary arts.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Oh, I bet you're a really good cook then. Um, what would you think about a plan where you worked out an arrangement with this neighbor, where in exchange for her watching your son, you would prepare dinner for her and her, um, daughter?
+
+--- Example 54 ---
+Client: -so take- taking the medicine sounds like the-the end of the game right now.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm, yeah it would, I-I-I think that would, uh, go a long way toward reducing those risks.
+
+--- Example 55 ---
+Client: If I walked that far, I probably wouldn't even need to go to the gym, right?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, I don't know about that. Um. That-- you know, it's really important that you get your, um, not just your cardiovascular-- that's a good idea for the cardiovascular, but also, you know, your, um, weightlifting, the [inaudible 00:01:32] [crosstalk]
+
+--- Example 56 ---
+Client: I would really like a little bit of information on, uh, injecting in my arm.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. I can email you some information on how to inject in a way that reduces the chance of infection and we also have behavioral health specialists in our clinic who can go over how to reduce harm with you. I bet the syringe exchange has similar resources too.
+
+--- Example 57 ---
+Client: I have a friend who, uh, does it and she just raves about it. She loves it.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, you know, Tai Chi is one of the best ways to get your balance back after you've had something like a stroke. And it's also really good for preventing falls. And if you wanna be home and you wanna be doing the things you wanna do and going for walks with your dog, it's very important to make sure that you don't fall 'cause that would cause more problems down the road.
+
+--- Example 58 ---
+Client: In other words, think about it more, don't- don't just do it automatically.
+Therapist (Therapist Input (Affirmation / Summary / Information)): That's correct. And writing it down helps that process.
+
+--- Example 59 ---
+Client: Yeah, you know how those union workers have to have you know, Union break.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Union break. Yeah. le-leverage, and you know so it's something else you might know about nicotine is, um is that actually depending on how you smoke it, it can- it can be stimulant when you want it to be a stimulant if you smoke it in short, shallow puffs and then it can be a depressant like after a meal and you take longer inhalations, and it really tends to act on your central nervous system as a depressant. So it kind of does whatever you want at any given moment and yet there is this price that you pay
+
+--- Example 60 ---
+Client: Actually, I really would. I'm kind of excited about it. What else you got?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, small steps can go a long way. So, even things like taking the stairs instead of the elevator every once in a while or parking just a bit further from the door when you go to a store can be ways to increase movement in your day.
+
+--- Example 61 ---
+Client: Well, I mean, I could maybe try to cut back in the evenings a little bit.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay, great. Let's quantify that a little bit. So how many cigarettes would that be?
+
+--- Example 62 ---
+Client: Which are the ones that cause all the problems and everything. So, um, if-if you can assure me that it's not going to have those same side effects and health problems-
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah, def-definitely would not. I mean, probably you saw the name corticosteroid and thought, "uh-oh."
+
+--- Example 63 ---
+Client: And-and thank you for listening me listening to me. It means a lot to me.
+Therapist (Therapist Input (Affirmation / Summary / Information)): It's my-- yeah it's my pleasure. It's part of my job and it's probably like this so. I'm going to hurry up and get changed for practice.
+
+--- Example 64 ---
+Client: Oh, it's a nice place. It's close to work. It's good living with a mate.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah. So, in terms of being supportive and a sort of support you're gonna need to make these changes.
+
+--- Example 65 ---
+Client: -three years, and all I could think about I was like obsessing about it.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yes. Yeah, yeah. So I think that- I think, I'm just a really big advocate of w-whatever is gonna enhance the quality and the length of your life. And if somebody becomes addicted to nicotine go- gum, God bless them. They're still gonna live longer, you know what I mean?
+
+--- Example 66 ---
+Client: Are you saying that they-they like they can't digest insulin or is that?
+Therapist (Therapist Input (Affirmation / Summary / Information)): You need insulin in your cells, individual cells in muscle or in fat or wherever to, um, use up excess sugar or to utilize sugar.
+
+--- Example 67 ---
+Client: That seems to be like, uh, a false setting up, you know, like, come on.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Actually, you would be amazed how many people do it.
+
+--- Example 68 ---
+Client: Well, I don't see how I could do it. I-I'm still in a walker, you know.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Yeah, yeah, I understand. So there are lots of places around that have it. Your local senior center would have it. And what I recommend is that you start by doing it in a chair. Just sitting in the chair.
+
+--- Example 69 ---
+Client: Discussing things helps me. I always feel better when I get things out.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. So Jean, I really want to congratulate you on taking this very important first step towards addressing this problem that you've had for such a long time, but as the first small step, I wonder whether you'd be open to actually just monitoring your smoking for the next week. And the reason why I say that- because as you were mentioning to me, smoking is so automatic for you that sometimes writing it down helps make every cigarette a conscious act. And I noticed that you were saying to me, you feel a loss of control over these cigarettes. And sometimes just being mindful and writing something down will help you get some control over what you're doing. And that's often the first small step. What are your thoughts about that?
+
+--- Example 70 ---
+Client: Yeah. I would've definitely told him to put on a condom if I was sober.
+Therapist (Therapist Input (Affirmation / Summary / Information)): There's something else I wanna share. When people forget where they are or how many drinks they've had, that's a sign of heavy drinking. And when people keep drinking despite experiencing negative consequences, that can be a sign of what we call alcohol use disorder.
+
+--- Example 71 ---
+Client: So, uh, what are you saying then? That I should come back and see you?
+Therapist (Therapist Input (Affirmation / Summary / Information)): I think that would be a good idea. I think we've only just begun to talk about it-
+
+--- Example 72 ---
+Client: I-I'm more comfortable-- I feel better. I think that's the main thing.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. Yeah, because your-your health really, to me, it's more important than your-your looks. I mean, don't get me wrong, I understand what you're saying, but, you know, it'd be great to get back in those jeans, but—
+
+--- Example 73 ---
+Client: I didn't realize that drinking had anything to do with blood pressure.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Mm-hmm. Yeah, it can sometimes.
+
+--- Example 74 ---
+Client: Wait a minute, isn't walking too mild to help you lose weight, though?
+Therapist (Therapist Input (Affirmation / Summary / Information)): Actually, even just a few minutes of walking is really healthy and worthwhile, and then when you have time to do even more, that's great. Walking is also great because you can do it anywhere, it doesn't need to be at the gym.
+
+--- Example 75 ---
+Client: And then, uh-uh, what I'd like to do is try not to smoke in my house.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. So, from now to the next time you come back and see me, what is it that you'd like to-to work on?
+
+--- Example 76 ---
+Client: I think that would be a good idea. Uh, is this gonna help like get my license back, like, at this-- Like, the-the plans that I've made, is that gonna really help me like--
+Therapist (Therapist Input (Affirmation / Summary / Information)): Well, I sure-sure would, um, tell the-the people who-who need to know-
+
+--- Example 77 ---
+Client: That-- Are you contented with that performance of you and your team?
+Therapist (Therapist Input (Affirmation / Summary / Information)): And, I suppose, our own personalized a little bit like that, there's lots of different aspects that need to be tweaked.
+
+--- Example 78 ---
+Client: Yeah. Yeah, it's- it's a big stress, it's like my best friend, so that's one of the important things. Also, I guess, cutting down these last cigarettes I've been working on.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay, so smoking and-and I'm working towards quitting completely sounds like that's a goal for you?
+
+--- Example 79 ---
+Client: I think so. I think it's-it's very feasible. I think it's possible.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Okay. Um, so I guess we'll talk about, um, less alcohol activities. I'm just making some notes to myself and then maybe, um, reducing the amount of drinking that you're doing if alcohol is involved. Okay. Um, so that-that goal sounds feasible, you said? Would it be okay if we met in a couple of weeks to sort of see how it's going?
+
+--- Example 80 ---
+Client: No. You know, convince me because, you know, I kind of want to be.
+Therapist (Therapist Input (Affirmation / Summary / Information)): Sure. Well, it's hard to me to convince you-
