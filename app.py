@@ -83,19 +83,23 @@ def initialize_session_state():
 
 def load_conversation_manager():
     """Load or create the conversation manager."""
+    if "llm_provider" not in st.session_state:
+        st.session_state.llm_provider = "anthropic"
+
     if st.session_state.conversation_manager is None:
         with st.spinner("Initializing chatbot..."):
             try:
                 from src.conversation_manager import create_conversation_manager
                 st.session_state.conversation_manager = create_conversation_manager(
-                    use_ollama=True  # Set to False to use OpenAI
+                    provider=st.session_state.llm_provider
                 )
                 st.success("Chatbot initialized!")
             except Exception as e:
                 st.error(f"Failed to initialize: {e}")
-                st.info("Make sure Ollama is running with: `ollama run llama3`")
+                if st.session_state.llm_provider == "ollama":
+                    st.info("Make sure Ollama is running with: `ollama run gemma3:4b`")
                 return None
-    
+
     return st.session_state.conversation_manager
 
 
@@ -128,6 +132,20 @@ def render_sidebar():
             if state.get("reasoning"):
                 st.caption(f"💭 {state.get('reasoning')}")
         
+        # LLM Provider selector
+        st.markdown("---")
+        st.subheader("LLM Provider")
+        provider = st.selectbox(
+            "Select model",
+            options=["anthropic", "ollama", "openai"],
+            format_func=lambda x: {"anthropic": "Claude Haiku (Anthropic)", "ollama": "Ollama (Local)", "openai": "OpenAI"}[x],
+            index=["anthropic", "ollama", "openai"].index(st.session_state.get("llm_provider", "anthropic"))
+        )
+        if provider != st.session_state.get("llm_provider"):
+            st.session_state.llm_provider = provider
+            st.session_state.conversation_manager = None
+            st.rerun()
+
         # Debug toggle
         st.markdown("---")
         st.subheader("Developer")

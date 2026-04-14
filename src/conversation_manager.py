@@ -239,23 +239,24 @@ class ConversationManager:
             logger.info(f"Session {session_id} cleared")
 
 
-def create_conversation_manager(use_ollama: bool = True) -> ConversationManager:
+def create_conversation_manager(provider: str = "ollama") -> ConversationManager:
     """
     Factory function to create a fully configured ConversationManager.
-    
+
     Args:
-        use_ollama: If True, use Ollama (local Llama 3). If False, use OpenAI.
-        
+        provider: LLM provider - "ollama", "anthropic", or "openai"
+
     Returns:
         Configured ConversationManager instance
     """
     from src.config import (
         OLLAMA_BASE_URL, OLLAMA_MODEL,
+        ANTHROPIC_API_KEY, ANTHROPIC_MODEL,
         OPENAI_API_KEY, OPENAI_MODEL
     )
-    
+
     # Initialize LLM
-    if use_ollama:
+    if provider == "ollama":
         from langchain_community.chat_models import ChatOllama
         llm = ChatOllama(
             base_url=OLLAMA_BASE_URL,
@@ -263,6 +264,17 @@ def create_conversation_manager(use_ollama: bool = True) -> ConversationManager:
             temperature=0.7
         )
         logger.info(f"Using Ollama with model: {OLLAMA_MODEL}")
+    elif provider == "anthropic":
+        if not ANTHROPIC_API_KEY:
+            raise ValueError("ANTHROPIC_API_KEY not set in environment")
+        from langchain_anthropic import ChatAnthropic
+        llm = ChatAnthropic(
+            api_key=ANTHROPIC_API_KEY,
+            model=ANTHROPIC_MODEL,
+            temperature=0.7,
+            max_tokens=500
+        )
+        logger.info(f"Using Anthropic with model: {ANTHROPIC_MODEL}")
     else:
         if not OPENAI_API_KEY:
             raise ValueError("OPENAI_API_KEY not set in environment")
