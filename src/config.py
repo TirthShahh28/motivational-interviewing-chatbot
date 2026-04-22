@@ -17,9 +17,9 @@ DATA_DIR = PROJECT_ROOT / "data"
 LOGS_DIR = PROJECT_ROOT / "logs"
 
 # ============== LLM CONFIGURATION ==============
-# Ollama (Local LLM)
+# Ollama (Local LLM — fine-tuned MI therapist model)
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "mi-therapist")
 
 # Anthropic (Claude)
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", None)
@@ -61,10 +61,19 @@ DEFENSIVENESS_LEVELS = [
 ]
 
 # ============== SAFETY CONFIGURATION ==============
-# Keywords that trigger safety protocols
+# Keywords/patterns that trigger safety protocols
 SAFETY_RED_FLAGS = [
-    "suicide", "kill myself", "end my life", "self-harm",
-    "hurt myself", "overdose", "want to die"
+    # Active suicidal ideation
+    r"suicid\w*", r"kill\s*(my)?self", r"end\s+my\s+life", r"take\s+my\s+(own\s+)?life",
+    # Self-harm
+    r"self[- ]?harm", r"hurt\s*(my)?self", r"cut\s*(my)?self",
+    # Overdose
+    r"\bover\s*dose\b", r"\bod['.]?(?:ing|ed)?\b",
+    # Death wish / passive ideation
+    r"want\s+to\s+die", r"wish\s+i\s+w(as|ere)\s+dead", r"better\s+off\s+dead",
+    r"no\s+reason\s+to\s+live", r"can'?t\s+take\s+it\s+anymore",
+    r"don'?t\s+want\s+to\s+be\s+here", r"won'?t\s+be\s+around\s+much\s+longer",
+    r"want\s+it\s+all\s+to\s+end", r"rather\s+be\s+dead",
 ]
 
 # Topics the bot should NOT provide advice on

@@ -84,7 +84,7 @@ def initialize_session_state():
 def load_conversation_manager():
     """Load or create the conversation manager."""
     if "llm_provider" not in st.session_state:
-        st.session_state.llm_provider = "anthropic"
+        st.session_state.llm_provider = "ollama"
 
     if st.session_state.conversation_manager is None:
         with st.spinner("Initializing chatbot..."):
@@ -93,12 +93,25 @@ def load_conversation_manager():
                 st.session_state.conversation_manager = create_conversation_manager(
                     provider=st.session_state.llm_provider
                 )
-                st.success("Chatbot initialized!")
+                st.success(f"Chatbot initialized with {st.session_state.llm_provider}!")
             except Exception as e:
-                st.error(f"Failed to initialize: {e}")
+                # Auto-fallback: if Ollama fails, try Anthropic
                 if st.session_state.llm_provider == "ollama":
-                    st.info("Make sure Ollama is running with: `ollama run gemma3:4b`")
-                return None
+                    st.warning(f"Local model unavailable ({e}). Falling back to Claude Haiku...")
+                    try:
+                        from src.conversation_manager import create_conversation_manager
+                        st.session_state.conversation_manager = create_conversation_manager(
+                            provider="anthropic"
+                        )
+                        st.session_state.llm_provider = "anthropic"
+                        st.success("Chatbot initialized with Claude Haiku (fallback)!")
+                    except Exception as e2:
+                        st.error(f"Both local and API failed: {e2}")
+                        st.info("Either start Ollama (`ollama serve`) or add Anthropic API credits.")
+                        return None
+                else:
+                    st.error(f"Failed to initialize: {e}")
+                    return None
 
     return st.session_state.conversation_manager
 
@@ -137,9 +150,13 @@ def render_sidebar():
         st.subheader("LLM Provider")
         provider = st.selectbox(
             "Select model",
-            options=["anthropic", "ollama", "openai"],
-            format_func=lambda x: {"anthropic": "Claude Haiku (Anthropic)", "ollama": "Ollama (Local)", "openai": "OpenAI"}[x],
-            index=["anthropic", "ollama", "openai"].index(st.session_state.get("llm_provider", "anthropic"))
+            options=["ollama", "anthropic", "openai"],
+            format_func=lambda x: {
+                "ollama": "MI-Therapist (Fine-tuned, Local)",
+                "anthropic": "Claude Haiku (API Fallback)",
+                "openai": "OpenAI (API)"
+            }[x],
+            index=["ollama", "anthropic", "openai"].index(st.session_state.get("llm_provider", "ollama"))
         )
         if provider != st.session_state.get("llm_provider"):
             st.session_state.llm_provider = provider
@@ -189,18 +206,26 @@ def render_chat_messages():
 
 def process_user_input(user_input: str):
     """Process user input and get bot response."""
-    cm = st.session_state.conversation_manager
-    
-    if cm is None:
-        st.error("Chatbot not initialized")
+    # Input validation
+    user_input = user_input.strip()
+    if not user_input:
         return
-    
+    if len(user_input) > 5000:
+        st.warning("Message is too long. Please keep it under 5000 characters.")
+        return
+
+    cm = st.session_state.conversation_manager
+
+    if cm is None:
+        st.error("Chatbot not initialized. Please refresh the page.")
+        return
+
     # Add user message to display
     st.session_state.messages.append({
         "role": "user",
         "content": user_input
     })
-    
+
     # Process through pipeline
     with st.spinner("Thinking..."):
         try:
@@ -208,24 +233,31 @@ def process_user_input(user_input: str):
                 user_input,
                 session_id=st.session_state.session_id
             )
-            
+
             # Update session ID
             st.session_state.session_id = result["session_id"]
-            
+
             # Update last state
             if result.get("user_state"):
-                st.session_state.last_state = result["user_state"].model_dump()
-                st.session_state.messages[-1]["state"] = st.session_state.last_state
-                st.session_state.messages[-1]["knowledge_count"] = len(
-                    result.get("retrieved_knowledge", [])
-                )
-            
-            # Add bot response
+                try:
+                    st.session_state.last_state = result["user_state"].model_dump()
+                    st.session_state.messages[-1]["state"] = st.session_state.last_state
+                    st.session_state.messages[-1]["knowledge_count"] = len(
+                        result.get("retrieved_knowledge", [])
+                    )
+                except Exception:
+                    pass  # State display is non-critical
+
+            # Add bot response (with empty response fallback)
+            response_text = result.get("response", "").strip()
+            if not response_text:
+                response_text = "I hear you. Can you tell me more about what's on your mind?"
+
             st.session_state.messages.append({
                 "role": "assistant",
-                "content": result["response"]
+                "content": response_text
             })
-            
+
         except Exception as e:
             logger.error(f"Error processing message: {e}")
             st.session_state.messages.append({
@@ -260,7 +292,9 @@ def main():
     
     # Load conversation manager
     cm = load_conversation_manager()
-    
+    if cm is None:
+        st.stop()
+
     # Render existing messages
     render_chat_messages()
     

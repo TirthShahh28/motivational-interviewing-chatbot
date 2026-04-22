@@ -72,20 +72,22 @@ class ConversationManager:
         self,
         llm_client,
         knowledge_retriever: KnowledgeRetriever = None,
-        enable_logging: bool = True
+        enable_logging: bool = True,
+        use_fast_state: bool = False
     ):
         """
         Initialize the conversation manager.
-        
+
         Args:
             llm_client: LangChain LLM instance
             knowledge_retriever: Initialized KnowledgeRetriever
             enable_logging: Whether to log conversations
+            use_fast_state: Use rule-based state inference (faster, no LLM call)
         """
         self.llm = llm_client
-        
+
         # Initialize components
-        self.state_engine = StateInferenceEngine(llm_client)
+        self.state_engine = StateInferenceEngine(llm_client, use_rule_based=use_fast_state)
         self.response_generator = ResponseGenerator(llm_client)
         self.safety_guard = SafetyGuard()
         
@@ -257,11 +259,15 @@ def create_conversation_manager(provider: str = "ollama") -> ConversationManager
 
     # Initialize LLM
     if provider == "ollama":
-        from langchain_community.chat_models import ChatOllama
+        try:
+            from langchain_ollama import ChatOllama
+        except ImportError:
+            from langchain_community.chat_models import ChatOllama
         llm = ChatOllama(
             base_url=OLLAMA_BASE_URL,
             model=OLLAMA_MODEL,
-            temperature=0.7
+            temperature=0.7,
+            num_predict=200,
         )
         logger.info(f"Using Ollama with model: {OLLAMA_MODEL}")
     elif provider == "anthropic":
@@ -300,8 +306,12 @@ def create_conversation_manager(provider: str = "ollama") -> ConversationManager
         logger.warning(f"RAG initialization failed: {e}. Continuing without RAG.")
         retriever = None
     
+    # Use fast rule-based state inference for local models (saves ~30s per message)
+    use_fast = (provider == "ollama")
+
     return ConversationManager(
         llm_client=llm,
         knowledge_retriever=retriever,
-        enable_logging=True
+        enable_logging=True,
+        use_fast_state=use_fast
     )

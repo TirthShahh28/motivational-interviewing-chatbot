@@ -138,6 +138,7 @@ class ResponseGenerator:
             llm_client: LangChain LLM instance
         """
         self.llm = llm_client
+        self._last_opener = ""
         logger.info("ResponseGenerator initialized")
     
     def generate(
@@ -191,7 +192,14 @@ class ResponseGenerator:
             
             # Clean up response
             response_text = response_text.strip()
-            
+
+            if not response_text:
+                logger.warning("LLM returned empty response, using fallback")
+                return "I hear you. Tell me more about what's on your mind."
+
+            # Fix repetitive "It sounds like" opener
+            response_text = self._vary_opener(response_text)
+
             logger.debug(f"Generated response: {response_text[:100]}...")
             return response_text
             
@@ -199,6 +207,40 @@ class ResponseGenerator:
             logger.error(f"Response generation failed: {e}")
             return "I hear you. Tell me more about what's on your mind."
     
+    def _vary_opener(self, response: str) -> str:
+        """Replace repetitive 'It sounds like' openers with varied alternatives."""
+        import random
+        lower = response.lower()
+
+        # Only fix if it starts with "it sounds like"
+        if not lower.startswith("it sounds like"):
+            self._last_opener = lower.split('.')[0][:30] if '.' in lower else lower[:30]
+            return response
+
+        # Alternative openers that preserve the reflection
+        alternatives = [
+            "What I'm hearing is",
+            "It really comes through that",
+            "I can sense that",
+            "From what you're sharing,",
+            "What stands out to me is",
+            "I notice that",
+            "That really resonates —",
+            "There's something important in what you said —",
+            "You're expressing something meaningful —",
+            "I hear you saying",
+        ]
+
+        # Pick one that's different from last time
+        choice = random.choice([a for a in alternatives if a.lower()[:15] != self._last_opener[:15]] or alternatives)
+        self._last_opener = choice.lower()[:30]
+
+        # Replace the opener
+        rest = response[len("It sounds like"):].lstrip()
+        if rest and rest[0].isupper():
+            rest = rest[0].lower() + rest[1:]
+        return f"{choice} {rest}"
+
     def _format_history(self, history: list[dict]) -> str:
         """Format conversation history for the prompt."""
         if not history:
