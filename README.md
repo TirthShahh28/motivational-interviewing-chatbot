@@ -1,228 +1,104 @@
-# Emotion-Aware Conversational Chatbot for Alcohol Dialogues
+# Motivational Interviewing Chatbot
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+A conversational companion that practices Motivational Interviewing (MI) for alcohol-related conversations. The goal isn't to advise or diagnose — it's to listen, reflect, and support autonomy the way a trained counselor would.
 
-An intelligent conversational agent that uses real-time state inference to detect user emotion and defensiveness, providing empathetic, autonomy-respecting responses grounded in Motivational Interviewing (MI) principles.
+This is my MS capstone project. The core of it is a **fine-tuned Gemma 2 model** (`mi-therapist`) trained on the [AnnoMI dataset](https://github.com/uccollab/AnnoMI) plus ~1,000 synthetic conversations I generated with Claude. It runs locally via Ollama; if Ollama is unreachable, the app falls back to Claude Haiku through the Anthropic API.
 
----
+## What it does
 
-## 🌿 Branch Strategy
+A user types a message. Before generating a reply, the system:
 
-| Branch         | Purpose                                       | Status            |
-| -------------- | --------------------------------------------- | ----------------- |
-| `main`         | Capstone presentation version (Streamlit MVP) | ✅ Stable         |
-| `capstone-mvp` | Backup of simple MVP                          | ✅ Frozen         |
-| `production`   | Full-stack production-grade version           | 🚧 In Development |
+1. **Infers user state** — the emotion (neutral, frustrated, anxious, sad, angry, hopeful, contemplative) and defensiveness level (none / low / moderate / high). Used to steer the response style.
+2. **Retrieves relevant guidelines** from a FAISS index over a curated MI knowledge base (OARS, stage-of-change, resistance handling, anti-patterns, real AnnoMI excerpts).
+3. **Runs a safety check** — any message matching crisis patterns (suicidal ideation, self-harm, overdose) short-circuits to crisis resources. Restricted topics like medication dosing are blocked too.
+4. **Generates a response** with prompts adapted to the inferred state and retrieved knowledge.
 
-### Which branch should you use?
+## Running it
 
-- **For capstone demo**: Use `main` branch
-- **For portfolio showcase**: Use `production` branch (FastAPI + PostgreSQL + Redis + Airflow)
-
----
-
-## Architecture Overview
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      Streamlit UI (app.py)                  │
-└─────────────────────────┬───────────────────────────────────┘
-                          │
-┌─────────────────────────▼───────────────────────────────────┐
-│               Conversation Manager                          │
-│  (Orchestrates the full pipeline)                           │
-└──────┬──────────────┬──────────────┬──────────────┬─────────┘
-       │              │              │              │
-       ▼              ▼              ▼              ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│   Safety     │ │    State     │ │     RAG      │ │   Response   │
-│   Guard      │ │  Inference   │ │   Pipeline   │ │  Generator   │
-│              │ │              │ │              │ │              │
-│ • Crisis     │ │ • Emotion    │ │ • ChromaDB   │ │ • Adaptive   │
-│   detection  │ │   detection  │ │ • Semantic   │ │   prompts    │
-│ • Medical    │ │ • Defensive- │ │   search     │ │ • MI-based   │
-│   boundaries │ │   ness level │ │ • Knowledge  │ │   responses  │
-│ • Logging    │ │ • JSON output│ │   retrieval  │ │              │
-└──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
-```
-
-## Quick Start
-
-### Prerequisites
-
-1. **Python 3.10+** installed
-2. **Ollama** installed (for local LLM)
-
-### Step 1: Set Up Environment
+You need Python 3.10+ and [Ollama](https://ollama.com/). The fine-tuned model weights aren't in the repo (1.6 GB, gitignored) — you'll either have to train your own via [`notebooks/finetune_gemma2.ipynb`](notebooks/finetune_gemma2.ipynb) or skip Ollama and use the Claude fallback.
 
 ```bash
-# Navigate to project
-cd capstone-chatbot
-
-# Create virtual environment
 python -m venv venv
-
-# Activate (Windows)
-.\venv\Scripts\activate
-
-# Activate (Mac/Linux)
-source venv/bin/activate
-
-# Install dependencies
+source venv/bin/activate        # Windows: .\venv\Scripts\activate
 pip install -r requirements.txt
-```
 
-### Step 2: Set Up Ollama (Local LLM)
+# If you have the GGUF file locally, register it with Ollama:
+ollama create mi-therapist -f models/Modelfile
 
-```bash
-# Install Ollama from https://ollama.com/
-
-# Pull Llama 3 model
-ollama pull llama3
-
-# Verify it's running
-ollama run llama3 "Hello, how are you?"
-```
-
-### Step 3: Configure Environment
-
-```bash
-# Copy example env file
-cp .env.example .env
-
-# Edit .env if needed (defaults should work)
-```
-
-### Step 4: Run the Application
-
-```bash
-# Start the Streamlit app
 streamlit run app.py
 ```
 
-Open your browser to `http://localhost:8501`
+Don't want to mess with Ollama? Put `ANTHROPIC_API_KEY=...` in a `.env` file and the app will detect Ollama is down and fall back to Claude Haiku automatically.
 
-## Project Structure
+## Why Motivational Interviewing?
 
-```
-capstone-chatbot/
-├── app.py                    # Streamlit UI
-├── requirements.txt          # Python dependencies
-├── .env.example             # Environment template
-├── src/
-│   ├── __init__.py
-│   ├── config.py            # Configuration settings
-│   ├── state_inference.py   # Emotion/defensiveness detection
-│   ├── rag_pipeline.py      # Knowledge retrieval (RAG)
-│   ├── response_generator.py # Adaptive response generation
-│   ├── safety_layer.py      # Safety checks and logging
-│   └── conversation_manager.py # Main orchestrator
-├── knowledge_base/          # SME-provided guidelines
-│   ├── mi_principles.md
-│   ├── handling_resistance.md
-│   ├── emotional_responses.md
-│   └── harm_reduction.md
-├── data/
-│   └── chroma_db/          # Vector database (auto-created)
-└── logs/                    # Conversation logs
-```
+MI is a counseling approach built around four principles: express empathy, roll with resistance, support autonomy, and develop discrepancy. It's the opposite of confrontation — you don't tell someone they have a problem, you help them notice it themselves. That turns out to be a useful fit for an LLM chatbot, because models are bad at confrontation but reasonable at reflective listening.
 
-## How It Works
+Alcohol dialogues specifically are a stress test: users come in ambivalent or defensive, so "be empathetic" isn't enough — the bot has to recognize the defensiveness and respond to it differently.
 
-### 1. State Inference
+## The AI engineering work
 
-When a user sends a message, the system analyzes it for:
+This is the part worth a capstone grade.
 
-- **Emotional state**: neutral, frustrated, anxious, sad, angry, hopeful, contemplative
-- **Defensiveness level**: none, low, moderate, high
+### Fine-tuning
+- **Base**: `google/gemma-2-2b-it`
+- **Method**: LoRA (PEFT), trained on Colab T4
+- **Training data**: AnnoMI alcohol-only subset (~676 KB JSONL) + ~1,000 synthetic MI conversations
+- Exported as 4-bit quantized GGUF for Ollama ([`notebooks/export_model_for_ollama.ipynb`](notebooks/export_model_for_ollama.ipynb))
 
-### 2. Knowledge Retrieval
+### Synthetic data generation
+Real MI transcripts are rare and expensive. [`scripts/generate_synthetic_data.py`](scripts/generate_synthetic_data.py) prompts Claude to simulate both sides of a session across scenario types (short / medium / long / mixed defensiveness). Generated batches live in [`data/synthetic/`](data/synthetic/).
 
-Based on the user's message AND inferred state, the system retrieves relevant guidelines from the knowledge base using semantic search.
+### Evaluation
+Built a Claude-as-judge evaluation rather than relying on human scoring — too slow for iteration.
 
-### 3. Adaptive Response
+- **Scenarios**: 20 handcrafted user turns covering different emotion × defensiveness combinations ([`data/evaluation/eval_scenarios_test20.jsonl`](data/evaluation/eval_scenarios_test20.jsonl))
+- **Judge**: Claude Sonnet scores each response across MI dimensions (empathy, autonomy support, change talk, style match, safety)
+- **Configs compared**: base Gemma, fine-tuned v1, v2, v2 + RAG, Claude Haiku baseline
+- Scripts: [`scripts/score_with_claude.py`](scripts/score_with_claude.py), [`scripts/run_eval_test20.py`](scripts/run_eval_test20.py)
 
-The response generator creates replies that:
+### RAG
+FAISS index over the MI knowledge base using `all-MiniLM-L6-v2` embeddings, top-3 retrieval. Retrieved chunks get injected into the prompt as context-specific guidance — e.g., if the user is scored as highly defensive, the retriever surfaces resistance-handling strategies from the MI playbook.
 
-- Match the appropriate MI technique for the defensiveness level
-- Acknowledge the emotional state
-- Incorporate relevant expert knowledge
-- Maintain empathy and support autonomy
-
-### 4. Safety Layer
-
-Every message is checked for:
-
-- Crisis indicators (self-harm, suicidal ideation) → Provides resources
-- Medical advice requests → Redirects to professionals
-- Inappropriate bot output → Blocks and regenerates
-
-## Configuration Options
-
-Edit `src/config.py` to customize:
-
-| Setting                | Default | Description                     |
-| ---------------------- | ------- | ------------------------------- |
-| `OLLAMA_MODEL`         | llama3  | Which Ollama model to use       |
-| `CONTEXT_WINDOW_TURNS` | 5       | Conversation history to include |
-| `TOP_K_RESULTS`        | 3       | RAG documents to retrieve       |
-| `CHUNK_SIZE`           | 500     | Knowledge base chunk size       |
-
-## Using OpenAI Instead of Ollama
-
-1. Add to `.env`:
+## Project layout
 
 ```
-OPENAI_API_KEY=your_key_here
+src/                           # Runtime pipeline
+  conversation_manager.py      # Orchestrator
+  state_inference.py           # Emotion + defensiveness detection
+  rag_pipeline.py              # FAISS-based retrieval
+  response_generator.py        # Adaptive prompt construction
+  safety_layer.py              # Crisis / restricted-topic guards
+  config.py
+
+scripts/                       # Data + eval pipelines (offline, not runtime)
+  prepare_annomi.py
+  generate_synthetic_data.py
+  prepare_finetune_data.py
+  score_with_claude.py
+  run_eval_test20.py
+
+notebooks/                     # Fine-tuning + inference (Colab/Kaggle)
+knowledge_base/                # MI guidelines + AnnoMI examples
+data/                          # Processed datasets, synthetic batches, eval results
+models/                        # (gitignored) GGUF weights + Ollama Modelfile
 ```
 
-2. Update `requirements.txt`:
+## Honest limits
 
-```
-langchain-openai>=0.0.5
-```
+- Not clinically validated. This is a capstone, not a product.
+- The emotion classifier is LLM-based and gets subtle affects wrong (resignation often reads as "sad").
+- Claude-as-judge scoring correlates roughly but not perfectly with human MI ratings. I treat it as a coarse signal for iteration, not ground truth.
+- Latency is ~2–4 s per turn on CPU Ollama; fine for demos, too slow for a real conversation.
+- No memory across sessions.
 
-3. In `app.py`, change:
+## Crisis resources
 
-```python
-create_conversation_manager(use_ollama=False)
-```
-
-## Adding to Knowledge Base
-
-1. Add `.md` or `.txt` files to `knowledge_base/`
-2. Delete `data/chroma_db/` folder
-3. Restart the app (it will re-index automatically)
-
-## Evaluation
-
-The `logs/` folder contains:
-
-- Session logs (JSONL format)
-- Flagged interactions for expert review
-
-Each log entry includes:
-
-- User message
-- Bot response
-- Inferred state
-- Safety level
-- Retrieved knowledge
-
-## Development Roadmap
-
-- [x] Core conversation pipeline
-- [x] State inference module
-- [x] RAG with ChromaDB
-- [x] Safety guardrails
-- [x] Streamlit UI
-- [ ] More comprehensive knowledge base (needs SME input)
-- [ ] Evaluation metrics
-- [ ] Response latency optimization
-- [ ] Docker deployment
+If you or someone you know needs help:
+- **988** — US Suicide & Crisis Lifeline
+- **SAMHSA**: 1-800-662-4357
+- **Crisis Text Line**: text HOME to 741741
 
 ## License
 
-Academic use only - Capstone Project
+Academic / capstone use only.
