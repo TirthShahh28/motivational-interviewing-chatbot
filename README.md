@@ -4,6 +4,20 @@ A conversational companion that practices Motivational Interviewing (MI) for alc
 
 This is my MS capstone project. The core of it is a **fine-tuned Gemma 2 model** (`mi-therapist`) trained on the [AnnoMI dataset](https://github.com/uccollab/AnnoMI) plus ~1,000 synthetic conversations I generated with Claude. It runs locally via Ollama; if Ollama is unreachable, the app falls back to Claude Haiku through the Anthropic API.
 
+There are two interfaces on top of the same pipeline: a **Streamlit** dev/evaluation app that exposes internal state for debugging, and a clean end-user web app — **React** frontend (JSX compiled in-browser by Babel Standalone, CSS custom properties for theming) wired to a **FastAPI + uvicorn** backend.
+
+## End-user web interface
+
+<p align="center">
+  <img src="docs/screenshots/welcome.png" alt="Welcome screen" width="32%" />
+  <img src="docs/screenshots/chat.png" alt="Mid-conversation" width="32%" />
+  <img src="docs/screenshots/crisis.png" alt="Crisis card" width="32%" />
+</p>
+
+The end-user UI hides everything that isn't the conversation — no model picker, no debug panels, no detected-emotion labels surfaced to the user. The same state inference, RAG retrieval, and safety pipeline still runs underneath, it's just no longer part of what the user sees.
+
+When the safety layer flags a turn as crisis, the assistant message renders as a distinct soft card with 988 / SAMHSA / Crisis Text Line surfaced inline above the response — see the third screenshot.
+
 ## What it does
 
 A user types a message. Before generating a reply, the system:
@@ -12,6 +26,26 @@ A user types a message. Before generating a reply, the system:
 2. **Retrieves relevant guidelines** from a FAISS index over a curated MI knowledge base (OARS, stage-of-change, resistance handling, anti-patterns, real AnnoMI excerpts).
 3. **Runs a safety check** — any message matching crisis patterns (suicidal ideation, self-harm, overdose) short-circuits to crisis resources. Restricted topics like medication dosing are blocked too.
 4. **Generates a response** with prompts adapted to the inferred state and retrieved knowledge.
+
+### Pipeline
+
+```mermaid
+flowchart TD
+    U[User message] --> S1[Safety layer · input]
+    S1 -->|crisis pattern| CR[Crisis card<br/>988 · SAMHSA · Crisis Text Line]
+    S1 -->|restricted topic| MB[Medical boundary response]
+    S1 -->|safe| ST[State inference<br/>emotion + defensiveness]
+    ST --> RAG[RAG retrieval<br/>FAISS over MI knowledge base]
+    RAG --> RG[Adaptive prompt<br/>+ fine-tuned mi-therapist on Ollama]
+    RG --> S2[Safety layer · output]
+    S2 -->|blocked| FB[Fallback reflection]
+    S2 -->|safe| OUT[Streamed response]
+    LG[Logger writes per-session JSONL<br/>state · safety level · retrieved chunks] -.-> ST
+    LG -.-> RAG
+    LG -.-> S2
+```
+
+Every turn writes a structured JSONL record to `logs/<session_id>.jsonl` capturing the inferred state, safety level, and retrieved knowledge — so the pipeline is auditable after the fact, not just a black-box LLM call.
 
 ## Running it
 
@@ -24,11 +58,25 @@ pip install -r requirements.txt
 
 # If you have the GGUF file locally, register it with Ollama:
 ollama create mi-therapist -f models/Modelfile
+```
 
+Then pick the interface:
+
+**End-user web app (FastAPI + the Claude Design frontend):**
+
+```bash
+uvicorn backend_server:app --host 127.0.0.1 --port 8000
+```
+
+Open <http://127.0.0.1:8000>. Single server — the API and the static frontend are served on the same origin.
+
+**Developer / evaluation app (Streamlit, exposes model picker, detected emotion, debug panel):**
+
+```bash
 streamlit run app.py
 ```
 
-Don't want to mess with Ollama? Put `ANTHROPIC_API_KEY=...` in a `.env` file and the app will detect Ollama is down and fall back to Claude Haiku automatically.
+Don't want to mess with Ollama? Put `ANTHROPIC_API_KEY=...` in a `.env` file and either app will detect Ollama is down and fall back to Claude Haiku automatically.
 
 ## Why Motivational Interviewing?
 
@@ -60,16 +108,33 @@ Built a Claude-as-judge evaluation rather than relying on human scoring — too 
 ### RAG
 FAISS index over the MI knowledge base using `all-MiniLM-L6-v2` embeddings, top-3 retrieval. Retrieved chunks get injected into the prompt as context-specific guidance — e.g., if the user is scored as highly defensive, the retriever surfaces resistance-handling strategies from the MI playbook.
 
+### End-user web stack
+- **Frontend**: React 18 with JSX compiled in-browser by Babel Standalone — no build step, pure SPA. CSS custom properties drive the warm sage/cream palette; typography uses Newsreader serif (assistant text), Inter (UI), JetBrains Mono (eyebrow labels) via Google Fonts.
+- **Backend**: FastAPI + uvicorn in [`backend_server.py`](backend_server.py). A single server serves both the static frontend and the `/api/chat` endpoint that wraps the conversation pipeline — so the React app and the Python pipeline run on the same origin (no CORS, single port).
+- The Streamlit dev/evaluation app ([`app.py`](app.py)) is untouched and remains the engineering-facing interface, with model picker and per-turn state inspector visible.
+
 ## Project layout
 
 ```
-src/                           # Runtime pipeline
+src/                           # Runtime pipeline (shared by both UIs)
   conversation_manager.py      # Orchestrator
   state_inference.py           # Emotion + defensiveness detection
   rag_pipeline.py              # FAISS-based retrieval
   response_generator.py        # Adaptive prompt construction
   safety_layer.py              # Crisis / restricted-topic guards
   config.py
+
+backend_server.py              # FastAPI server for the end-user web app
+app.py                         # Streamlit dev/evaluation app
+
+capstone-chatbot-design/       # End-user web frontend (Claude Design export)
+  Aside.html                   # entry point
+  src/
+    app.jsx                    # composition root
+    chat-pieces.jsx            # Header, MessageList, MessageInput, CrisisCard, …
+    modals.jsx                 # CrisisModal, AboutModal, MenuDrawer
+    mock-backend.jsx           # API client (talks to /api/chat)
+    icons.jsx
 
 scripts/                       # Data + eval pipelines (offline, not runtime)
   prepare_annomi.py
@@ -81,7 +146,9 @@ scripts/                       # Data + eval pipelines (offline, not runtime)
 notebooks/                     # Fine-tuning + inference (Colab/Kaggle)
 knowledge_base/                # MI guidelines + AnnoMI examples
 data/                          # Processed datasets, synthetic batches, eval results
+docs/                          # Project artifacts (briefings, screenshots)
 models/                        # (gitignored) GGUF weights + Ollama Modelfile
+logs/                          # (gitignored) per-session JSONL audit logs
 ```
 
 ## Honest limits

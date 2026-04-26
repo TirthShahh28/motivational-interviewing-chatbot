@@ -61,19 +61,32 @@ DEFENSIVENESS_LEVELS = [
 ]
 
 # ============== SAFETY CONFIGURATION ==============
-# Keywords/patterns that trigger safety protocols
+# Keywords/patterns that trigger safety protocols.
+# Patterns allow for an optional intensifier word (even/really/just/actually/still)
+# between auxiliaries and verbs, since real users phrase passive ideation that way
+# more often than the textbook form.
 SAFETY_RED_FLAGS = [
     # Active suicidal ideation
     r"suicid\w*", r"kill\s*(my)?self", r"end\s+my\s+life", r"take\s+my\s+(own\s+)?life",
+    r"(end|kill)\s+it\s+all",
     # Self-harm
     r"self[- ]?harm", r"hurt\s*(my)?self", r"cut\s*(my)?self",
     # Overdose
     r"\bover\s*dose\b", r"\bod['.]?(?:ing|ed)?\b",
     # Death wish / passive ideation
-    r"want\s+to\s+die", r"wish\s+i\s+w(as|ere)\s+dead", r"better\s+off\s+dead",
-    r"no\s+reason\s+to\s+live", r"can'?t\s+take\s+it\s+anymore",
-    r"don'?t\s+want\s+to\s+be\s+here", r"won'?t\s+be\s+around\s+much\s+longer",
-    r"want\s+it\s+all\s+to\s+end", r"rather\s+be\s+dead",
+    r"want(\s+\w+)?\s+to\s+die", r"wish\s+i\s+w(as|ere)\s+dead",
+    r"better\s+off\s+(dead|without\s+me|gone|if\s+i\s+(was|were)\s+gone)",
+    r"rather\s+be\s+dead",
+    r"no\s+reason\s+to\s+(live|keep\s+going|go\s+on|continue|exist|wake\s+up)",
+    r"no\s+point\s+(in\s+)?(living|keep\s+going|going\s+on|continuing|exist)",
+    r"don'?t\s+see\s+(a\s+|any\s+)?(reason|point|way)\s+to\s+(keep\s+going|go\s+on|live|continue)",
+    r"can'?t\s+(take|do|handle)\s+(it|this)\s+(anymore|any\s+longer)",
+    # The (?:\w+\s+)? group catches "don't even want", "don't really want", "don't just want", etc.
+    r"don'?t\s+(?:\w+\s+)?want\s+to\s+(be\s+here|live|keep\s+going|wake\s+up|go\s+on|exist|be\s+alive)",
+    r"won'?t\s+be\s+around\s+(much\s+)?longer",
+    r"want\s+it\s+(all\s+)?to\s+end",
+    r"nothing\s+left\s+(for\s+me|to\s+live\s+for)",
+    r"thinking\s+about\s+(ending|killing)",
 ]
 
 # Topics the bot should NOT provide advice on

@@ -23,7 +23,7 @@ This chatbot is NOT a crisis service. These protocols guide the chatbot in recog
 - "I'm glad you told me. That took real courage."
 - "Your life matters, and there are people trained to help with exactly what you're going through right now."
 
-### What NOT to Say
+### What NOT to Sayi 
 
 - "You don't really mean that" (dismissive)
 - "Think about how your family would feel" (guilt-inducing)

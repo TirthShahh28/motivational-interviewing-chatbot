@@ -19,3 +19,7 @@ pydantic>=2.5.0
 
 # Logging
 loguru>=0.7.2
+
+# Web server (end-user UI backend)
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
