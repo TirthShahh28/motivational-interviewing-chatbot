@@ -1,0 +1,169 @@
+% =====================================================================
+%  ENGR 5315 -- M.Eng. Capstone Final Report
+%  Author : Tirth Shah
+%  Title  : Motivational Interviewing Chatbot for Alcohol-Related Dialogues
+%  Build  : pdflatex main && bibtex main && pdflatex main && pdflatex main
+% =====================================================================
+\documentclass[11pt,letterpaper]{article}
+
+% ----- Page geometry -----
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% ----- Encoding & fonts -----
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ----- Math, symbols, units -----
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{siunitx}
+
+% ----- Graphics, tables -----
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+
+% ----- Diagrams (used for the runtime pipeline in methodology) -----
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
+
+% ----- Code listings -----
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{lstbg}{RGB}{248,248,248}
+\definecolor{lstkw}{RGB}{0,0,180}
+\definecolor{lststr}{RGB}{163,21,21}
+\definecolor{lstcmt}{RGB}{0,128,0}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{lstbg},
+    keywordstyle=\color{lstkw}\bfseries,
+    stringstyle=\color{lststr},
+    commentstyle=\color{lstcmt}\itshape,
+    frame=single,
+    rulecolor=\color{black!20},
+    breaklines=true,
+    breakatwhitespace=true,
+    showstringspaces=false,
+    columns=flexible,
+    tabsize=2,
+    captionpos=b,
+}
+\lstdefinelanguage{json}{
+    morestring=[b]",
+    morestring=[d]',
+    stringstyle=\color{lststr},
+    keywords={true,false,null},
+    keywordstyle=\color{lstkw}\bfseries,
+}
+
+% ----- Refs & links -----
+\usepackage[hidelinks,colorlinks=true,linkcolor=black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\usepackage{cleveref}
+
+% ----- Bibliography -----
+\usepackage[numbers,sort&compress]{natbib}
+
+% ----- Header / footer -----
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small Motivational Interviewing Chatbot}
+\fancyhead[R]{\small Tirth Shah \textbar{} M.Eng. Capstone}
+\fancyfoot[C]{\thepage}
+
+\title{\textbf{Motivational Interviewing Chatbot for Alcohol-Related Dialogues:\\
+A Fine-Tuned, Retrieval-Augmented, Safety-Layered LLM Pipeline}}
+\author{Tirth Shah\\
+        \small M.Eng. in Computer Science\\
+        \small University of Connecticut\\
+        \small \texttt{tirthshah2812@gmail.com}}
+\date{May 2026}
+
+\begin{document}
+
+% =====================================================================
+%  TITLE PAGE
+% =====================================================================
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+
+    {\large UNIVERSITY OF CONNECTICUT \\[0.2em]
+            College of Engineering \\
+            Master of Engineering Program \\
+            ENGR 5315 -- M.Eng. Capstone Project \par}
+
+    \vspace{3cm}
+
+    {\Huge \bfseries Motivational Interviewing Chatbot for Alcohol-Related Dialogues \par}
+    \vspace{0.6cm}
+    {\Large A Fine-Tuned, Retrieval-Augmented, Safety-Layered LLM Pipeline\par}
+
+    \vspace{2.5cm}
+
+    {\large \textbf{Tirth Shah} \par}
+    \vspace{0.2cm}
+    {\large \texttt{tirthshah2812@gmail.com} \par}
+
+    \vspace{1.5cm}
+
+    {\large \textit{Capstone Instructor} \par}
+    {\large \textbf{Prof.\ Tingting Yu} \par}
+
+    \vspace{1.5cm}
+
+    {\large \textit{Submitted in partial fulfillment of the requirements\\
+                    for the degree of Master of Engineering in Computer Science}\par}
+
+    \vfill
+
+    {\large May 2026 \par}
+\end{titlepage}
+
+% =====================================================================
+%  FRONT MATTER
+% =====================================================================
+\pagenumbering{roman}
+
+\input{sections/01_abstract}
+\newpage
+
+\tableofcontents
+\newpage
+
+\listoffigures
+\listoftables
+\newpage
+
+% =====================================================================
+%  BODY
+% =====================================================================
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{sections/02_introduction}
+\input{sections/03_literature}
+\input{sections/04_methodology}
+\input{sections/05_analysis}
+\input{sections/06_experiments}
+\input{sections/07_results}
+\input{sections/08_conclusions}
+\input{sections/09_future_work}
+
+% =====================================================================
+%  REFERENCES
+% =====================================================================
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

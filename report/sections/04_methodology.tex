@@ -1,0 +1,293 @@
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{System Overview}
+
+The system is a six-stage Python pipeline shared by two front ends. Every user
+message is run through the same pipeline; only the presentation layer differs
+between the developer/evaluation interface and the end-user web interface.
+\Cref{fig:pipeline} shows the runtime path of a single turn.
+
+\begin{figure}[t]
+\centering
+\begin{minipage}{0.95\linewidth}
+\centering
+\begin{tikzpicture}[
+    node distance=0.55cm and 0.65cm,
+    every node/.style={font=\footnotesize},
+    box/.style={draw, rounded corners=2pt, align=center, minimum width=3.0cm,
+                minimum height=0.85cm, fill=blue!4},
+    safe/.style={draw, rounded corners=2pt, align=center, minimum width=3.0cm,
+                 minimum height=0.85cm, fill=red!6},
+    io/.style={draw, rounded corners=2pt, align=center, minimum width=2.4cm,
+               minimum height=0.7cm, fill=gray!8},
+    arr/.style={-{Stealth[length=2.2mm]}, thick},
+    side/.style={-{Stealth[length=2.2mm]}, dashed, gray}
+]
+\node[io] (u) {User message};
+\node[safe, below=of u] (s1) {1.\,Input safety \\ \scriptsize crisis / restricted-topic};
+\node[box, below=of s1] (st) {2.\,State inference \\ \scriptsize emotion + defensiveness};
+\node[box, below=of st] (rag) {3.\,RAG retrieval \\ \scriptsize FAISS top-3};
+\node[box, below=of rag] (rg) {4.\,Response generation \\ \scriptsize fine-tuned mi-therapist};
+\node[safe, below=of rg] (s2) {5.\,Output safety};
+\node[io, below=of s2] (out) {Streamed response};
+
+\node[io, right=2.0cm of s1] (cr) {Crisis card \\ \scriptsize 988 / SAMHSA / CTL};
+\node[io, right=2.0cm of s2] (fb) {Fallback reflection};
+\node[box, right=2.0cm of rag] (log) {6.\,Per-turn JSONL log};
+
+\draw[arr] (u) -- (s1);
+\draw[arr] (s1) -- node[right,font=\scriptsize]{safe} (st);
+\draw[arr] (s1) -- node[above,font=\scriptsize]{crisis} (cr);
+\draw[arr] (st) -- (rag);
+\draw[arr] (rag) -- (rg);
+\draw[arr] (rg) -- (s2);
+\draw[arr] (s2) -- node[right,font=\scriptsize]{safe} (out);
+\draw[arr] (s2) -- node[above,font=\scriptsize]{blocked} (fb);
+
+\draw[side] (st.east) -- ++(0.3,0) |- (log.west);
+\draw[side] (rag.east) -- (log.west);
+\draw[side] (s2.east) -- ++(0.3,0) |- (log.west);
+\end{tikzpicture}
+\end{minipage}
+\caption{Six-stage runtime pipeline. Solid arrows are the request path; dashed
+arrows indicate side-effect writes to the per-turn audit log. Stages 1 and 5
+are red because they can short-circuit the pipeline; the remaining stages
+always execute when the input passes the input safety check.}
+\label{fig:pipeline}
+\end{figure}
+
+The orchestrator is \texttt{ConversationManager}, which owns a
+\texttt{ConversationHistory}, a \texttt{StateInferencer}, a
+\texttt{RAGPipeline}, a \texttt{ResponseGenerator}, and a
+\texttt{ConversationLogger}. The same object graph is wrapped by either the
+Streamlit dev/eval app (\texttt{app.py}) or the FastAPI server
+(\texttt{backend\_server.py}).
+
+\subsection{Stage 1 -- Input Safety}
+
+The input safety layer (\texttt{src/safety\_layer.py}) screens the incoming
+user message for two categories of content:
+
+\begin{itemize}
+    \item \textbf{Crisis indicators.} Suicidal ideation (active and passive),
+    self-harm intent, and overdose. Patterns include direct phrases
+    (``kill myself'', ``end it'') and indirect phrasings (``no reason to
+    keep going'', ``don't even want to be here''). The original implementation
+    used strict-adjacency regexes; these missed many natural phrasings, so the
+    patterns were broadened with optional-intensifier groups during late-stage
+    polish.
+    \item \textbf{Restricted topics.} Medication dosing and prescription
+    advice. The system is not a clinical authority; it is explicitly designed
+    to refuse this category of request.
+\end{itemize}
+
+A crisis match short-circuits the entire pipeline -- no RAG retrieval, no LLM
+call, just a pre-written response containing the 988 Suicide \& Crisis
+Lifeline, SAMHSA helpline, and Crisis Text Line. A restricted-topic match
+returns a medical-boundary response with the same short-circuit.
+
+The choice of regex over an embedding-based classifier is deliberate: every
+trigger is auditable line-by-line, and the cost of a false negative here is
+much higher than the cost of a false positive.
+
+\subsection{Stage 2 -- State Inference}
+
+The state inferencer (\texttt{src/state\_inference.py}) scores each user
+message on two axes:
+
+\begin{itemize}
+    \item \textbf{Emotion} -- one of seven classes:
+    \textit{neutral}, \textit{frustrated}, \textit{anxious}, \textit{sad},
+    \textit{angry}, \textit{hopeful}, \textit{contemplative}.
+    \item \textbf{Defensiveness} -- one of four levels:
+    \textit{none}, \textit{low}, \textit{moderate}, \textit{high}.
+\end{itemize}
+
+For local Gemma runs the inference is rule-based using weighted regular
+expressions over linguistic markers (modal verbs, hedging, negations, intensity
+words), which runs in $\sim$30~ms. For API runs an LLM call is used instead.
+Either path produces the same JSON structure, which is consumed downstream.
+
+The inferred state \emph{never appears in the response surface}. It is used
+silently to weight retrieval and to select among prompt-template variants.
+This is a deliberate UX decision -- being told ``I detect that you are
+defensive'' would itself be MI-inconsistent.
+
+\subsection{Stage 3 -- Retrieval-Augmented Generation}
+
+The retrieval component (\texttt{src/rag\_pipeline.py}) maintains a FAISS index
+over a curated MI knowledge base. The corpus consists of nine markdown
+documents authored for this project plus an extracted set of high-quality MI
+exchanges from AnnoMI (\Cref{tab:kb-contents}).
+
+\begin{table}[h]
+\centering
+\caption{Contents of the MI knowledge base used for retrieval.}
+\label{tab:kb-contents}
+\begin{tabular}{ll}
+\toprule
+\textbf{Document} & \textbf{Purpose} \\
+\midrule
+\texttt{mi\_principles.md}              & Four guiding MI principles \\
+\texttt{oars\_detailed\_guide.md}       & OARS skill set with examples \\
+\texttt{mi\_antipatterns.md}            & What NOT to say \\
+\texttt{handling\_resistance.md}        & Roll-with-resistance strategies \\
+\texttt{defensiveness\_playbook.md}     & Tactics by defensiveness level \\
+\texttt{stage\_of\_change\_strategies.md} & Stage-matched interventions \\
+\texttt{emotional\_responses.md}        & Reflection patterns by emotion \\
+\texttt{harm\_reduction.md}             & Harm-reduction framings \\
+\texttt{crisis\_protocols.md}           & Escalation and resource scripts \\
+\texttt{annomi\_examples/}              & Curated AnnoMI excerpts \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The configuration is:
+\begin{itemize}
+    \item \textbf{Encoder.} \texttt{sentence-transformers/all-MiniLM-L6-v2}
+    (384-dim, English-only).
+    \item \textbf{Chunking.} \texttt{chunk\_size = 500} characters,
+    \texttt{overlap = 50}.
+    \item \textbf{Index.} FAISS \texttt{IndexFlatL2} (exact, sufficient given
+    the small corpus size).
+    \item \textbf{Retrieval.} Top-$k$ with $k=3$, biased by inferred state --
+    e.g., a turn scored as ``high'' defensiveness oversamples the
+    \texttt{handling\_resistance.md} and \texttt{defensiveness\_playbook.md}
+    chunks instead of empathy reflections.
+\end{itemize}
+
+The retrieved chunks are injected into the prompt as ``context-specific
+guidance'' in stage 4.
+
+\subsection{Stage 4 -- Response Generation}
+
+The response generator (\texttt{src/response\_generator.py}) builds the final
+prompt as the concatenation of:
+\begin{enumerate}
+    \item a system message describing MI principles and style guidelines,
+    \item the top-3 retrieved knowledge chunks,
+    \item a sliding context window of recent dialogue turns,
+    \item the new user message.
+\end{enumerate}
+
+The prompt is sent to the fine-tuned \texttt{mi-therapist} model running on
+Ollama. If Ollama is unreachable, the system falls back transparently to
+Claude Haiku via the Anthropic API, with the fallback fact recorded in the
+audit log.
+
+\subsubsection*{Fine-Tuning Configuration}
+
+\begin{table}[h]
+\centering
+\caption{Fine-tuning configuration. ``Effective batch size'' is
+$1 \times 8 = 8$; ``trainable params'' figure depends on rank and target modules.}
+\label{tab:finetune-config}
+\begin{tabular}{ll}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Base model              & \texttt{google/gemma-2-2b-it} \\
+Quantization (training) & 4-bit NF4 (QLoRA-style) \\
+Method                  & LoRA via PEFT \\
+LoRA rank $r$           & 16 \\
+LoRA $\alpha$           & 32 \\
+LoRA dropout            & 0.05 \\
+Target modules          & \texttt{q\_proj, k\_proj, v\_proj, o\_proj}, \\
+                        & \texttt{gate\_proj, up\_proj, down\_proj} \\
+Optimizer               & paged\_adamw\_8bit \\
+Learning rate           & $2 \times 10^{-4}$ \\
+Scheduler               & cosine with $10\%$ warmup \\
+Epochs                  & 3 \\
+Batch size              & 1 (per device) \\
+Gradient accumulation   & 8 \\
+Precision               & bf16 \\
+Gradient checkpointing  & enabled \\
+Max sequence length     & 2048 tokens \\
+Hardware                & Google Colab T4 (16 GB) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The trained adapters are merged back into the base weights and exported to
+4-bit GGUF (Q4\_K\_M) for inference, producing a $\approx$1.6~GB artifact that
+runs on a CPU through Ollama with $\sim$2--4~s per-turn latency.
+
+\subsection{Stage 5 -- Output Safety}
+
+After generation, the response is screened a second time for medical-advice
+patterns (``you should take'', ``I recommend stopping'', explicit dosage
+references). If matched, the LLM output is replaced with a generic reflective
+fallback. This stage exists because system-prompt guardrails alone are not
+reliable -- a fine-tuned model can still drift, especially on adversarial
+inputs.
+
+\subsection{Stage 6 -- Audit Logging}
+
+The \texttt{ConversationLogger} writes one JSONL record per turn under
+\texttt{logs/<session\_id>.jsonl} containing: timestamp, user message,
+bot response, inferred state (emotion, defensiveness, reasoning, linguistic
+markers), safety level, retrieved chunks. Crisis-flagged turns are
+additionally appended to \texttt{logs/flagged\_for\_review.jsonl} for manual
+review. The audit log is the artifact that makes the pipeline inspectable
+rather than a black box.
+
+\subsection{Two Interfaces, One Pipeline}
+
+The same \texttt{ConversationManager} powers both UIs. \Cref{tab:two-ui}
+contrasts them.
+
+\begin{table}[h]
+\centering
+\caption{The same backend pipeline is wrapped by two different front ends.}
+\label{tab:two-ui}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{l X X}
+\toprule
+ & \textbf{End-user web app} & \textbf{Developer / eval app} \\
+\midrule
+Entry point          & \texttt{backend\_server.py} + React frontend & \texttt{app.py} (Streamlit) \\
+Stack                & FastAPI + React 18 (UMD) + Babel Standalone & Streamlit \\
+Surfaces internal state? & No -- clean conversation only & Yes -- model picker, detected emotion, retrieval count, JSON debug panel \\
+Crisis handling      & Soft inline card with 988 / SAMHSA / CTL & Long-form text response \\
+Audience             & Non-technical demos, prof review & Engineering iteration and evaluation \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The split exists because the visibility a developer needs (raw inferred state,
+retrieved chunks, fallback indicator) is the same visibility an end user should
+\emph{not} see -- it would break the conversational illusion that MI requires.
+
+\subsection{Project Layout}
+
+\Cref{fig:layout} maps the runtime pipeline to the source tree.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.92\linewidth}
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single, backgroundcolor=\color{lstbg}]
+src/                          # Runtime pipeline (shared by both UIs)
+  conversation_manager.py     # Orchestrator
+  state_inference.py          # Stage 2: emotion + defensiveness
+  rag_pipeline.py             # Stage 3: FAISS-based retrieval
+  response_generator.py       # Stage 4: adaptive prompt construction
+  safety_layer.py             # Stages 1 and 5 + Stage 6 logging
+  config.py
+
+backend_server.py             # FastAPI server (end-user web app)
+app.py                        # Streamlit dev/evaluation app
+
+capstone-chatbot-design/      # End-user web frontend (React + Babel)
+scripts/                      # Offline data + eval pipelines
+notebooks/                    # Fine-tuning + inference notebooks
+knowledge_base/               # MI guidelines + AnnoMI excerpts
+data/                         # Processed datasets, synthetic batches, eval results
+models/                       # (gitignored) GGUF weights + Ollama Modelfile
+logs/                         # (gitignored) per-session JSONL audit logs
+\end{lstlisting}
+\end{minipage}
+\caption{Project layout. The \texttt{src/} package is the runtime, sharable
+between front ends; \texttt{scripts/} and \texttt{notebooks/} are offline.}
+\label{fig:layout}
+\end{figure}

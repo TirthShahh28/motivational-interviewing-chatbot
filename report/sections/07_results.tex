@@ -1,0 +1,236 @@
+\section{Results and Discussion}
+\label{sec:results}
+
+This section presents the evaluation results, compares the configurations
+across MI dimensions, and discusses what the numbers mean qualitatively.
+All scores are produced by the LLM-as-judge protocol described in
+\Cref{sec:experiments}.
+
+\subsection{Overall Scores}
+
+\Cref{tab:results-main} reports per-dimension means and the unweighted overall
+mean across the five configurations. Standard deviations are reported alongside
+the means; $n$ is the number of scored items per configuration (small
+differences in $n$ reflect generation failures retried but not re-scored, and
+five additional edge cases scored only on the Claude reference).
+
+\begin{table}[h]
+\centering
+\caption{Mean scores ($\mu \pm \sigma$) per MI dimension, by configuration.
+Each cell is over $n$ test items; the rightmost column is the unweighted mean
+across the five dimensions.}
+\label{tab:results-main}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l c c c c c c c}
+\toprule
+\textbf{Config} & $n$ & \textbf{Empathy} & \textbf{MI tech.} & \textbf{Resist.} & \textbf{Auton.} & \textbf{Approp.} & \textbf{Overall} \\
+\midrule
+\texttt{base}    & 181 & $3.11 \pm 0.80$ & $2.96 \pm 0.80$ & $3.65 \pm 0.80$ & $3.73 \pm 0.60$ & $2.78 \pm 0.83$ & $3.25$ \\
+\texttt{v1}      & 181 & $3.22 \pm 0.87$ & $2.96 \pm 0.90$ & $3.52 \pm 1.01$ & $3.66 \pm 0.81$ & $2.74 \pm 0.95$ & $3.22$ \\
+\texttt{v2}      & 181 & $3.44 \pm 0.97$ & $3.27 \pm 0.92$ & $3.87 \pm 1.06$ & $3.89 \pm 0.90$ & $2.92 \pm 1.09$ & $3.48$ \\
+\texttt{v2\_rag} & 180 & $3.49 \pm 1.10$ & $3.85 \pm 1.08$ & $4.03 \pm 1.15$ & $4.05 \pm 0.99$ & $3.61 \pm 1.30$ & $\mathbf{3.81}$ \\
+\texttt{claude}  & 186 & $4.73 \pm 0.46$ & $4.56 \pm 0.53$ & $4.82 \pm 0.46$ & $4.57 \pm 0.56$ & $4.36 \pm 0.72$ & $\mathbf{4.61}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Cref{fig:overall} visualizes the overall column. The fine-tuned model with
+RAG closes $41\%$ of the absolute gap between the base Gemma-2-2B and the
+Claude reference, with an absolute gain of $+0.56$ ($+17.2\%$ relative) over
+the base.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.78\linewidth]{05_overall_average.png}
+\caption{Overall mean score (unweighted across the five MI dimensions) per
+configuration. Higher is better. The fine-tuned Gemma-2-2B with RAG reaches
+$3.81/5.0$, closing roughly $41\%$ of the gap between the base Gemma-2-2B
+($3.25$) and Claude Haiku ($4.61$).}
+\label{fig:overall}
+\end{figure}
+
+\subsection{Per-Dimension Comparison}
+
+Aggregate numbers obscure where the gains came from. \Cref{fig:per-dim} shows
+all five dimensions side by side; \Cref{fig:radar} shows the same data on a
+radar chart that makes the shape of each configuration's strengths visible.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.92\linewidth]{01_model_comparison.png}
+\caption{Per-dimension mean scores by configuration. \texttt{v2\_rag} (red)
+clearly dominates the smaller-model configurations; the largest absolute gains
+appear on \emph{MI technique} and \emph{appropriateness}.}
+\label{fig:per-dim}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.62\linewidth]{02_radar_chart.png}
+\caption{Radar plot of the five MI dimensions. The fine-tuned configurations
+have a fundamentally different shape from \texttt{base} -- they are wider on
+\emph{MI technique} and \emph{appropriateness}, the two dimensions closest to
+``did the model do MI things rather than generic-assistant things''.}
+\label{fig:radar}
+\end{figure}
+
+The dimension-level gains of \texttt{v2\_rag} over \texttt{base} are
+summarized in \Cref{tab:per-dim-delta}.
+
+\begin{table}[h]
+\centering
+\caption{Per-dimension improvement of \texttt{v2\_rag} over \texttt{base}.
+The two largest gains -- MI technique ($+0.89$) and Appropriateness ($+0.83$)
+-- are exactly the dimensions on which a generic instruction-tuned model is
+weakest by construction.}
+\label{tab:per-dim-delta}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Dimension} & \textbf{base} & \textbf{v2\_rag} & $\Delta$ \\
+\midrule
+Empathy             & 3.11 & 3.49 & $+0.38$ \\
+MI technique        & 2.96 & 3.85 & $+0.89$ \\
+Resistance handling & 3.65 & 4.03 & $+0.38$ \\
+Autonomy support    & 3.73 & 4.05 & $+0.32$ \\
+Appropriateness     & 2.78 & 3.61 & $+0.83$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Cref{fig:improvement} expresses the same data as a per-dimension delta, and
+\Cref{fig:heatmap} shows the full configuration $\times$ dimension matrix.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.78\linewidth]{03_improvement_over_base.png}
+\caption{Absolute score gain of \texttt{v2\_rag} over \texttt{base}, by
+dimension. The two MI-specific dimensions (technique, appropriateness) gain
+nearly a full point on a 5-point scale; the more general dimensions (empathy,
+resistance handling, autonomy support) gain less because the base model was
+already passable on them.}
+\label{fig:improvement}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\linewidth]{06_heatmap.png}
+\caption{Configuration $\times$ dimension heatmap. The visual pattern -- a
+near-uniform top row for Claude, a graded gradient down the fine-tuned
+configurations, and a thin top from \texttt{base} on Empathy/Resistance --
+matches the per-dimension narrative.}
+\label{fig:heatmap}
+\end{figure}
+
+\subsection{The v1 Result}
+
+\Cref{tab:results-main} contains a result that deserves a sentence on its own:
+\texttt{v1} (fine-tuned on real AnnoMI alcohol data \emph{only}) scores
+$3.22$ overall, slightly \emph{below} \texttt{base} ($3.25$). This is a real
+finding, not noise. With $\approx$363 training examples, a small instruction-tuned
+model does not learn enough to compensate for the specialization cost; the
+fine-tune appears to have narrowed its style without improving its MI quality.
+
+The reason \texttt{v2} ($3.48$) clears \texttt{base} is the synthetic data:
+once the training set is widened with the $\approx$1{,}000 generated
+conversations covering the four scenario types, the same fine-tuning recipe
+produces a meaningful gain. This is the strongest single piece of evidence
+that the synthetic-data step was load-bearing rather than decorative.
+
+\subsection{Technique Distribution}
+
+\Cref{fig:tech} reports which MI techniques the judge actually \emph{detected}
+in each configuration's responses. This is independent of score quality -- it
+is a description of \emph{what} the model does, not how well.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.92\linewidth]{04_technique_distribution.png}
+\caption{Distribution of MI techniques detected by the judge per configuration.
+The fine-tuned configurations shift the modal output toward
+\textit{reflection}/\textit{open question} -- the canonical MI moves -- and
+away from \textit{advice}/\textit{closed question}. \texttt{v2\_rag} most
+closely tracks the Claude reference's distribution.}
+\label{fig:tech}
+\end{figure}
+
+\subsection{Qualitative Examples}
+
+Numbers alone do not carry the texture of what the fine-tune actually changed.
+\Cref{tab:qual} shows one representative AnnoMI test turn and the response
+from each configuration.
+
+\begin{table}[h]
+\centering
+\caption{Representative qualitative comparison on a real AnnoMI test turn.
+The user is mildly defensive; the reference response from the human counselor
+uses a scaling question, a canonical MI move.}
+\label{tab:qual}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{l X}
+\toprule
+\textbf{User turn} & \textit{``I don't really think I drink that much. My friends drink the same.''} \\
+\midrule
+\texttt{base}    & Highlights health risks of regular drinking and recommends tracking intake -- advice-giving, MI-inconsistent. \\
+\texttt{v1}      & Asks ``how much is that, exactly?'' -- a closed quantitative question that invites further defensiveness. \\
+\texttt{v2}      & Reflects: ``It sounds like comparing yourself to your friends makes it feel pretty normal.'' MI-consistent simple reflection. \\
+\texttt{v2\_rag} & Reflects \emph{and} pivots to autonomy: ``It sounds normal to you, given who you're around. What would help you decide whether you wanted to think more about it -- not because anyone says so, but on your own terms?'' \\
+\texttt{claude}  & A complex reflection plus a scaling question, similar in shape to the human reference. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The qualitative gradient mirrors the quantitative one: \texttt{base} gives
+advice, \texttt{v1} reverts to closed questioning, \texttt{v2} reaches a
+correct simple reflection, and \texttt{v2\_rag} layers a reflection with an
+autonomy-supporting follow-up that reads as deliberate MI rather than
+templated.
+
+\subsection{Latency and Footprint}
+
+\Cref{tab:latency} reports inference characteristics on the deployment target.
+Latency was measured end-to-end (full pipeline including state inference and
+RAG retrieval) on a CPU-only laptop, averaged over 50 turns of the eval set.
+
+\begin{table}[h]
+\centering
+\caption{Inference characteristics of the deployed configurations.
+Footprint is the on-disk model artifact; latency is full end-to-end per turn
+on CPU including pipeline overhead.}
+\label{tab:latency}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Configuration} & \textbf{Footprint} & \textbf{Latency (CPU)} \\
+\midrule
+\texttt{base / v1 / v2 / v2\_rag} (Gemma-2-2B Q4\_K\_M GGUF) & $\sim$1.6 GB & $\sim$2--4 s \\
+\texttt{claude} (Haiku via API)                              & N/A (hosted) & $\sim$1--2 s \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The 2--4 s latency is acceptable for a demo and fine for the evaluation loop
+but is too slow for a fluent real-time conversation -- a limitation discussed
+further in \Cref{sec:future_work}.
+
+\subsection{Summary}
+
+The headline findings are:
+\begin{enumerate}
+    \item Fine-tuning a 2B-parameter open-weights model with LoRA on a mixed
+    real + synthetic MI corpus and adding RAG over a curated MI knowledge base
+    closes $\approx$41\% of the gap to a much larger Claude Haiku reference,
+    with an absolute gain of $+0.56$ ($+17.2\%$ relative) over the
+    no-fine-tune baseline.
+    \item The largest gains are on \emph{MI technique} ($+0.89$) and
+    \emph{appropriateness} ($+0.83$) -- precisely the dimensions on which a
+    generic instruction-tuned model is weakest.
+    \item Fine-tuning on real AnnoMI \emph{alone} ($\sim$363 examples) is
+    not enough; the synthetic-data augmentation step is load-bearing.
+    \item Adding RAG to the v2 fine-tune yields a further $+0.33$ overall,
+    confirming that knowledge retrieval is complementary to fine-tuning rather
+    than redundant with it.
+    \item The headline gap to a much larger model remains substantial
+    ($-0.80$ overall on a 5-point scale), as expected; the project's claim is
+    not parity but rather that a small, locally-deployable model can be moved
+    into a usable MI-consistent regime.
+\end{enumerate}

@@ -1,0 +1,80 @@
+\section{Introduction and Background}
+\label{sec:introduction}
+
+\subsection{Problem Statement}
+
+Roughly one in seven adults in the United States meets criteria for an
+alcohol-use disorder in any given year, yet only a small minority ever speak to
+a counselor about it~\cite{niaaa2023}. The evidence-based clinical approach to
+ambivalence about substance use is \textit{Motivational Interviewing} (MI),
+developed by Miller and Rollnick~\cite{miller2013mi}. MI is collaborative and
+goal-oriented but explicitly non-confrontational: rather than tell the patient
+what to do, the clinician helps the patient articulate their own reasons for
+change.
+
+Two facts motivate this project. First, qualified MI clinicians do not scale --
+training, supervision, and licensure are slow and expensive, and access is
+geographically uneven. Second, off-the-shelf LLMs do not, by default, behave
+like MI counselors. They are trained on instruction-following corpora that
+reward direct answers and informative explanations, so when faced with a user
+who says \textit{``I don't think I drink that much''}, the modal response from
+a generic assistant is to either reassure the user (a missed opportunity to
+develop discrepancy) or to enumerate health risks (a frontal assault that
+provokes resistance). Neither is MI.
+
+The question this capstone addresses is therefore practical:
+\begin{quote}
+\textit{Can a small, locally-deployable language model be turned into a
+credible Motivational Interviewing assistant for alcohol-related conversations,
+with explicit safety boundaries and full conversation auditability?}
+\end{quote}
+
+\subsection{Project Goals and Objectives}
+
+The objectives of this project, in priority order, are:
+\begin{enumerate}
+    \item \textbf{Behavioral fidelity.} Produce responses that visibly follow
+    MI principles (express empathy, roll with resistance, support autonomy,
+    develop discrepancy) rather than defaulting to advice-giving or
+    information-dumping.
+    \item \textbf{State awareness.} Detect when a user shifts from openness
+    to defensiveness mid-conversation and adapt the response style accordingly,
+    silently -- without exposing the inferred state to the user.
+    \item \textbf{Safety.} Detect crisis ideation (suicidal language,
+    self-harm, overdose) and restricted-topic content (medication dosing,
+    prescriptions) both before \emph{and} after model inference, and
+    short-circuit to evidence-based crisis resources when warranted.
+    \item \textbf{Auditability.} Produce a structured, per-turn record of every
+    conversation containing the inferred state, retrieved knowledge, safety
+    flags, and full text -- so that the pipeline is inspectable rather than a
+    black-box LLM call.
+    \item \textbf{Local deployability.} Run the production model on a CPU-only
+    workstation through Ollama, with a transparent fallback to a hosted API
+    when local inference is unavailable.
+\end{enumerate}
+
+\subsection{Scope and Limits}
+
+The system is a research artifact, not a clinical product. It is not validated
+under an institutional review board, has not been reviewed at scale by licensed
+clinicians, and is not appropriate for unsupervised deployment to people in
+acute distress. Its purpose is to demonstrate the engineering of an
+MI-aligned conversational pipeline and to characterize, quantitatively, what a
+small fine-tuned model can reach versus a large reference model on the same
+task. The honest limits of the system are stated explicitly in
+\Cref{sec:future_work}.
+
+\subsection{Report Outline}
+
+The remainder of this report is organized as follows.
+\Cref{sec:literature} surveys related work in MI, parameter-efficient
+fine-tuning, retrieval-augmented generation, and LLM-as-judge evaluation.
+\Cref{sec:methodology} describes the six-stage pipeline architecture and the
+fine-tuning, retrieval, and safety designs.
+\Cref{sec:analysis} discusses the key engineering analyses and trade-offs --
+data scarcity, model size selection, evaluation design.
+\Cref{sec:experiments} specifies the evaluation set, the LLM-as-judge protocol,
+and the configurations compared.
+\Cref{sec:results} presents quantitative and qualitative results.
+\Cref{sec:conclusions} summarizes findings, and \Cref{sec:future_work} lays out
+recommended future work.

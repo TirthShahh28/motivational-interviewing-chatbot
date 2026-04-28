@@ -1,0 +1,89 @@
+\section{Survey of Related Literature}
+\label{sec:literature}
+
+This project sits at the intersection of four bodies of work: Motivational
+Interviewing as a behavioral-health methodology, parameter-efficient fine-tuning
+of language models, retrieval-augmented generation, and automated evaluation
+of dialogue systems. The relevant prior art in each is summarized here.
+
+\subsection{Motivational Interviewing}
+
+Motivational Interviewing was introduced by Miller and Rollnick~\cite{miller2013mi}
+as a counseling style for resolving ambivalence about behavior change. Its
+operational core is the OARS skill set --
+\textit{Open questions}, \textit{Affirmations}, \textit{Reflections},
+\textit{Summaries} -- combined with four guiding principles:
+\textit{express empathy}, \textit{develop discrepancy}, \textit{roll with
+resistance}, and \textit{support self-efficacy}. Meta-analytic evidence supports
+MI as an effective intervention for alcohol-use disorders compared to no-treatment
+controls, with effect sizes that, while modest, are robust across populations
+and settings~\cite{lundahl2010metaanalysis}.
+
+The empirical literature on \emph{automating} MI-aligned dialogue is much
+younger. Wu et al.~\cite{wu2022annomi} introduced the AnnoMI corpus -- the only
+publicly available dataset of expert-annotated MI transcripts -- and a baseline
+classifier for MI-consistent versus MI-inconsistent turns. AnnoMI is the
+real-data backbone of this project.
+
+\subsection{Parameter-Efficient Fine-Tuning}
+
+Full fine-tuning of multi-billion-parameter language models is prohibitive on
+single-GPU consumer hardware. Hu et al.~\cite{hu2022lora} introduced
+\textbf{Low-Rank Adaptation (LoRA)}, which freezes the pretrained weight matrix
+$W \in \mathbb{R}^{d \times k}$ and learns a low-rank update
+$\Delta W = BA$ where $B \in \mathbb{R}^{d \times r}$ and
+$A \in \mathbb{R}^{r \times k}$, with $r \ll \min(d,k)$. LoRA reduces trainable
+parameters by orders of magnitude while matching full-fine-tuning quality on
+GLUE-scale benchmarks. Dettmers et al.~\cite{dettmers2023qlora} extended this
+to QLoRA, in which the frozen base model is quantized to 4-bit precision so that
+even very large models fit on a single consumer GPU.
+
+This project uses LoRA via the Hugging Face PEFT library~\cite{peft2023}, applied
+to all attention and MLP projection matrices of \texttt{gemma-2-2b-it}, with the
+base weights kept in 4-bit NF4 precision during training. The Gemma model
+family itself was released by Google~\cite{gemma2024}, with the 2B-instruct
+checkpoint chosen here for local deployability.
+
+\subsection{Retrieval-Augmented Generation}
+
+Lewis et al.~\cite{lewis2020rag} introduced \textbf{Retrieval-Augmented Generation
+(RAG)} as a method for grounding language model outputs in non-parametric
+knowledge: at inference time, an embedding-based retriever fetches the
+$k$ most relevant passages from a document store and concatenates them to the
+prompt. RAG mitigates hallucination and lets the system update its knowledge
+without retraining the model.
+
+The retrieval component of this project uses FAISS~\cite{johnson2019faiss} as
+the approximate-nearest-neighbor index and \texttt{all-MiniLM-L6-v2}~\cite{reimers2019sentencebert}
+as the encoder. \texttt{all-MiniLM-L6-v2} was selected over larger encoders for
+its $\approx 30 \times$ speed advantage on CPU and its strong retrieval quality
+on the MTEB benchmark~\cite{muennighoff2022mteb} relative to its size.
+
+\subsection{LLM-as-Judge Evaluation}
+
+Evaluating open-ended dialogue is a long-standing problem. Reference-based
+metrics such as BLEU and ROUGE correlate poorly with human judgement on tasks
+where many distinct responses are valid~\cite{liu2016how}. Human evaluation is
+the gold standard but is too slow to drive an iteration loop on a one-person
+project.
+
+Zheng et al.~\cite{zheng2023judging} demonstrated that strong LLMs (GPT-4,
+Claude) used as judges achieve $80\%+$ agreement with human raters on
+chatbot-arena-style pairwise judgements, comparable to inter-human agreement.
+Subsequent work~\cite{chiang2023closer} showed that the LLM-as-judge protocol
+is sensitive to position bias, verbosity bias, and self-preference bias, and
+recommends mitigations including symmetric pairwise prompting and explicit
+rubrics. This project applies the rubric variant -- the judge sees a fixed
+five-dimension MI rubric and produces calibrated 1--5 scores -- and treats the
+results as a coarse iteration signal rather than ground truth, in line with
+the recommendations of \cite{chiang2023closer}.
+
+\subsection{Conversational Safety}
+
+Safety in deployed conversational AI is typically implemented as a
+defense-in-depth stack: input filtering, in-context guardrails inside the
+prompt, post-generation classifiers, and audit logging~\cite{markov2023moderation,inan2023llamaguard}.
+This project adopts a stripped-down version of that pattern -- a regex-based
+input and output screen for crisis and medical-boundary content, plus per-turn
+JSONL audit logging -- chosen explicitly because it is auditable line-by-line,
+which an embedding-based classifier is not.

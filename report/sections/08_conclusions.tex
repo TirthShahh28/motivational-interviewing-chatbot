@@ -1,0 +1,70 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+This capstone designed, implemented, and evaluated a six-stage pipeline for an
+MI-aligned chatbot for alcohol-related dialogues. The headline result is that
+a parameter-efficient fine-tune of \texttt{gemma-2-2b-it}, trained on the
+AnnoMI alcohol-only subset augmented with $\approx$1{,}000 synthetic MI
+conversations and supplemented at inference time by retrieval over a curated
+MI knowledge base, reaches an LLM-as-judge score of $3.81/5.0$ on a
+181-item evaluation set spanning real, synthetic, and edge-case turns. That
+is a $+17.2\%$ relative improvement over the base model and closes $41\%$
+of the absolute gap to a much larger Claude Haiku reference.
+
+Beyond the headline number, four conclusions are worth stating explicitly.
+
+\subsubsection*{1. Synthetic data was load-bearing, not decoration.}
+Fine-tuning on AnnoMI alone (\texttt{v1}) did not improve over the base model;
+in fact it nudged the overall score slightly down. Only after the training set
+was widened with synthetic dialogue covering scenario shapes the real data
+under-covers (long sessions, mixed defensiveness within a session) did the
+fine-tune produce a meaningful gain (\texttt{v2}). The lesson is that for
+small specialized corpora, ``just train on the real data'' is not enough --
+the model needs enough \emph{shape} variety to learn a stylistic identity, and
+synthetic generation is one practical way to provide it.
+
+\subsubsection*{2. Retrieval is complementary to fine-tuning, not redundant.}
+\texttt{v2\_rag} adds $+0.33$ on top of \texttt{v2}, which is more than the
+fine-tune itself contributed over the base. This says that the model and the
+knowledge base were doing genuinely different work: fine-tuning shaped
+\emph{how} the model talks; retrieval gave it the right \emph{what} to say in
+a given turn. Treating them as substitutes -- a common temptation when
+budgets are tight -- would have left meaningful quality on the table.
+
+\subsubsection*{3. Auditability needs to be a first-class design choice.}
+The decision to make safety a regex screen plus per-turn JSONL audit logging
+-- rather than an embedding-based classifier and an ephemeral runtime --
+paid off twice in the project: once when the original strict-adjacency
+crisis patterns were found to miss natural phrasings, and once when the
+debugging affordance of the per-turn log made it possible to reconstruct
+exactly which retrieved chunks the model was conditioned on for any given
+output. Both fixes were one-commit changes against an inspectable surface;
+neither would have been against an opaque classifier or an unlogged runtime.
+
+\subsubsection*{4. LLM-as-judge is fine for iteration, not for adjudication.}
+The five-dimension rubric and the $\approx$181-item evaluation set produced a
+signal stable enough to drive iteration -- the consistent ordering of
+\texttt{base $<$ v2 $<$ v2\_rag $<$ claude} across configurations, runs, and
+dimensions is itself evidence of internal consistency. But this is not a
+clinical adjudication. The scores correlate with human MI ratings only in the
+coarse sense documented by \cite{zheng2023judging,chiang2023closer}, and the
+project treats them as that: a coarse iteration signal.
+
+\subsection*{What This Project Demonstrates}
+
+The combined system demonstrates that a small, locally-deployable language
+model can be moved from ``general-purpose assistant that defaults to
+advice-giving'' into ``MI-consistent reflective interlocutor'' through a
+specific stack of design choices: parameter-efficient fine-tuning on real +
+synthetic data, retrieval over a curated knowledge base, two-stage regex
+safety, per-turn audit logging, and a single shared pipeline behind two
+purpose-fit front ends. None of those moves are individually novel; the
+contribution is the integration and the honest evaluation.
+
+\subsection*{What This Project Is Not}
+
+It is not a clinical product. It is not validated under an institutional
+review board. It is not appropriate for unsupervised deployment to people in
+acute distress. The system was designed and evaluated as a research artifact
+for a capstone course; the limitations and the work required to take it
+further are spelled out in \Cref{sec:future_work}.
